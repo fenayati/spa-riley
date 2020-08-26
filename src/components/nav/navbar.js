@@ -8,16 +8,24 @@ import M from 'materialize-css' ;
 // IMPORT CUSTOM CSS FILE FOR NAV HEADER COLOR
 import '../layout.css'
 
+// from https://github.com/Dogfalo/materialize/issues/6087
+if (typeof window !== 'undefined') {
+	// require ('../../styles/materialize.min.js')
+	require ('../../styles/materialize.js')
+}
+
 class Navbar extends React.Component {
 
 	// using this article to update state in this component
 	// https://ourcodeworld.com/articles/read/409/how-to-update-parent-state-from-child-component-in-react
 
+	
+
 	componentDidMount() {	
 		document.addEventListener('DOMContentLoaded', function() {
 			let options = {closeOnClick: true}
 			let elems = document.querySelectorAll('.sidenav')
-			M.Sidenav.init(elems, options)
+			window.M.Sidenav.init(elems, options)
 		})
 	}
 	
