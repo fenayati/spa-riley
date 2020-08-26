@@ -8,7 +8,9 @@ const NavSegment = (props) => {
 		
 	return (
 		
-		<li className={`sidenav-close${props.activeTab === props.label ? ' active' : '' }`} onClick={() => props.action(props.label)}>
+		// TEMPORARILY DISABLE PROPS.ACTION. THIS IS USED TO KEEP TRACK OF THE ACTIVE TAB
+		// <li className={`sidenav-close${props.activeTab === props.label ? ' active' : '' }`} onClick={() => props.action(props.label)}>
+		<li className={`sidenav-close${props.activeTab === props.label ? ' active' : '' }`}>
 			<Link className="eggshell-text" to={props.url}>{props.label}</Link>
 			{/* <a href="#" className="eggshell-text" to={props.url}>{props.label}</a> */}
 		</li>
