@@ -24,11 +24,17 @@ $title-color: #ff0000;
 
 @import "~bulma/bulma.sass";
 ```
-4. Import `mystyles.scss` where it is used.
+4. Import `mystyles.scss` where it is used (`layout.js`)
+
+5. Build out `navbar.js` and `nav_segment.js` components.
+    - Build `Navbar` links out of `NavSegment` components.
+        - `NavSegment` component uses Gatsby `Link` component for routes.
+        - Pass `classes`, `path`, and `label` props to `NavSegment`.
+    - Use `navbar-end` class to push links to the right of the screen.
 
 ## [Bulma Examples](https://bulma.io/expo/)
 - [Pentos](https://pentos.co/)
 
 ## [Sass Variables](https://bulma.io/documentation/customize/variables/)
 
-# 4. [Bulma Navbar](https://bulma.io/documentation/components/navbar/#fixed-navbar)
+# 4. [Bulma Navbar](https://bulma.io/documentation/components/navbar)
