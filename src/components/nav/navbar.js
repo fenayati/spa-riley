@@ -3,77 +3,122 @@
 import React from 'react' ;
 import { Link } from 'gatsby' ;
 import NavList from './nav_list'
-import M from 'materialize-css' ;
-
-// IMPORT CUSTOM CSS FILE FOR NAV HEADER COLOR
-import '../layout.css'
-
-// from https://github.com/Dogfalo/materialize/issues/6087
-if (typeof window !== 'undefined') {
-	// require ('../../styles/materialize.min.js')
-	require ('../../styles/materialize.js')
-}
+import '../../styles/sass/mystyles.scss'
+import Logo from '../../images/logo_transparent.png'
 
 class Navbar extends React.Component {
 
 	// using this article to update state in this component
 	// https://ourcodeworld.com/articles/read/409/how-to-update-parent-state-from-child-component-in-react
 
-	
-
-	componentDidMount() {	
-		document.addEventListener('DOMContentLoaded', function() {
-			let options = {closeOnClick: true}
-			let elems = document.querySelectorAll('.sidenav')
-			window.M.Sidenav.init(elems, options)
-		})
+	componentDidMount() {
 	}
 	
 	render() {	
 		// THE PURPOSE OF THE NAVBAR FUNCTION IS TO RETURN THE JSX TEMPLATE FOR OUR NAVBAR WRAPPER
 		return (
 			
-			<div>
+			// <div>
 
-				<ul className='sidenav cg-blue' id='mobile-links'>
-					{/* <NavList activeTab={this.state.activeTab} action={this.handler}/> */}
-					<NavList activeTab={this.props.activeTab} action={this.props.action}/>
-				</ul>
-
-				<div className="navbar-fixed">
-					
-					<nav>
+			// 	<ul className='sidenav cg-blue' id='mobile-links'>
+			// 		{/* <NavList activeTab={this.state.activeTab} action={this.handler}/> */}
+			// 		<NavList activeTab={this.props.activeTab} action={this.props.action}/>
+			// 	</ul>
 						
-						{/* 'NAV-WRAPPER' IS A MATERIALIZED CLASS (THE MATERIALIZE CSS FRAMEWORK) */}
-						<div className='nav-wrapper cg-blue'>
-							{/*'CONTAINER' IS A MATERIALIZED CLASS*/}
-							<div className="container">
-								
-								{/*'BRAND-LOGO' IS A MATERIALIZED CLASS*/}
-								<Link to='/' className='brand-logo eggshell-text'>Spa Riley</Link>
-				
-								<a href="/#" className="sidenav-trigger" data-target='mobile-links'>
-									<i className="material-icons left hide-on-large-only">menu</i>
+			// 	<nav class="navbar" role="navigation">
+					
+			// 		{/* 'NAV-WRAPPER' IS A MATERIALIZED CLASS (THE MATERIALIZE CSS FRAMEWORK) */}
+			// 		<div className='nav-wrapper cg-blue'>
+			// 			{/*'CONTAINER' IS A MATERIALIZED CLASS*/}
+			// 			<div className="container">
+							
+			// 				{/*'BRAND-LOGO' IS A MATERIALIZED CLASS*/}
+			// 				<Link to='/' className='brand-logo eggshell-text'>Spa Riley</Link>
+			
+			// 				<a href="/#" className="sidenav-trigger" data-target='mobile-links'>
+			// 					<i className="material-icons left hide-on-large-only">menu</i>
+			// 				</a>
+							
+							
+			// 				<ul className='right hide-on-med-and-down'>
+			// 					{/* <NavList activeTab={this.state.activeTab} action={this.handler}/> */}
+			// 					<NavList activeTab={this.props.activeTab} action={this.props.action}/>
+			// 				</ul>
+			
+			// 				{/* <ul className='sidenav' id='mobile-links'>
+			// 					<NavList />
+			// 				</ul> */}
+							
+			// 			</div>
+			// 		</div>
+					
+			// 	</nav>	
+			
+			// </div>
+
+			<>
+				<nav class="navbar has-background-dark" role="navigation" aria-label="main navigation">
+					<div class="navbar-brand">
+						<a class="navbar-item" href="#">
+							<img src={Logo} width="112" height="28"/>
+						</a>
+
+						<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+						</a>
+					</div>
+
+					<div id="navbarBasicExample" class="navbar-menu">
+						<div class="navbar-start">
+							<a class="navbar-item">
+								Home
+							</a>
+
+							<a class="navbar-item">
+								Documentation
+							</a>
+
+							<div class="navbar-item has-dropdown is-hoverable">
+								<a class="navbar-link">
+								More
 								</a>
-								
-								
-								<ul className='right hide-on-med-and-down'>
-									{/* <NavList activeTab={this.state.activeTab} action={this.handler}/> */}
-									<NavList activeTab={this.props.activeTab} action={this.props.action}/>
-								</ul>
-				
-								{/* <ul className='sidenav' id='mobile-links'>
-									<NavList />
-								</ul> */}
-								
+
+								<div class="navbar-dropdown">
+								<a class="navbar-item">
+									About
+								</a>
+								<a class="navbar-item">
+									Jobs
+								</a>
+								<a class="navbar-item">
+									Contact
+								</a>
+								<hr class="navbar-divider"/>
+								<a class="navbar-item">
+									Report an issue
+								</a>
+								</div>
 							</div>
 						</div>
-						
-					</nav>	
-		
-				</div>
 
-			</div>
+						<div class="navbar-end">
+						<div class="navbar-item">
+							<div class="buttons">
+							<a class="button is-primary">
+								<strong>Sign up</strong>
+							</a>
+							<a class="button is-light">
+								Log in
+							</a>
+							</div>
+						</div>
+						</div>
+					</div>
+				</nav>
+			</>
+
 		)
 	}
 } ;
