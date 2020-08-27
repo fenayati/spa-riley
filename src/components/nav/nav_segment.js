@@ -1,22 +1,15 @@
-// THE NAVBAR COMPONENT IS NOT GOING TO HAVE STATE. CAN JUST BE A FUNCTIONAL COMPONENT INSTEAD OF A CLASS COMPONENT
+import React from 'react'
 
-import React from 'react' ;
+import { Link } from 'gatsby'
 
-import { Link } from 'gatsby' ;
+const NavSegment = ( { classes, path, label } ) => {
 
-const NavSegment = (props) => {
-		
 	return (
-		
-		// TEMPORARILY DISABLE PROPS.ACTION. THIS IS USED TO KEEP TRACK OF THE ACTIVE TAB
-		// <li className={`sidenav-close${props.activeTab === props.label ? ' active' : '' }`} onClick={() => props.action(props.label)}>
-		<li className={`sidenav-close${props.activeTab === props.label ? ' active' : '' }`}>
-			<Link className="eggshell-text" to={props.url}>{props.label}</Link>
-			{/* <a href="#" className="eggshell-text" to={props.url}>{props.label}</a> */}
-		</li>
+
+		<Link className={`navbar-item${typeof classes !== 'undefined' ? ' ' + classes : ''}`} to={path}>{label}</Link>
 
 	)
 
-} ;
+}
 
-export default NavSegment ;
+export default NavSegment

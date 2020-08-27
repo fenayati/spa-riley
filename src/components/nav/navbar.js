@@ -1,10 +1,12 @@
-// THE NAVBAR COMPONENT IS NOT GOING TO HAVE STATE. CAN JUST BE A FUNCTIONAL COMPONENT INSTEAD OF A CLASS COMPONENT
+// PACKAGES
+import React from 'react'
+import NavSegment from './nav_segment'
 
-import React from 'react' ;
-import { Link } from 'gatsby' ;
-import NavList from './nav_list'
-import '../../styles/sass/mystyles.scss'
+// IMAGES
 import Logo from '../../images/logo_transparent.png'
+
+// DISABLED
+// import NavList from './nav_list_materialize'
 
 class Navbar extends React.Component {
 
@@ -71,50 +73,49 @@ class Navbar extends React.Component {
 					</div>
 
 					<div id="navbarBasicExample" class="navbar-menu">
-						<div class="navbar-start">
-							<a class="navbar-item">
-								Home
-							</a>
-
-							<a class="navbar-item">
-								Documentation
-							</a>
+						<div class="navbar-end">
+							<NavSegment path="/" label="Home" />
 
 							<div class="navbar-item has-dropdown is-hoverable">
 								<a class="navbar-link">
-								More
+								Services
 								</a>
 
 								<div class="navbar-dropdown">
-								<a class="navbar-item">
-									About
-								</a>
-								<a class="navbar-item">
-									Jobs
-								</a>
-								<a class="navbar-item">
-									Contact
-								</a>
-								<hr class="navbar-divider"/>
+
+									<NavSegment path="/services/facials" label="Facials" />
+									<NavSegment path="/services/waxing" label="Waxing" />
+									<NavSegment path="/services/add-ons" label="Add-Ons" />
+
+								{/* FROM BULMA DOCS */}
+								{/* <hr class="navbar-divider"/>
 								<a class="navbar-item">
 									Report an issue
+								</a> */}
+
+								</div>
+							</div>
+
+							<NavSegment path="/products" label="Products" />
+							<NavSegment path="/about" label="About" />
+							<NavSegment path="/contact" label="Contact" />
+
+						</div>
+
+						{/* LOGIN AND SIGN UP BUTTONS FROM BULMA DOCS */}
+						{/* <div class="navbar-end">
+							<div class="navbar-item">
+								<div class="buttons">
+								<a class="button is-primary">
+									<strong>Sign up</strong>
+								</a>
+								<a class="button is-light">
+									Log in
 								</a>
 								</div>
 							</div>
-						</div>
+						</div> */}
 
-						<div class="navbar-end">
-						<div class="navbar-item">
-							<div class="buttons">
-							<a class="button is-primary">
-								<strong>Sign up</strong>
-							</a>
-							<a class="button is-light">
-								Log in
-							</a>
-							</div>
-						</div>
-						</div>
 					</div>
 				</nav>
 			</>
