@@ -1,0 +1,8 @@
+@charset "utf-8";
+// @import "../node_modules/bulma/bulma.sass";
+$peach: #f9c4ac;
+$navbar-item-hover-background-color: $peach ;
+$navbar-item-hover-color: hsl(0, 0%, 21%) ;
+// $navbar-item-color: hsl(0, 0%, 96%) ;
+$navbar-item-color: $peach ;
+@import "~bulma/bulma.sass"
