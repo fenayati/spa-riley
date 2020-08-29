@@ -17,6 +17,11 @@ body {
   background-color: black ;
 
 }
+
+body.brown {
+  background-color: #7f6343 ;
+}
+
 article,
 aside,
 details,
