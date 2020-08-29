@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import { Helmet } from 'react-helmet'
 
 // STYLES
 import '../styles/pages/index.css'
@@ -13,7 +14,11 @@ import rocks from '../images/stones-167089.jpg'
 
 const IndexPage = () => (
   <Layout>
+
     <SEO title="Home" />
+    <Helmet>
+      <body class="has-background-dark" />
+    </Helmet>
 
     <div className="container">
       <div className="columns">
