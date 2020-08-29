@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 // STYLES
-import '../styles/index.css'
+import '../styles/pages/index.css'
 
 // IMAGES
 import rocks from '../images/stones-167089.jpg'
