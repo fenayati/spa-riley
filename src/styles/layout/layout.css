@@ -1,3 +1,6 @@
+/* 08.29.20 */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap") ;
+
 /* 08/28/20 - EXTEND HEIGHT OF HTML, BODY ELEMENTS TO 100% */
 html, body {
   height: 100% ;
@@ -217,7 +220,10 @@ body {
 
   /* 08.28.20 - USE PLAYFAIR DISPLAY */
   /* font-family: georgia, serif; */
-  font-family: "playfair display", serif ;
+
+  /* 08.29.20 / - TEST THAT GOOGLE FONTS IMPORTING CORRECTLY */
+  font-family: 'Playfair Display', serif;
+
   font-style: normal; 
   font-weight: normal;
   font-variant-ligatures: normal;

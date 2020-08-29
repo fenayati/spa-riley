@@ -30,16 +30,20 @@ module.exports = {
     'gatsby-plugin-sass',
 
     // 08.28.20 - ADD GOOGLE FONTS PREFETCH
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Playfair Display`
-          }
-        ]
-      }
-    }
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Playfair Display`,
+    //         variants: ['400'] 
+    //       }, 
+    //       {
+    //         family: `Lobster`
+    //       }
+    //     ]
+    //   }
+    // }
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
