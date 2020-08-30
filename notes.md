@@ -42,8 +42,8 @@ $title-color: #ff0000;
 
 # 4. [Using Google Fonts in Gatsby Project](https://medium.com/@matt.readout/using-google-fonts-in-your-gatsby-js-projects-b59a3abfba15)
 
-1. `npm install --save gatsby-plugin-prefetch-google-fonts`
-2. In `gatsby-config.js`, include plugin with webfonts as options: 
+1. ~~`npm install --save gatsby-plugin-prefetch-google-fonts`~~
+2. ~~In `gatsby-config.js`, include plugin with webfonts as options:~~
 ```
 module.exports = {
  plugins: [
@@ -65,9 +65,40 @@ module.exports = {
   ]
 }
 ```
-3. In `layout.css`, use `font-family: "playfair display", serif` for `body` tag.
-4. Disable font settings for `h1` tag so it inherits from body.
+3. The font we want not working with the prefetch plugin.
+    - `npm uninstall gatsby-plugin-prefetch-google-fonts`
+    - Disable plugin in `gatsby-config.js`
+4. In `layout.css`: 
+    - At top, `@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap") ;`
+    - Use `font-family: "playfair display", serif` for `body` tag.
+5. Disable font settings for `h1` tag so it inherits from body.
 
 # 5. Build out home page
 
 1. Use Bulma `columns` and `column` classes to create two divs side by side.
+
+# 6. Build out facials page
+
+1. Using Wix as a template, Facials page should have a brown color. Created new CSS rule *below* the `body` selector: 
+```
+body.brown {
+  background-color: #7f6343 ;
+}
+```
+2. Use `react-helmet` to dynamically set the `body` class:
+```
+<Helmet>
+  <body class="brown" />
+</Helmet>
+```
+3. Create a single card for custom facials based on the Bulma `card` class.
+    - Use `card-image` class.
+    - Use `card-content` class.
+
+# 6. [Images](https://www.youtube.com/watch?v=XiG8gYJ7DiI)
+
+1. **Watch video above in greater detail.**
+
+# 7. [Instagram](https://desiraebeberniss.com/posts/displaying-an-instagram-feed-with-gatsby/)
+
+1. **Read article above in greater detail**
