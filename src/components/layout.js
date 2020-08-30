@@ -15,7 +15,7 @@ import Header from "./header"
 import '../styles/sass/mystyles.scss'
 import "../styles/layout/layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, maxWidth }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,13 +26,19 @@ const Layout = ({ children }) => {
     }
   `)
 
+  if (maxWidth === undefined){
+    maxWidth = 960
+  }
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
+        className="main-div"
         style={{
           margin: `3em auto`,
-          maxWidth: 960,
+          // maxWidth: 960,
+          maxWidth: maxWidth,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
