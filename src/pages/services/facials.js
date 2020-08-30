@@ -1,77 +1,84 @@
+// PACKAGES
 import React from "react"
-import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
+
+// COMPONENTS
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import Img from 'gatsby-image'
+import FacialCard from '../../components/facial_card'
 
-// STYLES
-// import '../../styles/pages/brownBody.css'
+const Facials = ( {data} ) => {
 
-const Facials = ( {data} ) => (
+  const facialServices = [
 
-  <Layout>
+    {
+      image: data.customFacial.childImageSharp.fluid, 
+      title: "Custom Facial", 
+      subtitle: "60 min, $200", 
+      description: "This nourishing treatment will make you shine. Discover a San Francisco spa where you’ll feel awakened, balanced, and rested within a warm, welcoming environment. Reconnect with yourself by experiencing our unique and soothing Skin Care. Find serenity and balance with one of our skilled practitioners. Book your appointment today."
+    },
 
-    {/* 08.29.20 / NICK SMEDIRA: DYNAMICALLY SET BODY CLASS */}
-    <Helmet>
-      <body class="brown" />
-    </Helmet>
-    
-    <SEO title="Facials" />
-    <h1>Facials page</h1>
+    {
+      image: data.dualExfoliation.childImageSharp.fluid, 
+      title: "Dual Exfoliation", 
+      subtitle: "60 min, $150", 
+      description: "Experience a deep cleansing and leave with baby soft skin. A combination of Microdermabrasion and derma planing removes dead skin cell build up, unclogs pores and gets rid of unwanted peach fuzz."
+    },
 
-    {/* 08.29.20: ADD 3 COLUMNS  */}
-    <div className="container">
-      <div className="columns">
+    {
+      image: data.antiAgingFacial.childImageSharp.fluid, 
+      title: "Anti Aging Facial", 
+      subtitle: "30 min, $190", 
+      description: "Rewind the clock with this facial targeted towards those with mature or sun damaged skin. Using microcurrent technology to lift, contour and decrease wrinkles. Red LED light for anti-aging. Includes mask."
+    },
 
-        {/* CUSTOM FACIAL */}
-        <div className="column">
-          <div className="card">
-            <div className="card-image">
-              <figure className="image is-square pt-0">
-                <Img fluid={data.customFacial.childImageSharp.fluid} />
-              </figure>
-            </div>
-            <div className="card-content has-background-black">
-              <div className="content">
-                <h2 className="brown has-text-centered" style={{textTransform: "uppercase"}}>Custom Facial</h2>
-                <h3 className="has-text-white has-text-centered">60 min, $200</h3>
-                <p className="has-text-white has-text-centered">
-                  This nourishing treatment will make you shine. Discover a San Francisco spa where you’ll feel awakened, balanced, and rested within a warm, welcoming environment. Reconnect with yourself by experiencing our unique and soothing Skin Care. Find serenity and balance with one of our skilled practitioners. Book your appointment today.
-                </p>
-              </div>
-            </div>
-          </div>
-          
+    {
+      image: data.massageBodywork.childImageSharp.fluid, 
+      title: "Massage & Bodywork", 
+      subtitle: "60 min, $100", 
+      description: ""
+    },
+
+  ]
+
+  const numServices = facialServices.length
+
+  const columnSize = 12 % numServices == 0 ? "is-" + 12/numServices : ""
+
+  return (  
+    <Layout maxWidth="90%">
+
+      {/* 08.29.20 / NICK SMEDIRA: DYNAMICALLY SET BODY CLASS */}
+      <Helmet>
+        <body class="brown" />
+      </Helmet>
+      
+      <SEO title="Facials" />
+      <h1>Facials page</h1>
+
+      {/* 08.29.20: ADD BULMA COLUMNS  */}
+      <div className="container">
+        <div className="columns">
+
+          {/* 08.30.20: MAP THE FACIALS BULMA CARD COMPONENT */}
+          {
+            facialServices.map(service => 
+              <FacialCard 
+                image={service.image} 
+                title={service.title} 
+                subtitle={service.subtitle} 
+                description={service.description}
+                columnSize={columnSize}
+              />
+            )
+          }
+
         </div>
-
-        {/* DUAL EXFOLIATION */}
-        <div className="column">
-
-        </div>
-
-        {/* ANTI AGING FACIAL */}
-        <div className="column">
-
-        </div>
-
-        {/* MASSAGE AND BODY WORK */}
-        <div className="column">
-
-        </div>
-
       </div>
-    </div>
 
-    {/* <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p> */}
-    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div> */}
-    {/* <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default Facials
 
@@ -79,6 +86,27 @@ export default Facials
 export const query = graphql`
   query {
     customFacial: file(relativePath: {eq: "facials/facial_1/facial_1_square.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dualExfoliation: file(relativePath: {eq: "facials/facial_2/facial_2_square.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    antiAgingFacial: file(relativePath: {eq: "facials/facial_3/facial_3_square.jpeg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    massageBodywork: file(relativePath: {eq: "facials/facial_4/facial_4.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
