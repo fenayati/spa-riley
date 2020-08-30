@@ -1,18 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { Link, graphql } from 'gatsby'
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { Helmet } from 'react-helmet'
+import Img from 'gatsby-image'
 
 // STYLES
 import '../styles/pages/index.css'
 
 // IMAGES
-import rocks from '../images/stones-167089.jpg'
+// import rocks from '../images/stones-167089.jpg'
 
-const IndexPage = () => (
+const IndexPage = ( {data} ) => (
   <Layout>
 
     <SEO title="Home" />
@@ -28,8 +28,12 @@ const IndexPage = () => (
         
         {/* <div className="column" style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}> */}
         <div className="column">
+
+          {/* 08.29.20 / USE GATSBY-IMAGE TO IMPORT THE IMAGES */}
           {/* <Image /> */}
-          <img src={rocks} />
+          {/* <img src={rocks} /> */}
+          <Img fluid={data.tableHerbs.childImageSharp.fluid} />
+        
         </div>
       </div>
     </div>
@@ -41,3 +45,16 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+// 08.29.20 / ADD GRAPH QL QUERY
+export const query = graphql`
+  query {
+    tableHerbs: file(relativePath: {eq: "index/table-herbs.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
