@@ -98,11 +98,11 @@ body.brown {
 5. Create an array of card data in `facials.js`
 6. Map the array data to the `FacialCard` component.
 
-# 6. [Images](https://www.youtube.com/watch?v=XiG8gYJ7DiI)
+# 7. [Images](https://www.youtube.com/watch?v=XiG8gYJ7DiI)
 
 1. **Watch video above in greater detail.**
 
-# 7. Instagram
+# 8. Instagram
 
 ## ~~[Displaying an Instagram feed with Gatsby, part 1](https://desiraebeberniss.com/posts/displaying-an-instagram-feed-with-gatsby/)~~
     - The methodology used in this article has been deprecated.
@@ -120,3 +120,8 @@ body.brown {
 2. In link above, copy code.
 3. Add `<div>` tag to component. 
 4. Use `useEffect` React hook to run the script from EmbedSocial so that page will have access to browser `document`.
+
+# 9. Build out Waxing page
+
+1. Create component `waxing_service.js`
+2. In `waxing.js`, create array of waxing services and prices and map to `WaxingService` component.
