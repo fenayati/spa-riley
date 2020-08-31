@@ -54,10 +54,11 @@ const Facials = ( {data} ) => {
       </Helmet>
       
       <SEO title="Facials" />
-      <h1>Facials page</h1>
+      
 
       {/* 08.29.20: ADD BULMA COLUMNS  */}
       <div className="container">
+        <h1>Facials page</h1>
         <div className="columns">
 
           {/* 08.30.20: MAP THE FACIALS BULMA CARD COMPONENT */}
