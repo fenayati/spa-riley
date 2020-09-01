@@ -43,7 +43,7 @@ const Facials = ( {data} ) => {
 
   const numServices = facialServices.length
 
-  const columnSize = 12 % numServices == 0 ? "is-" + 12/numServices : ""
+  const columnSize = 12 % numServices === 0 ? "is-" + 12/numServices : ""
 
   return (  
     <Layout maxWidth="90%">

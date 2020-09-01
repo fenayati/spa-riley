@@ -61,11 +61,11 @@ class Navbar extends React.Component {
 			<>
 				<nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
 					<div class="navbar-brand">
-						<a class="navbar-item" href="#">
-							<img src={Logo} width="112" height="28"/>
+						<a class="navbar-item" href="/#">
+							<img src={Logo} width="112" height="28" alt="site logo"/>
 						</a>
 
-						<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+						<a href="/#" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
@@ -77,7 +77,7 @@ class Navbar extends React.Component {
 							<NavSegment path="/" label="Home" />
 
 							<div class="navbar-item has-dropdown is-hoverable">
-								<a class="navbar-link">
+								<a href="/#" class="navbar-link">
 								Services
 								</a>
 
