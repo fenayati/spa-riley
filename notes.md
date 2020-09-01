@@ -125,3 +125,10 @@ body.brown {
 
 1. Create component `waxing_service.js`
 2. In `waxing.js`, create array of waxing services and prices and map to `WaxingService` component.
+
+# 10. Google Map
+
+1. Create new project in Google Cloud console: `spa-riley`
+2. API Key: `AIzaSyBUN8_cF0KajMniudJc_TF0sPfSN2lG71w`
+    - Store in `.env.development` and `.env.production` to make secure.
+    - Call with `process.env.VARIABLE_NAME`
