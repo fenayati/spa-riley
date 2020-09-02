@@ -77,7 +77,7 @@ class Navbar extends React.Component {
 							<NavSegment path="/" label="Home" />
 
 							<div class="navbar-item has-dropdown is-hoverable">
-								<a href="/#" class="navbar-link">
+								<a class="navbar-link">
 								Services
 								</a>
 
