@@ -37,35 +37,54 @@ const Contact = () => {
 
   const idInit = "initMap"
   const idLib = "googleMaps"
+  const idRedraw = "redraw"
+
+  const appendMapFunction = () => {
+    const initFunction = document.createElement('script')
+    initFunction.id = idInit
+    initFunction.text = scriptText
+    document.body.appendChild(initFunction)
+  }
+
+  const importGoogleMaps = () => {
+    const googleMaps = document.createElement('script')
+    googleMaps.id = idLib
+    googleMaps.defer = true
+    googleMaps.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&callback=initMap`
+    document.body.appendChild(googleMaps)
+  }
+
+  const redrawMap = () => {
+    const redrawScript = document.getElementById(idRedraw)
+    if(redrawScript){
+      redrawScript.parentNode.removeChild(redrawScript)
+    }
+    const drawMap = document.createElement('script')
+    drawMap.text = "initMap()"
+    drawMap.id = idRedraw
+    document.body.appendChild(drawMap)
+  }
 
   useEffect( () => {
 
     const mapsScript = document.getElementById(idLib)
-    // const initScript = document.getElementById(idInit)
-
-    // init map
+    
+    // provide map init function if not already inserted
     if(!document.getElementById(idInit)){
-      const initFunction = document.createElement('script')
-      initFunction.id = idInit
-      initFunction.text = scriptText
-      document.body.appendChild(initFunction)
+      appendMapFunction()
     }
 
-    // import google maps
     if(mapsScript){
-      // mapsScript.parentNode.removeChild(mapsScript)
-      const drawMap = document.createElement('script')
-      drawMap.text = "initMap()"
-      document.body.appendChild(drawMap)
+      
+      // google maps already imported, so if we get here then the component has rerendered and the callback built into the library import will not draw the map so redraw it
+      redrawMap()
+
     } else {
-      const googleMaps = document.createElement('script')
-      googleMaps.id = idLib
-      googleMaps.defer = true
-      googleMaps.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&callback=initMap`
-      document.body.appendChild(googleMaps)
+
+      // google maps has not already been imported. import google maps
+      importGoogleMaps()
+
     }
-
-
 
   })
   
