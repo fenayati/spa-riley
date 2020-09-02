@@ -132,3 +132,5 @@ body.brown {
 2. API Key: `AIzaSyBUN8_cF0KajMniudJc_TF0sPfSN2lG71w`
     - Store in `.env.development` and `.env.production` to make secure.
     - Call with `process.env.VARIABLE_NAME`
+3. Like EmbedSocial widget, can use the React Effect Hook to insert the Google Maps code onto the page.
+4. Style Google Map using [Google Maps Styling Wizard](https://mapstyle.withgoogle.com/)
