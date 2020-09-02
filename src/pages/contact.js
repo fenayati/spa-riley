@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { Link } from 'gatsby' 
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,7 +24,188 @@ const Contact = () => {
         zoom: 15,
         center: coordinates,
         gestureHandling: 'none',
-        zoomControl: false
+        zoomControl: false,
+        mapTypeControl: false,
+        fullscreenControl: false,
+        streetViewControl: false,
+        styles: [
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#212121"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#212121"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.country",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#181818"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#1b1b1b"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#2c2c2c"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#8a8a8a"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#373737"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#3c3c3c"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway.controlled_access",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#4e4e4e"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#3d3d3d"
+              }
+            ]
+          }
+        ]
       }
     )
 
@@ -92,11 +274,38 @@ const Contact = () => {
 
     <Layout>
       <SEO title="Contact" />
-      <h1 className="has-text-white">Contact page</h1>
-      <h2 className="has-text-white">Location</h2>
+      {/* <h1 className="has-text-white">Contact page</h1> */}
+      {/* <h2 className="has-text-white">Location</h2> */}
 
-      {/* 09.01.20: MAP DIV */}
-      <div id="map" style={{height: 400, width: "100%"}}></div>
+      <div className="container">
+        <div className="has-background-dark has-text-white columns" style={{minHeight: 200}}>
+
+          {/* CONTACT INFO */}
+          <div className="column" style={{margin: "1em"}}>
+            <h1>Book Now</h1>
+            <p style={{margin: 0}}>Chagrin Falls, Ohio 44022</p>
+            <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
+            <p style={{margin: 0}}>(440) 667-9617</p>
+          </div>
+
+          {/* HOURS */}
+          <div className="column" style={{margin: "1em"}}>
+            <h1>Hours</h1>
+            <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
+            <p style={{margin: 0}}>Sat: 10am - 5pm</p>
+            <p style={{margin: 0}}>Sun: 10am - 5pm</p>
+          </div>
+
+        </div>
+
+        <div className="columns" style={{marginBottom: "1em"}}>
+
+          {/* 09.01.20: MAP DIV */}
+          <div id="map" style={{height: 400, width: "100%"}}></div>
+
+        </div>
+
+      </div>
 
     </Layout>
 
