@@ -97,7 +97,7 @@ class Navbar extends React.Component {
 							</div>
 
 							<NavSegment path="/products" label="Products" />
-							<NavSegment path="/about" label="About" />
+							<NavSegment path="/about" label="About Me" />
 							<NavSegment path="/contact" label="Contact" />
 
 						</div>
