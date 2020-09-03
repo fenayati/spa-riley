@@ -134,3 +134,44 @@ body.brown {
     - Call with `process.env.VARIABLE_NAME`
 3. Like EmbedSocial widget, can use the React Effect Hook to insert the Google Maps code onto the page.
 4. Style Google Map using [Google Maps Styling Wizard](https://mapstyle.withgoogle.com/)
+
+
+# 11. Custom Styling
+
+## Navbar
+
+Riley wants a nav bar with the logo in the center and the links to the left and right. Doesn't look possible out-of-the-box with Bulma, so going the custom route.
+
+### [Center logo in navbar](https://www.youtube.com/watch?v=hp-LP8Nv18s)
+
+1. The nav links will be organized in an unordered list tag `<ul>`. Give it a `list-style: none` rule so that there will be no numbers for the list `<li>` items. Add a `text-align: right` rule so that all the `<li>` items are on the right side of the page.
+```
+<ul style={{margin: 0, padding: 0, listStyle: "none", textAlign: "right"}}>
+```
+2. Create a stylesheet `navbar.css` with the following code:
+```
+.inner_main_menu ul li {
+    float: none ;
+    display: inline-block
+}
+
+.inner_main_menu ul li:nth-child(-n+3) {
+    float: left 
+}
+
+.inner_main_menu ul li a {
+    color: #2f3E46 ;
+    font-size: 20px ; 
+    text-transform: uppercase ;
+    text-decoration: none ; 
+    display: block ;
+    padding: 10px 20px
+}
+
+.inner_main_menu ul li a:hover {
+    color: #84A98C ;
+}
+```
+  - The primary rule for the `<li>` tags will be to `float: none` and `display: inline-block`.
+  - Use `li:nth-child(-n+3)` selector to select all `<li>` tags up to the third tag and apply the `float: left` rule so that those 3 items are on the left. The rest will be to the right.
+  - Style the `<a>` tags (`<Link>` in Gatsby).
