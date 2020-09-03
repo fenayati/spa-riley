@@ -3,7 +3,7 @@ import React from 'react'
 import NavSegment from './nav_segment'
 
 // IMAGES
-import Logo from '../../images/logo_transparent.png'
+import Logo from '../../../images/logo_transparent.png'
 
 // DISABLED
 // import NavList from './nav_list_materialize'
