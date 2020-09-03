@@ -1,0 +1,21 @@
+.inner_main_menu ul li {
+    float: none ;
+    display: inline-block
+}
+
+.inner_main_menu ul li:nth-child(-n+3) {
+    float: left 
+}
+
+.inner_main_menu ul li a {
+    color: #2f3E46 ;
+    font-size: 20px ; 
+    text-transform: uppercase ;
+    text-decoration: none ; 
+    display: block ;
+    padding: 10px 20px
+}
+
+.inner_main_menu ul li a:hover {
+    color: #84A98C ;
+}
