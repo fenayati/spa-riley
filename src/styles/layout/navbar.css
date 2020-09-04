@@ -1,9 +1,10 @@
 .inner_main_menu ul li {
     float: none ;
-    display: inline-block
+    display: inline-block ;
+    /* position: relative */
 }
 
-.inner_main_menu ul li:nth-child(-n+3) {
+.inner_main_menu ul li:nth-child(-n+2) {
     float: left 
 }
 
@@ -18,4 +19,10 @@
 
 .inner_main_menu ul li a:hover {
     color: #84A98C ;
+}
+
+.nav-dropdown {
+    position: absolute ;
+    top: 0 ;
+    left: 0
 }
