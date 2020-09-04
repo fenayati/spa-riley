@@ -175,3 +175,11 @@ Riley wants a nav bar with the logo in the center and the links to the left and 
   - The primary rule for the `<li>` tags will be to `float: none` and `display: inline-block`.
   - Use `li:nth-child(-n+3)` selector to select all `<li>` tags up to the third tag and apply the `float: left` rule so that those 3 items are on the left. The rest will be to the right.
   - Style the `<a>` tags (`<Link>` in Gatsby).
+
+### [Add dropdown menus and make responsive](https://youtu.be/svv7jOxaSzw)
+
+Having trouble about minute 3.
+
+### GraphQL Queries in non-page Components
+
+The `graphql` query can only be used in page components. For non-page components, use `useStaticQuery` inside the component.
