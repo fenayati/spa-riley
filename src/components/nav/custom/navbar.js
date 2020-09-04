@@ -53,15 +53,16 @@ const Navbar = () => {
                         paddingTop: 31
                     }}
                 >
-                    <NavSegment label="Services"/>
-
-                        {/* services dropdown menu */}
-                        {/* <ul style={{ position: "absolute", top: 0, left: 0}}> */}
-                        {/* <ul className="nav-dropdown">
+                    {/* REPLACE NAV SEGMENT w/ BASIC LINK */}
+                    {/* <NavSegment label="Services"/> */}
+                    <li>
+                        <Link>Services</Link>
+                        <ul>
                             <NavSegment label="Facials" />
                             <NavSegment label="Waxing" />
                             <NavSegment label="Add-Ons" />
-                        </ul> */}
+                        </ul>
+                    </li>
 
                     <NavSegment path="/products" label="Products"/>
                     <NavSegment path="/about" label="About Me"/>
