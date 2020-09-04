@@ -1,7 +1,7 @@
 .inner_main_menu ul li {
     float: none ;
     display: inline-block ;
-    /* position: relative */
+    position: relative
 }
 
 .inner_main_menu ul li:nth-child(-n+2) {
@@ -21,7 +21,7 @@
     color: #84A98C ;
 }
 
-.nav-dropdown {
+.inner_main_menu ul li ul {
     position: absolute ;
     top: 0 ;
     left: 0
