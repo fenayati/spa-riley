@@ -14,6 +14,7 @@ import Header from "./header"
 // STYLES
 import '../styles/sass/mystyles.scss'
 import "../styles/layout/layout.css"
+import '../styles/layout/navbar.css'
 
 const Layout = ({ children, maxWidth }) => {
   const data = useStaticQuery(graphql`
