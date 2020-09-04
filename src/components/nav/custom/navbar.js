@@ -4,7 +4,7 @@ import NavSegment from './nav_segment'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import '../../../styles/layout/navbar.css'
+// import '../../../styles/layout/navbar.css'
 
 const Navbar = () => {
 
@@ -13,7 +13,7 @@ const Navbar = () => {
             query {
                 logo: file(relativePath: {eq: "logo_transparent.png"}) {
                     childImageSharp {
-                        fluid(maxWidth: 2000) {
+                        fluid(maxWidth: 300) {
                         ...GatsbyImageSharpFluid
                         }
                     }
@@ -25,19 +25,47 @@ const Navbar = () => {
     console.log(data)
 
     return(
-        <div id="main_menu">
-            <div className="logo_area">
+        <div id="main_menu" style={{width: "100%", position: "relative", backgroundColor: "white", height: 110}}>
+            <div 
+                className="logo_area" 
+                style={{
+                    width: 150, 
+                    height: 150, 
+                    position: "absolute", 
+                    left: "50%", 
+                    top: 0, 
+                    content: "", 
+                    marginLeft: -75,
+                    textAlign: "center"
+                }}
+            >
                 <Link to="/">
-                    <Img fluid={data.logo.childImageSharp.fluid} style={{height: "100%"}} />
+                    <Img fluid={data.logo.childImageSharp.fluid} style={{width: 150, maxHeight: "100%"}} />
                 </Link>
             </div>
             <div className="inner_main_menu" style={{margin: "0 auto", width: "90%"}}>
-                <ul style={{margin: 0, padding: 0, listStyle: "none", textAlign: "right"}}>
-                    <NavSegment label="Home"/>
+                <ul 
+                    style={{
+                        margin: 0, 
+                        padding: 0, 
+                        listStyle: "none", 
+                        textAlign: "right", 
+                        paddingTop: 31
+                    }}
+                >
                     <NavSegment label="Services"/>
-                    <NavSegment label="Products"/>
+
+                        {/* services dropdown menu */}
+                        {/* <ul style={{ position: "absolute", top: 0, left: 0}}> */}
+                        {/* <ul className="nav-dropdown">
+                            <NavSegment label="Facials" />
+                            <NavSegment label="Waxing" />
+                            <NavSegment label="Add-Ons" />
+                        </ul> */}
+
+                    <NavSegment path="/products" label="Products"/>
                     <NavSegment path="/about" label="About Me"/>
-                    <NavSegment label="Contact"/>
+                    <NavSegment path="/contact" label="Contact"/>
                 </ul>
             </div>
         </div>
