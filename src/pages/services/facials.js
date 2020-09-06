@@ -50,7 +50,7 @@ const Facials = ( {data} ) => {
 
       {/* 08.29.20 / NICK SMEDIRA: DYNAMICALLY SET BODY CLASS */}
       <Helmet>
-        <body class="brown" />
+        <body style="background-color: #354F52" />
       </Helmet>
       
       <SEO title="Facials" />
