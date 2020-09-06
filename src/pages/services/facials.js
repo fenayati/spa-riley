@@ -1,6 +1,5 @@
 // PACKAGES
 import React from "react"
-import { Helmet } from "react-helmet"
 
 // COMPONENTS
 import Layout from "../../components/layout"
@@ -32,12 +31,12 @@ const Facials = ( {data} ) => {
       description: "Rewind the clock with this facial targeted towards those with mature or sun damaged skin. Using microcurrent technology to lift, contour and decrease wrinkles. Red LED light for anti-aging. Includes mask."
     },
 
-    {
-      image: data.massageBodywork.childImageSharp.fluid, 
-      title: "Massage & Bodywork", 
-      subtitle: "60 min, $100", 
-      description: ""
-    },
+    // {
+    //   image: data.massageBodywork.childImageSharp.fluid, 
+    //   title: "Massage & Bodywork", 
+    //   subtitle: "60 min, $100", 
+    //   description: ""
+    // },
 
   ]
 
@@ -47,14 +46,8 @@ const Facials = ( {data} ) => {
 
   return (  
     <Layout maxWidth="90%">
-
-      {/* 08.29.20 / NICK SMEDIRA: DYNAMICALLY SET BODY CLASS */}
-      <Helmet>
-        <body style="background-color: #354F52" />
-      </Helmet>
       
       <SEO title="Facials" />
-      
 
       {/* 08.29.20: ADD BULMA COLUMNS  */}
       <div className="container">
