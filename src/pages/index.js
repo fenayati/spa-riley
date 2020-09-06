@@ -16,7 +16,7 @@ const IndexPage = ( {data} ) => (
 
     <SEO title="Home" />
     <Helmet>
-      <body class="has-background-dark" />
+      <body style="background-color: #52796F" />
     </Helmet>
 
     <div className="container">
