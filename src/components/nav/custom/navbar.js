@@ -58,9 +58,9 @@ const Navbar = () => {
                     <li>
                         <Link>Services</Link>
                         <ul>
-                            <NavSegment label="Facials" />
-                            <NavSegment label="Waxing" />
-                            <NavSegment label="Add-Ons" />
+                            <NavSegment path="/services/facials" label="Facials" />
+                            <NavSegment path="/services/waxing" label="Waxing" />
+                            <NavSegment path="/services/add-ons" label="Add-Ons" />
                         </ul>
                     </li>
 
