@@ -21,9 +21,10 @@ body {
 
 }
 
-body.brown {
+/* 09.06.20 - DISABLE BROWN COLOR */
+/* body.brown {
   background-color: #7f6343 ;
-}
+} */
 
 article,
 aside,
@@ -224,7 +225,9 @@ html {
   box-sizing: inherit;
 }
 body {
+
   color: hsla(0, 0%, 0%, 0.8);
+  background-color: #CAD2C5;
 
   /* 08.28.20 - USE PLAYFAIR DISPLAY */
   /* font-family: georgia, serif; */
