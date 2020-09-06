@@ -178,7 +178,12 @@ Riley wants a nav bar with the logo in the center and the links to the left and 
 
 ### [Add dropdown menus and make responsive](https://youtu.be/svv7jOxaSzw)
 
-Having trouble about minute 3.
+1. Build dropdown using custom CSS.
+
+### [Side Nav Tutorial](https://www.w3schools.com/howto/howto_js_sidenav.asp)
+
+1. Make navbar responsive and build custom JS sidenav.
+2. Improve: the side nav text gets squished as the sidenav closes. Research `position: fixed`.
 
 ### GraphQL Queries in non-page Components
 
