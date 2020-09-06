@@ -18,11 +18,36 @@
 }
 
 .inner_main_menu ul li a:hover {
-    color: #84A98C ;
+    color: #52796f ;
 }
 
 .inner_main_menu ul li ul {
     position: absolute ;
-    top: 0 ;
-    left: 0
+    top: 27px;
+    left: -12px ; 
+    background-color: #2f3e46 ;
+    z-index: 1 ;
+    display: none ;
+}
+
+.inner_main_menu ul li:hover ul {
+    display: block ;
+}
+
+.inner_main_menu ul li ul li {
+    float: none !important;
+    display: block ;
+    text-align: center;
+    margin-bottom: 0
+}
+
+.inner_main_menu ul li ul li a {
+    color: white ; 
+    font-size: 15px ;
+    text-transform: capitalize;
+}
+
+.inner_main_menu ul li ul li a:hover {
+    background: #CAD2C5 ; 
+    color: #2F3E46
 }
