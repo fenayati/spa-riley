@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 
 // STYLES
@@ -15,9 +14,6 @@ const IndexPage = ( {data} ) => (
   <Layout>
 
     <SEO title="Home" />
-    <Helmet>
-      <body style="background-color: #52796F" />
-    </Helmet>
 
     <div className="container">
       <div className="columns">

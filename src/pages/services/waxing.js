@@ -1,6 +1,5 @@
 import React from "react"
 import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -47,10 +46,6 @@ const Waxing = ( {data} ) => {
     <Layout>
 
       <SEO title="Products" />
-
-      <Helmet>
-        <body class="has-background-dark" />
-      </Helmet>
 
       <div className="container">
         <div className="columns">

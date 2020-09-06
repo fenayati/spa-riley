@@ -1,25 +1,17 @@
 import React from "react"
 import Img from 'gatsby-image'
-import { Helmet } from 'react-helmet'
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
 
 const About = ({data}) => (
 
   <Layout>
     <SEO title="About Me" />
-    <Helmet>
-      <body style="background: #CAD2C5"></body>
-    </Helmet>
 
     <div className="columns" style={{marginBottom: "2em"}}>
       <div className="column" style={{padding: 0}}>
-        {/* <figure className="image"> */}
-          <Img fluid={data.portrait.childImageSharp.fluid} style={{height: "100%"}} />
-        {/* </figure> */}
+        <Img fluid={data.portrait.childImageSharp.fluid} style={{height: "100%"}} />
       </div>
       <div className="column has-background-dark has-text-centered has-text-white" style={{padding: 0}}>
         <div style={{padding: "2em"}}>

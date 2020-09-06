@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from 'react-helmet'
 // import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
@@ -10,9 +9,6 @@ const AddOns = () => (
 
   <Layout>
     <SEO title="Products" />
-    <Helmet>
-      <body style="background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('https://res.cloudinary.com/nsmedira/image/upload/f_auto,q_auto/v1599046998/background_rnquix.jpg') no-repeat center center fixed ;" />
-    </Helmet>
 
     <div className="has-text-centered has-text-white" style={{marginBottom: "2em"}}>
       <h1>Additional Services</h1>
