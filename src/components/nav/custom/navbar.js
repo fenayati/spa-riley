@@ -1,8 +1,10 @@
 // PACKAGES
 import React from 'react'
-import NavSegment from './nav_segment'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+
+// COMPONENTS
+import NavList from './nav_list'
 
 // import '../../../styles/layout/navbar.css'
 
@@ -22,7 +24,13 @@ const Navbar = () => {
         `
     )    
 
-    console.log(data)
+    function openNav() {
+        document.getElementById('side-nav').style.width = "250px"
+    }
+
+    function closeNav() {
+        document.getElementById('side-nav').style.width = "0"
+    }
 
     return(
         <div id="main_menu" style={{width: "100%", position: "relative", backgroundColor: "white", height: 110}}>
@@ -43,8 +51,13 @@ const Navbar = () => {
                     <Img fluid={data.logo.childImageSharp.fluid} style={{width: 150, maxHeight: "100%"}} />
                 </Link>
             </div>
+
+            {/* 09.06.20 - HAMBURGER ICON */}
+            <span id="hamburger" style={{fontSize: 30, cursor: "pointer"}} onClick={openNav}>&#9776;</span>
+
             <div className="inner_main_menu" style={{margin: "0 auto", width: "90%"}}>
-                <ul 
+                {/* 09.06.20 - CONVERT NAVLIST TO A COMPONENT SO CAN BE USED IN THE SIDE NAV */}
+                {/* <ul 
                     style={{
                         margin: 0, 
                         padding: 0, 
@@ -53,8 +66,6 @@ const Navbar = () => {
                         paddingTop: 31
                     }}
                 >
-                    {/* REPLACE NAV SEGMENT w/ BASIC LINK */}
-                    {/* <NavSegment label="Services"/> */}
                     <li>
                         <Link>Services</Link>
                         <ul>
@@ -63,12 +74,19 @@ const Navbar = () => {
                             <NavSegment path="/services/add-ons" label="Add-Ons" />
                         </ul>
                     </li>
-
                     <NavSegment path="/products" label="Products"/>
                     <NavSegment path="/about" label="About Me"/>
                     <NavSegment path="/contact" label="Contact"/>
-                </ul>
+                </ul> */}
+                <NavList />
             </div>
+
+            {/* 09.06.20 - SIDENAV DIV */}
+            <div id="side-nav" className="side-nav">
+                <button className="closebtn" style={{cursor: "pointer"}} onClick={closeNav}>&times;</button>
+                <NavList />
+            </div>
+
         </div>
     )
 
