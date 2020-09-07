@@ -33,7 +33,18 @@ const Navbar = () => {
     }
 
     return(
-        <div id="main_menu" style={{width: "100%", position: "relative", backgroundColor: "white", height: 110}}>
+        <div 
+            id="navbar" 
+            style={{
+                top: 0, 
+                width: "100%", 
+                // position: "relative",
+                position: "fixed", 
+                backgroundColor: "white", 
+                height: 110,
+                zIndex: 1
+            }}
+        >
             <div 
                 className="logo_area" 
                 style={{
