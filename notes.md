@@ -192,3 +192,9 @@ The `graphql` query can only be used in page components. For non-page components
 # Push to Netlify
 
 The environment variables have to begin with `GATSBY_` in order to be available by client JS in browser.
+
+# Update site metadata
+
+In file `gatsby-config.js`: 
+1. Under `siteMetaData`, change site title and description
+2. Under plugin `gatsby-plugin-manifest`, change path to logo
