@@ -43,7 +43,16 @@ const Layout = ({ children, maxWidth }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <main 
+          style={{
+
+            // 09.07.20 - NOW THAT THE NAVBAR IS FIXED, PUSH REST OF PAGE DOWN COMMENSURATELY. NAVBAR IS 110PX
+            paddingTop: 110
+            
+          }}
+        >
+          {children}
+        </main>
         <footer className="has-text-white">
           © {new Date().getFullYear()}, Spa Riley, LLC
           {/* {` `}
