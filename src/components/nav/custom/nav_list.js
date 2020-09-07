@@ -7,14 +7,14 @@ import NavSegment from './nav_segment'
 
 const NavList = () => {
     return (
-        <ul 
-            style={{
-                margin: 0, 
-                padding: 0, 
-                listStyle: "none", 
-                textAlign: "right", 
-                paddingTop: 31
-            }}
+        <ul id="main-menu" 
+            // style={{
+            //     margin: 0, 
+            //     padding: 0, 
+            //     listStyle: "none", 
+            //     textAlign: "right", 
+            //     paddingTop: 31
+            // }}
         >
             <li>
                 <Link>Services</Link>
