@@ -232,7 +232,7 @@ const Contact = () => {
     const googleMaps = document.createElement('script')
     googleMaps.id = idLib
     googleMaps.defer = true
-    googleMaps.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&callback=initMap`
+    googleMaps.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GOOGLE_MAPS_API_KEY}&callback=initMap`
     document.body.appendChild(googleMaps)
   }
 
