@@ -188,3 +188,7 @@ Riley wants a nav bar with the logo in the center and the links to the left and 
 ### GraphQL Queries in non-page Components
 
 The `graphql` query can only be used in page components. For non-page components, use `useStaticQuery` inside the component.
+
+# Push to Netlify
+
+The environment variables have to begin with `GATSBY_` in order to be available by client JS in browser.
