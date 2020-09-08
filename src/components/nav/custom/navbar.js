@@ -13,7 +13,7 @@ const Navbar = () => {
     const data = useStaticQuery (
         graphql`
             query {
-                logo: file(relativePath: {eq: "logo_transparent.png"}) {
+                logo: file(relativePath: {eq: "logo_transparent_multi_v2.png"}) {
                     childImageSharp {
                         fluid(maxWidth: 300) {
                         ...GatsbyImageSharpFluid
