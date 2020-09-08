@@ -41,6 +41,11 @@ const Layout = ({ children, maxWidth }) => {
           // maxWidth: 960,
           maxWidth: maxWidth,
           padding: `0 1.0875rem 1.45rem`,
+
+          // 09.08.20 - ATTEMPTS TO REMOVE WHITESPACE
+          // overflowY: "scroll"
+          // minHeight: "100%"
+
         }}
       >
         <main 
