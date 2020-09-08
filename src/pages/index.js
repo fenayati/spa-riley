@@ -18,7 +18,14 @@ const IndexPage = ( {data} ) => (
     <div className="container">
       <div className="columns">
         <div className="column">
-          <h1 className="has-text-white" style={{fontSize: "72px"}}>Spa Riley: Putting Self Love First</h1>
+          <h1 
+            style={{
+              fontSize: "72px", 
+              // color: "#255957"
+              color: "white"
+            }}
+          >Spa Riley: Putting Self Love First
+        </h1>
         </div>
         
         {/* <div className="column" style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}> */}
