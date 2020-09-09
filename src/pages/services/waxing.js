@@ -47,19 +47,12 @@ const Waxing = ( {data} ) => {
 
       <SEO title="Products" />
 
-      <div className="container">
-        <div className="columns">
+      <div className="columns" style={{marginBottom: "2em"}}>
 
-          <div className="column">
-            <Img fluid={data.waxingLegs.childImageSharp.fluid} />
-          </div>
-          <div className="column">
-            <h2 className="has-text-centered has-text-white" style={{textTransform: "uppercase"}}>Waxing</h2>
+        <div className="column has-text-centered has-text-white" style={{backgroundColor: "#2f3e46", padding: 0}}>
+          <div style={{padding: "2em"}}>
+            <h2 className="has-text-centered" style={{textTransform: "uppercase", color: "#cad2c5"}}>Waxing</h2>
             <div>
-              
-              {/* <h3 className="has-text-white" style={{marginBottom: 0}}>Half Leg/Full Leg</h3>
-              <p className="has-text-white">$30-$50</p> */}
-              {/* <WaxingService service="Half Leg/Full Leg" price="$30-$50" /> */}
               {
                 waxingServices.map(service => 
                   <WaxingService 
@@ -68,10 +61,14 @@ const Waxing = ( {data} ) => {
                   />
                 )
               }
-
             </div>
           </div>
         </div>
+
+        <div className="column" style={{padding: 0}}>
+          <Img fluid={data.waxingLegs.childImageSharp.fluid} />
+        </div>
+
       </div>
 
     </Layout>
