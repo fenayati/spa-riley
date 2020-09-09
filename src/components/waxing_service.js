@@ -3,9 +3,9 @@ import React from "react"
 const WaxingService = ( {service, price} ) => {
 
     return(
-        <div>
-            <h3 className="has-text-white" style={{marginBottom: 0}}>{service}</h3>
-            <p className="has-text-white">{price}</p>
+        <div style={{color: "#cad2c5"}}>
+            <h3 style={{fontFamily: "playfair display", marginBottom: 0}}>{service}</h3>
+            <p style={{fontFamily: "playfair display"}}>{price}</p>
         </div>
     )
 
