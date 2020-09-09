@@ -13,7 +13,7 @@ import '../styles/pages/index.css'
 const IndexPage = ( {data} ) => (
   <Layout>
 
-    <SEO title="Home" />
+    <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
     <div className="container">
       <div className="columns">
@@ -55,6 +55,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ogImagePath: file(relativePath: {eq: "logo_transparent_multi_v3.png"}) {
+      childImageSharp {
+        fixed {
+          src
         }
       }
     }
