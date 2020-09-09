@@ -198,3 +198,5 @@ The environment variables have to begin with `GATSBY_` in order to be available 
 In file `gatsby-config.js`: 
 1. Under `siteMetaData`, change site title and description
 2. Under plugin `gatsby-plugin-manifest`, change path to logo
+
+# [Add OpenGraph Image to Gatsby Site](https://juliangaramendy.dev/custom-open-graph-images-in-gatsby-blog/)
