@@ -10,7 +10,7 @@ const AddOns = () => (
   <Layout>
     <SEO title="Products" />
 
-    <div className="has-text-centered add-ons" style={{marginBottom: "2em", color: "#255957"}}>
+    <div className="has-text-centered add-ons" style={{marginBottom: "2em", color: "#cad2c5", backgroundColor: "#2f3e46", padding: "2em"}}>
       <h1>Additional Services</h1>
       <h4>Can be added to a custom facial or purchased as a stand alone service.</h4>
       <p>Microdermabrasion - 30 minutes - $45</p>
