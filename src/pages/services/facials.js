@@ -14,7 +14,7 @@ const Facials = ( {data} ) => {
       image: data.customFacial.childImageSharp.fluid, 
       title: "Custom Facial", 
       subtitle: "60 min, $200", 
-      description: "This nourishing treatment will make you shine. Discover a San Francisco spa where you’ll feel awakened, balanced, and rested within a warm, welcoming environment. Reconnect with yourself by experiencing our unique and soothing Skin Care. Find serenity and balance with one of our skilled practitioners. Book your appointment today."
+      description: "This nourishing treatment will make you shine."
     },
 
     {
@@ -94,13 +94,6 @@ export const query = graphql`
       }
     }
     antiAgingFacial: file(relativePath: {eq: "facials/facial_3/facial_3_square.jpeg"}) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    massageBodywork: file(relativePath: {eq: "facials/facial_4/facial_4.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
