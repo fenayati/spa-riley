@@ -66,7 +66,7 @@ const Waxing = ( {data} ) => {
         </div>
 
         <div className="column" style={{padding: 0}}>
-          <Img fluid={data.waxingLegs.childImageSharp.fluid} />
+          <Img fluid={data.waxingLegs.childImageSharp.fluid} style={{height: "100%"}}/>
         </div>
 
       </div>
