@@ -8,6 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+
 
 import Header from "./header"
 
@@ -15,6 +18,7 @@ import Header from "./header"
 import '../styles/sass/mystyles.scss'
 import "../styles/layout/layout.css"
 import '../styles/layout/navbar.css'
+import '../styles/layout/footer.css'
 
 const Layout = ({ children, maxWidth }) => {
   const data = useStaticQuery(graphql`
@@ -30,6 +34,8 @@ const Layout = ({ children, maxWidth }) => {
   if (maxWidth === undefined){
     maxWidth = 960
   }
+
+  const faSize = "2x"
 
   return (
     <>
@@ -58,12 +64,16 @@ const Layout = ({ children, maxWidth }) => {
         >
           {children}
         </main>
-        <footer className="has-text-white">
-          © {new Date().getFullYear()}, Spa Riley, LLC
-          {/* {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> */}
-        </footer>
       </div>
+      <footer className="fixed-footer nav-text">
+        <p style={{position: "absolute", top: "27px", marginBottom: 0, marginLeft: "15px"}}>© {new Date().getFullYear()}, Spa Riley, LLC</p>
+        
+        <ul className="social-icons">
+          <li><FontAwesomeIcon icon={faInstagram} size={faSize}/></li>
+          <li><FontAwesomeIcon icon={faFacebookSquare} size={faSize}/></li>
+        </ul>
+
+      </footer>
     </>
   )
 }
