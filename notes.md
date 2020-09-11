@@ -205,3 +205,5 @@ In file `gatsby-config.js`:
 
 ## [Font Awesome in React](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
 - Also install `gatsby-plugin-fontawesome-css` to insert all icons during render.
+
+## [Adding social icons with cool effect](https://www.youtube.com/watch?v=woVuUbDOeMk&list=LLXsSQVI4TeCG63G9eiE2_wA&index=2&t=0s)
