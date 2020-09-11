@@ -1,5 +1,5 @@
 /* 08.29.20 */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap&family=Nunito:wght@200&family=Cabin&display=swap") ;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap&family=Cabin&display=swap") ;
 
 html {
   font-family: sans-serif;
@@ -465,9 +465,6 @@ p {
   padding-top: 0;
   margin-bottom: 1.45rem;
 
-  /* 08.29.20: ADD FONT: NUNITO */
-  font-family: 'Nunito', sans-serif;
-
 }
 figure {
   margin-left: 0;
@@ -706,4 +703,9 @@ pre tt:after {
 
 .add-ons p {
   font-size: 1.5em
+}
+
+.nav-text {
+  color: #2f3E46 ;
+  font-family: "playfair display"
 }
