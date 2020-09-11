@@ -200,3 +200,8 @@ In file `gatsby-config.js`:
 2. Under plugin `gatsby-plugin-manifest`, change path to logo
 
 # [Add OpenGraph Image to Gatsby Site](https://juliangaramendy.dev/custom-open-graph-images-in-gatsby-blog/)
+
+# Footer
+
+## [Font Awesome in React](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+- Also install `gatsby-plugin-fontawesome-css` to insert all icons during render.
