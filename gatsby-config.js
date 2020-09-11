@@ -28,6 +28,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
+    `gatsby-plugin-fontawesome-css`
 
     // 08.28.20 - ADD GOOGLE FONTS PREFETCH
     // {
