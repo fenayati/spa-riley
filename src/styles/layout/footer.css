@@ -1,0 +1,25 @@
+.fixed-footer {
+    position: fixed ;
+    bottom: 0 ;
+    height: 75px ;
+    width: 100% ;
+    background-color: white ;
+}
+
+.social-icons {
+    float: right
+}
+
+.social-icons li {
+    list-style: none ;
+    /* margin: 10px 30px ; */
+    display: inline-block ;
+    padding: 20px 20px ;
+    color: #2f3E46 ;
+    transition: .5s
+}
+
+.social-icons li:hover {
+    color: #84a98c ;
+    transition: .5s
+}
