@@ -1,5 +1,4 @@
 // PACKAGES
-import { Link } from 'gatsby'
 import React from 'react'
 
 // COMPONENTS
@@ -7,17 +6,9 @@ import NavSegment from './nav_segment'
 
 const NavList = () => {
     return (
-        <ul id="main-menu" 
-            // style={{
-            //     margin: 0, 
-            //     padding: 0, 
-            //     listStyle: "none", 
-            //     textAlign: "right", 
-            //     paddingTop: 31
-            // }}
-        >
+        <ul id="main-menu">
             <li>
-                <Link>Services</Link>
+                <a name="services">Services</a>
                 <ul>
                     <NavSegment path="/services/facials" label="Facials" />
                     <NavSegment path="/services/waxing" label="Waxing" />

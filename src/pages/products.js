@@ -40,7 +40,7 @@ const Products = () => {
       <div className="container">
 
         {/* 08.30.20: EMBED INSTAGRAM FEED */}
-        <div class='embedsocial-instagram' data-ref={process.env.GATSBY_EMBED_SOCIAL_DATA_REF} style={{}}></div>
+        <div className='embedsocial-instagram' data-ref={process.env.GATSBY_EMBED_SOCIAL_DATA_REF} style={{}}></div>
         {/* PUT THE SCRIPT INSIDE USEFFECT HOOK */}
         {/* <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/in.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialInstagramScript"));</script> */}
 

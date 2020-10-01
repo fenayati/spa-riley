@@ -13,7 +13,7 @@ const Navbar = () => {
     const data = useStaticQuery (
         graphql`
             query {
-                logo: file(relativePath: {eq: "logo_transparent_multi_v3.png"}) {
+                logo: file(relativePath: {eq: "logo_transparent_multi_v4.png"}) {
                     childImageSharp {
                         fluid(maxWidth: 300) {
                         ...GatsbyImageSharpFluid
@@ -64,7 +64,19 @@ const Navbar = () => {
             </div>
 
             {/* 09.06.20 - HAMBURGER ICON */}
-            <span id="hamburger" style={{fontSize: 30, cursor: "pointer"}} onClick={openNav}>&#9776;</span>
+            <span 
+                id="hamburger" 
+                style={{
+                    fontSize: 30, 
+                    cursor: "pointer"
+                }} 
+                onClick={openNav}
+                onKeyDown={openNav}
+                role="button"
+                tabIndex="0"
+            >
+                &#9776;  
+            </span>
 
             <div className="inner_main_menu" style={{margin: "0 auto", width: "90%"}}>
                 {/* 09.06.20 - CONVERT NAVLIST TO A COMPONENT SO CAN BE USED IN THE SIDE NAV */}
