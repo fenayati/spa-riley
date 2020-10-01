@@ -34,7 +34,7 @@ const IndexPage = ( {data} ) => (
           {/* 08.29.20 / USE GATSBY-IMAGE TO IMPORT THE IMAGES */}
           {/* <Image /> */}
           {/* <img src={rocks} /> */}
-          <Img fluid={data.tableHerbs.childImageSharp.fluid} />
+          <Img fluid={data.stones.childImageSharp.fluid} />
         
         </div>
       </div>
@@ -51,7 +51,7 @@ export default IndexPage
 // 08.29.20 / ADD GRAPH QL QUERY
 export const query = graphql`
   query {
-    tableHerbs: file(relativePath: {eq: "index/table-herbs.jpg"}) {
+    stones: file(relativePath: {eq: "index/stones.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
