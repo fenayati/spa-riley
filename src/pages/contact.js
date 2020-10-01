@@ -278,7 +278,13 @@ const Contact = () => {
       {/* <h2 className="has-text-white">Location</h2> */}
 
       <div className="container">
-        <div className="has-background-dark has-text-white columns" style={{minHeight: 200}}>
+        <div 
+          className="has-text-white columns" 
+          style={{
+            minHeight: 200,
+            backgroundColor: "#2f3e46"
+          }}
+        >
 
           {/* CONTACT INFO */}
           <div className="column" style={{margin: "1em"}}>
