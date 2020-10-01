@@ -4,7 +4,7 @@ import React from "react"
 // COMPONENTS
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import FacialCard from '../../components/facial_card'
+import FacialRow from '../../components/facials/facial_row'
 
 const Facials = ( {data} ) => {
 
@@ -12,23 +12,44 @@ const Facials = ( {data} ) => {
 
     {
       image: data.customFacial.childImageSharp.fluid, 
-      title: "Custom Facial", 
-      subtitle: "60 min, $200", 
-      description: "This nourishing treatment will make you shine."
+      title: "Acne Facial", 
+      subtitle: "75 min, $125", 
+      description: "Includes steaming, deep cleanse, extractions, detoxifying mask, LED blue light for killing bacteria and stopping the growth of new bacteria, ending with a soothing toner, recovery oil and SPF."
+    },
+
+    {
+      image: data.customFacial.childImageSharp.fluid, 
+      title: "Signature Facial", 
+      subtitle: "60 min, $100", 
+      description: "Steam, cleanse, custom mask, extractions if needed, gua sha, ultrasonic skin scrubber, hand and arm massage, eye cream, serum/moisturizer, SPF."
+    },
+
+    {
+      image: data.customFacial.childImageSharp.fluid, 
+      title: "Hyperpigmentation Facial", 
+      subtitle: "60 min, $125", 
+      description: "A facial targeted towards battling sun damage and discoloration, using a peel to lightly resurface the skin and prompt new cell turnover, vitamin C mask, vitamin C serum, hyaluronic acid moisturizer to fight dry skin and balance out the peel, ending with an SPF."
+    },
+
+    {
+      image: data.customFacial.childImageSharp.fluid, 
+      title: "Hydrafacial", 
+      subtitle: "60 min, $150", 
+      description: "Deep cleanse, extract and hydrate with pressurized water that is best for more sensitive skin types. This facial will help skin texture, reduce discoloration, dehydration, pore size and leave skin with a radiant glow for up to a week with no down time."
     },
 
     {
       image: data.dualExfoliation.childImageSharp.fluid, 
       title: "Dual Exfoliation", 
-      subtitle: "60 min, $150", 
-      description: "Experience a deep cleansing and leave with baby soft skin. A combination of Microdermabrasion and derma planing removes dead skin cell build up, unclogs pores and gets rid of unwanted peach fuzz."
+      subtitle: "75 min, $150", 
+      description: "Microdermabrasion and Dermaplaning to get rid of dead skin cell build up and leave skin feeling smooth and youthful. Toning, cleansing, serum, moisturizer, SPF."
     },
 
     {
       image: data.antiAgingFacial.childImageSharp.fluid, 
-      title: "Anti Aging Facial", 
-      subtitle: "30 min, $190", 
-      description: "Rewind the clock with this facial targeted towards those with mature or sun damaged skin. Using microcurrent technology to lift, contour and decrease wrinkles. Red LED light for anti-aging. Includes mask."
+      title: "Relaxing Facial", 
+      subtitle: "90 min, $125", 
+      description: "Perfect for unwinding, using hot stones in combination with jade rollers to leave the skin feeling refreshed and awake. Includes a longer, hand, and arm massage with the option of a scalp massage. Soothing mask is used and followed up with toner, moisturizer and SPF."
     },
 
     // {
@@ -42,7 +63,17 @@ const Facials = ( {data} ) => {
 
   const numServices = facialServices.length
 
-  const columnSize = 12 % numServices === 0 ? "is-" + 12/numServices : ""
+  // number of elements we want per row
+  const productsPerRow = 3
+
+  // array of N elements, where N is the number of rows needed
+  const rows = Math.ceil( numServices / productsPerRow )
+
+  // chunk the products into the array of rows
+  const productRows = []
+  for ( let i = 0 ; i < rows ; i++ ) {
+    productRows.push(facialServices.slice(i * productsPerRow, i * productsPerRow + productsPerRow))
+  }
 
   return (  
     <Layout maxWidth="90%">
@@ -51,23 +82,13 @@ const Facials = ( {data} ) => {
 
       {/* 08.29.20: ADD BULMA COLUMNS  */}
       <div className="container">
-        
-        <div className="columns">
 
-          {/* 08.30.20: MAP THE FACIALS BULMA CARD COMPONENT */}
-          {
-            facialServices.map(service => 
-              <FacialCard 
-                image={service.image} 
-                title={service.title} 
-                subtitle={service.subtitle} 
-                description={service.description}
-                columnSize={columnSize}
-              />
-            )
-          }
+        {        
+          productRows.map( (row, i) =>
+            <FacialRow key={i} products={row}/>
+          )
+        }
 
-        </div>
       </div>
 
     </Layout>
