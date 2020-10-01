@@ -70,7 +70,6 @@ const Layout = ({ children, maxWidth }) => {
         
         <ul className="social-icons">
           <li><FontAwesomeIcon icon={faInstagram} size={faSize}/></li>
-          <li><FontAwesomeIcon icon={faFacebookSquare} size={faSize}/></li>
         </ul>
 
       </footer>
