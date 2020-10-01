@@ -34,7 +34,10 @@ const IndexPage = ( {data} ) => (
           {/* 08.29.20 / USE GATSBY-IMAGE TO IMPORT THE IMAGES */}
           {/* <Image /> */}
           {/* <img src={rocks} /> */}
-          <Img fluid={data.stones.childImageSharp.fluid} />
+          <Img 
+            fluid={data.stones.childImageSharp.fluid} 
+            style={{border: "10px solid white"}}
+          />
         
         </div>
       </div>
