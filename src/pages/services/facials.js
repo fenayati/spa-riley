@@ -81,7 +81,7 @@ const Facials = ( {data} ) => {
       <SEO title="Facials" />
 
       {/* 08.29.20: ADD BULMA COLUMNS  */}
-      <div className="container">
+      <div className="container site-font">
 
         {        
           productRows.map( (row, i) =>
