@@ -12,9 +12,26 @@ const FacialCard = ( {image, title, subtitle, description, columnSize} ) => {
                     </figure>
                 </div>
                 <div className="card-content">
-                    <div className="content" style={{color: "#CAD2C5"}}>
-                        <h2 className="has-text-centered" style={{textTransform: "uppercase", color: "#CAD2C5"}}>{title}</h2>
-                        <h3 className="has-text-centered" style={{color: "#CAD2C5"}}>{subtitle}</h3>
+                    <div 
+                        className="content" 
+                        style={{color: "white"}}
+                    >
+                        <h2 
+                            className="has-text-centered" 
+                            style={{
+                                textTransform: "uppercase", 
+                                color: "white"
+                            }}>
+                                {title}
+                            </h2>
+                        <h3 
+                            className="has-text-centered" 
+                            style={{
+                                color: "white"
+                            }}
+                        >
+                            {subtitle}
+                        </h3>
                         <p className="has-text-centered">
                             {description}
                         </p>

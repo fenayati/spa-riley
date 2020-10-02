@@ -61,7 +61,7 @@ const Waxing = ( {data} ) => {
               className="has-text-centered" 
               style={{
                 textTransform: "uppercase", 
-                color: "#cad2c5"
+                color: "white"
               }}
             >
               Waxing

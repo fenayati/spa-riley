@@ -62,7 +62,7 @@ const AddOns = ({data}) => (
           className="has-text-centered add-ons column" 
           style={{
             marginBottom: "2em", 
-            color: "#cad2c5", 
+            color: "white", 
             backgroundColor: "#2f3e46", 
             padding: "2em"
           }}
