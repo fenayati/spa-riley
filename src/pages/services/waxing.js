@@ -45,9 +45,14 @@ const Waxing = ( {data} ) => {
 
     <Layout>
 
-      <SEO title="Products" />
+      <SEO title="Waxing" />
 
-      <div className="columns site-font" style={{marginBottom: "2em"}}>
+      <div 
+        className="columns site-font" 
+        style={{
+          marginBottom: "2em",
+          marginTop: "4em"
+        }}>
 
         <div 
           className="column has-text-centered has-text-white" 
@@ -83,7 +88,13 @@ const Waxing = ( {data} ) => {
           className="column" 
           style={{padding: 0}}
         >
-          <Img fluid={data.waxingLegs.childImageSharp.fluid} style={{height: "100%"}}/>
+          <Img 
+            fluid={data.waxingLegs.childImageSharp.fluid} 
+            style={{
+              height: "100%",
+              border: "10px solid #2f3e46"
+            }}
+          />
         </div>
 
       </div>

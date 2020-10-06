@@ -10,7 +10,12 @@ const AddOns = ({data}) => (
   <Layout>
     <SEO title="Products" />
 
-    <div className="container site-font">
+    <div 
+      className="container site-font"
+      style={{
+        marginBottom: "2.5em"
+      }}
+    >
 
       <div 
         className="columns" 
@@ -26,11 +31,17 @@ const AddOns = ({data}) => (
           className="column" 
           style={{
             padding: 0, 
-            height: 200, 
+            height: 300, 
             width: "100%"
           }}
         >
-          <Img fluid={data.addOns.childImageSharp.fluid} style={{height: "100%"}} />
+          <Img 
+            fluid={data.addOns.childImageSharp.fluid} 
+            style={{
+              height: "100%",
+              border: "10px solid #2f3e46"
+            }} 
+          />
         </div>
 
       </div>
@@ -61,10 +72,10 @@ const AddOns = ({data}) => (
         <div 
           className="has-text-centered add-ons column" 
           style={{
-            marginBottom: "2em", 
+            // marginBottom: "2em", 
             color: "white", 
             backgroundColor: "#2f3e46", 
-            padding: "2em"
+            // padding: "2em"
           }}
         >
 
@@ -89,7 +100,7 @@ export default AddOns
 
 export const query = graphql`
   query {
-    addOns: file(relativePath: {eq: "index/stones.jpg"}) {
+    addOns: file(relativePath: {eq: "additional-services/stones.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
