@@ -11,7 +11,13 @@ const About = ({data}) => (
 
     <div className="columns" style={{marginBottom: "2em"}}>
       <div className="column" style={{padding: 0}}>
-        <Img fluid={data.portrait.childImageSharp.fluid} style={{height: "100%"}} />
+        <Img 
+          fluid={data.portrait.childImageSharp.fluid} 
+          style={{
+            height: "100%",
+            border: "10px solid #2f3e46"
+          }} 
+        />
       </div>
       <div className="column has-text-centered has-text-white" style={{backgroundColor: "#2f3e46", padding: 0}}>
         <div style={{padding: "2em"}}>
