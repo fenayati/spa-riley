@@ -18,7 +18,7 @@ const Facials = ( {data} ) => {
     },
 
     {
-      image: data.customFacial.childImageSharp.fluid, 
+      image: data.facialDude.childImageSharp.fluid, 
       title: "Signature Facial", 
       subtitle: "60 min, $100", 
       description: "Steam, cleanse, custom mask, extractions if needed, gua sha, ultrasonic skin scrubber, hand and arm massage, eye cream, serum/moisturizer, SPF."
@@ -100,7 +100,7 @@ export default Facials
 // 08.29.20 / ADD GRAPH QL QUERY
 export const query = graphql`
   query {
-    customFacial: file(relativePath: {eq: "facials/facial_1/facial_1_square.jpg"}) {
+    customFacial: file(relativePath: {eq: "facials/smiling-lady.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
@@ -115,6 +115,13 @@ export const query = graphql`
       }
     }
     antiAgingFacial: file(relativePath: {eq: "facials/facial_3/facial_3_square.jpeg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    facialDude: file(relativePath: {eq: "facials/facial-dude.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
