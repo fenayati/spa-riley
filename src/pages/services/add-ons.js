@@ -2,7 +2,7 @@ import React from "react"
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 
-import Layout from "../../components/layout"
+import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 
 const AddOns = ({data}) => (
@@ -13,7 +13,7 @@ const AddOns = ({data}) => (
     <div 
       className="container site-font"
       style={{
-        marginBottom: "2.5em"
+        // marginBottom: "2.5em"
       }}
     >
 
