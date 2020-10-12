@@ -2,7 +2,7 @@
 import React from "react"
 
 // COMPONENTS
-import Layout from "../../components/layout"
+import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 import FacialRow from '../../components/facials/facial_row'
 
@@ -81,7 +81,13 @@ const Facials = ( {data} ) => {
       <SEO title="Facials" />
 
       {/* 08.29.20: ADD BULMA COLUMNS  */}
-      <div className="container site-font">
+      <div 
+        className="container site-font"
+        style={{
+          paddingTop: "1rem",
+          paddingBottom: "1rem"
+        }}
+      >
 
         {        
           productRows.map( (row, i) =>
