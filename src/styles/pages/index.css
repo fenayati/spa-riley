@@ -3,9 +3,15 @@ h1 {
 }
 
 @media only screen and (max-height: 653.09px) {
+
+    .window-index {
+      height: auto
+    }
+
     .vertical-center-index {
       position: relative;
       top: auto ;
       transform: none ;
     }
+    
 }
