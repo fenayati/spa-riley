@@ -1,13 +1,17 @@
 import React from 'react'
 
-const Window = ( {children} ) => {
+const Window = ( {children, classes} ) => {
+
+    let className = ["window"]
+    
+    if ( classes !== undefined ) {
+        className.push(classes)
+    }
+
+    className = className.join(" ")
+
     return (
-        <div 
-            style={{ 
-            height: "calc(100vh - ( 75px + 110px ))",
-            position: "relative"
-            }}
-        >
+        <div className={className}>
             {children}
         </div>
     )
