@@ -1,14 +1,11 @@
 import React from 'react'
 
+// UTILS
+import { classNameString } from '../../utils'
+
 const VerticalCenter = ( {children, classes} ) => {
 
-    let className = ["vertical-center"]
-    
-    if ( classes !== undefined ) {
-        className.push(classes)
-    }
-
-    className = className.join(" ")
+    let className = classNameString("vertical-center", classes)
 
     return (
         <div className={className}>

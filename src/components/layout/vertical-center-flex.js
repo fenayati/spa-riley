@@ -1,14 +1,11 @@
 import React from 'react'
 
+// UTILS
+import { classNameString } from '../../utils'
+
 const VerticalCenterFlex = ( {children, classes} ) => {
 
-    let className = ["vertical-center-flex"]
-    
-    if ( classes !== undefined ) {
-        className.push(classes)
-    }
-
-    className = className.join(" ")
+    let className = classNameString("vertical-center-flex", classes)
 
     return (
         <div className={className}>

@@ -1,14 +1,11 @@
 import React from 'react'
 
+// UTILS
+import { classNameString } from '../../utils'
+
 const Window = ( {children, classes} ) => {
 
-    let className = ["window"]
-    
-    if ( classes !== undefined ) {
-        className.push(classes)
-    }
-
-    className = className.join(" ")
+    let className = classNameString("window", classes)
 
     return (
         <div className={className}>

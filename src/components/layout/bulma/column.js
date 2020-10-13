@@ -1,14 +1,11 @@
 import React from 'react'
 
+// UTILS
+import { classNameString } from '../../../utils'
+
 const Column = ( {children, classes, styles} ) => {
 
-    let className = ["column"]
-    
-    if ( classes !== undefined ) {
-        className.push(classes)
-    }
-
-    className = className.join(" ")
+    let className = classNameString("column", classes)
 
     return (
         <div className={className} style={styles}>
