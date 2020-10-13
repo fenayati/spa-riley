@@ -18,31 +18,31 @@ const IndexPage = ( {data} ) => (
     <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
     <Window>
-        <VerticalCenter classes={["vertical-center-index"]}>
-          <Container>
-            <Columns>
-  
-              <Column>
-                <h1 
-                  style={{
-                    fontSize: "72px", 
-                    color: "white"
-                  }}
-                >
-                  Spa Riley: Putting Self Love First
-                </h1>
-              </Column>
-              
-              <Column>
-                <Img 
-                  fluid={data.stones.childImageSharp.fluid} 
-                  style={{border: "10px solid white"}}
-                />
-              </Column>
-              
-            </Columns>
-          </Container>
-        </VerticalCenter>
+      <VerticalCenter classes={["vertical-center-index"]}>
+        <Container>
+          <Columns>
+
+            <Column>
+              <h1 
+                style={{
+                  fontSize: "72px", 
+                  color: "white"
+                }}
+              >
+                Spa Riley: Putting Self Love First
+              </h1>
+            </Column>
+            
+            <Column>
+              <Img 
+                fluid={data.stones.childImageSharp.fluid} 
+                style={{border: "10px solid white"}}
+              />
+            </Column>
+            
+          </Columns>
+        </Container>
+      </VerticalCenter>
     </Window>
 
   </Layout>
