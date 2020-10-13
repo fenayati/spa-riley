@@ -1,8 +1,17 @@
 import React from 'react'
 
-const Column = ( {children} ) => {
+const Column = ( {children, classes, styles} ) => {
+
+    let className = ["column"]
+    
+    if ( classes !== undefined ) {
+        className.push(classes)
+    }
+
+    className = className.join(" ")
+
     return (
-        <div className="column">
+        <div className={className} style={styles}>
             {children}
         </div>
     )
