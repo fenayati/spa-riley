@@ -710,6 +710,13 @@ pre tt:after {
   transform: translateY(-50%);
 }
 
+.vertical-center-flex {
+  height: 100% ;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+}
+
 @media only screen and (max-height: 653.09px) {
   main {
     padding-top: 1rem ;
