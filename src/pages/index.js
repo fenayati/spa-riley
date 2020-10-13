@@ -17,7 +17,7 @@ const IndexPage = ( {data} ) => (
 
     <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
-    <Window>
+    <Window classes={["window-index"]}>
       <VerticalCenter classes={["vertical-center-index"]}>
         <Container>
           <Columns>
