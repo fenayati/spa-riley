@@ -54,9 +54,16 @@ const Waxing = ( {data} ) => {
 
       <SEO title="Waxing" />
 
-      <Window>
+      <Window classes={["window-waxing"]}>
+        
         <VerticalCenterFlex classes={["vertical-center-waxing"]}>
-          <Container styles={{paddingTop: "25px", paddingBottom: "25px"}}>
+
+          <Container 
+            styles={{
+              paddingTop: "25px", 
+              paddingBottom: "25px",
+            }}
+          >
             <Columns classes={["site-font"]} >
       
               <Column 
