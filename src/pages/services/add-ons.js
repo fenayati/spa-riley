@@ -2,8 +2,10 @@ import React from "react"
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 
+// COMPONENTS
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
+import { Columns, Column, Container } from "../../components/layout/bulma"
 
 const AddOns = ({data}) => (
 
@@ -14,13 +16,10 @@ const AddOns = ({data}) => (
       className="container site-font"
     >
 
-      <div 
-        className="columns" 
-      >
+      <Columns>
 
-        <div 
-          className="column" 
-          style={{
+        <Column 
+          styles = {{
             padding: 0, 
             height: 300, 
             width: "100%"
@@ -33,20 +32,15 @@ const AddOns = ({data}) => (
               border: "10px solid #2f3e46"
             }} 
           />
-        </div>
+        </Column>
 
-      </div>
+      </Columns>
 
-      <div 
-        className="has-text-white columns" 
-      >
+      <Columns classes={["has-text-white"]}>
 
-        <div 
-          className="has-text-centered add-ons column" 
-          style={{
-            color: "white", 
-            backgroundColor: "#2f3e46", 
-          }}
+        <Column
+          classes={["has-text-centered", "add-ons"]}
+          styles={{color: "white", backgroundColor: "#2f3e46"}}
         >
 
           <h1>Additional Services</h1>
@@ -57,9 +51,9 @@ const AddOns = ({data}) => (
           <p>LED - 20 minutes - $30</p>
           <p>Dermaplaning - 30 minutes - $30</p>
           
-        </div>
+        </Column>
 
-      </div>
+      </Columns>
 
     </div>
     
