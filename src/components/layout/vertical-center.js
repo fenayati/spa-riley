@@ -6,8 +6,9 @@ const VerticalCenter = ( {children, classes} ) => {
     
     if ( classes !== undefined ) {
         className.push(classes)
-        className = className.join(" ")
     }
+
+    className = className.join(" ")
 
     return (
         <div className={className}>
