@@ -1,50 +1,49 @@
 import React from "react"
 import { graphql } from 'gatsby'
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Img from 'gatsby-image'
+
+// COMPONENTS
+import Layout from "../components/layout/layout"
+import SEO from "../components/seo"
+import { Column, Columns, Container } from "../components/layout/bulma"
+import VerticalCenter from '../components/layout/vertical-center'
+import Window from '../components/layout/window'
 
 // STYLES
 import '../styles/pages/index.css'
-
-// IMAGES
-// import rocks from '../images/stones-167089.jpg'
 
 const IndexPage = ( {data} ) => (
   <Layout>
 
     <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
-    <div className="container">
-      <div className="columns">
-        <div className="column">
-          <h1 
-            style={{
-              fontSize: "72px", 
-              // color: "#255957"
-              color: "white"
-            }}
-          >Spa Riley: Putting Self Love First
-        </h1>
-        </div>
-        
-        {/* <div className="column" style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}> */}
-        <div className="column">
+    <Window classes={["window-index"]}>
+      <VerticalCenter classes={["vertical-center-index"]}>
+        <Container>
+          <Columns>
 
-          {/* 08.29.20 / USE GATSBY-IMAGE TO IMPORT THE IMAGES */}
-          {/* <Image /> */}
-          {/* <img src={rocks} /> */}
-          <Img 
-            fluid={data.stones.childImageSharp.fluid} 
-            style={{border: "10px solid white"}}
-          />
-        
-        </div>
-      </div>
-    </div>
-
-    {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
-    {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
+            <Column>
+              <h1 
+                style={{
+                  fontSize: "72px", 
+                  color: "white"
+                }}
+              >
+                Spa Riley: Putting Self Love First
+              </h1>
+            </Column>
+            
+            <Column>
+              <Img 
+                fluid={data.stones.childImageSharp.fluid} 
+                style={{border: "10px solid white"}}
+              />
+            </Column>
+            
+          </Columns>
+        </Container>
+      </VerticalCenter>
+    </Window>
 
   </Layout>
 )

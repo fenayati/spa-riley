@@ -1,0 +1,11 @@
+@media only screen and (max-height: 900px) {
+
+    .window-about {
+        height: auto
+    }
+
+    .vertical-center-about {
+        display: initial;
+    }
+
+}

@@ -695,10 +695,6 @@ pre tt:after {
   }
 }
 
-/* .add-ons p {
-  font-size: 1.5em
-} */
-
 .nav-text {
   color: #2f3E46 ;
   font-family: "playfair display"
@@ -706,4 +702,29 @@ pre tt:after {
 
 .site-font {
   font-family: 'Playfair Display', serif;
+}
+
+.vertical-center {
+  position: absolute ;
+  top: 50% ; 
+  transform: translateY(-50%);
+}
+
+.vertical-center-flex {
+  height: 100% ;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+}
+
+.window {
+  height: calc(100vh - ( 75px + 110px )) ;
+  position: relative
+}
+
+@media only screen and (max-height: 653.09px) {
+  main {
+    padding-top: 1rem ;
+    padding-bottom: 1rem
+  }
 }

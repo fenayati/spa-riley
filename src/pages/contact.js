@@ -1,8 +1,15 @@
 import React, { useEffect } from "react"
 import { Link } from 'gatsby' 
 
-import Layout from "../components/layout"
+// COMPONENTS
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import { Container, Columns, Column } from '../components/layout/bulma'
+import VerticalCenterFlex from "../components/layout/vertical-center-flex"
+import Window from "../components/layout/window"
+
+// CSS
+import '../styles/pages/contact.css'
 
 const Contact = () => {
 
@@ -274,44 +281,70 @@ const Contact = () => {
 
     <Layout>
       <SEO title="Contact" />
-      {/* <h1 className="has-text-white">Contact page</h1> */}
-      {/* <h2 className="has-text-white">Location</h2> */}
 
-      <div className="container">
-        <div 
-          className="has-text-white columns" 
-          style={{
-            minHeight: 200,
-            backgroundColor: "#2f3e46"
-          }}
-        >
+      <Window classes={["window-contact"]}>
 
-          {/* CONTACT INFO */}
-          <div className="column" style={{margin: "1em"}}>
-            <h1>Book Now</h1>
-            <p style={{margin: 0}}>Chagrin Falls, Ohio 44022</p>
-            <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
-            <p style={{margin: 0}}>(440) 667-9617</p>
-          </div>
+        <VerticalCenterFlex classes={["vertical-center-contact"]}>
 
-          {/* HOURS */}
-          <div className="column" style={{margin: "1em"}}>
-            <h1>Hours</h1>
-            <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
-            <p style={{margin: 0}}>Sat: 10am - 5pm</p>
-            <p style={{margin: 0}}>Sun: 10am - 5pm</p>
-          </div>
+          <Container
+            styles={{
+              paddingTop: "25px", 
+              paddingBottom: "25px",
+            }}
+          >
+      
+              <Columns 
+                classes={["has-text-white"]}
+                styles={{
+                  minHeight: 200,
+                  backgroundColor: "#2f3e46"
+                }}
+              >
+      
+                {/* CONTACT INFO */}
+                <Column
+                  styles={{
+                    margin: "1em"
+                  }}
+                >
+      
+                  <h1>Book Now</h1>
+                  <p style={{margin: 0}}>Chagrin Falls, Ohio 44022</p>
+                  <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
+                  <p style={{margin: 0}}>(440) 667-9617</p>
+      
+                </Column>
+      
+                {/* HOURS */}
+                <Column
+                  styles={{
+                    margin: "1em"
+                  }}
+                >
+      
+                  <h1>Hours</h1>
+                  <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
+                  <p style={{margin: 0}}>Sat: 10am - 5pm</p>
+                  <p style={{margin: 0}}>Sun: 10am - 5pm</p>
+      
+                </Column>
+      
+              </Columns>
+      
+              {/* <div className="columns" style={{marginBottom: "1em"}}> */}
+              <Columns>
+      
+                {/* 09.01.20: MAP DIV */}
+                <div id="map" style={{height: 400, width: "100%"}}></div>
+      
+              {/* </div> */}
+              </Columns>
+      
+          </Container>
 
-        </div>
+        </VerticalCenterFlex>
 
-        <div className="columns" style={{marginBottom: "1em"}}>
-
-          {/* 09.01.20: MAP DIV */}
-          <div id="map" style={{height: 400, width: "100%"}}></div>
-
-        </div>
-
-      </div>
+      </Window>
 
     </Layout>
 

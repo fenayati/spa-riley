@@ -9,16 +9,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 
-import Header from "./header"
+import Header from "../header"
 
 // STYLES
-import '../styles/sass/mystyles.scss'
-import "../styles/layout/layout.css"
-import '../styles/layout/navbar.css'
-import '../styles/layout/footer.css'
+import '../../styles/sass/mystyles.scss'
+import "../../styles/layout/layout.css"
+import '../../styles/layout/navbar.css'
+import '../../styles/layout/footer.css'
 
 const Layout = ({ children, maxWidth }) => {
   const data = useStaticQuery(graphql`
@@ -43,10 +43,20 @@ const Layout = ({ children, maxWidth }) => {
       <div
         className="main-div"
         style={{
-          margin: `3em auto`,
+          margin: `0px auto`,
           // maxWidth: 960,
           maxWidth: maxWidth,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `110px 1.0875rem 75px`,
+
+          // height: "calc(100vh - ( 75px + 110px ))",
+          // position: "relative",
+
+          // display: "flex", 
+          // flexDirection: "column",
+          // justifyContent: "center",
+
+          // boxSizing: "border-box", 
+          // top: "110px"
 
           // 09.08.20 - ATTEMPTS TO REMOVE WHITESPACE
           // overflowY: "scroll"
@@ -54,14 +64,7 @@ const Layout = ({ children, maxWidth }) => {
 
         }}
       >
-        <main 
-          style={{
-
-            // 09.07.20 - NOW THAT THE NAVBAR IS FIXED, PUSH REST OF PAGE DOWN COMMENSURATELY. NAVBAR IS 110PX
-            paddingTop: 110
-            
-          }}
-        >
+        <main>
           {children}
         </main>
       </div>

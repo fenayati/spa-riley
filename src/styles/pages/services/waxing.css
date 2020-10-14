@@ -1,0 +1,11 @@
+@media only screen and (max-height: 748px) {
+
+    .window-waxing {
+        height: auto
+    }
+
+    .vertical-center-waxing {
+        display: initial;
+    }
+
+}
