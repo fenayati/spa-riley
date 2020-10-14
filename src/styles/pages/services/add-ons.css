@@ -1,0 +1,11 @@
+@media only screen and (max-height: 835px) {
+
+    .window-add-ons {
+        height: auto
+    }
+
+    .vertical-center-add-ons {
+        display: initial;
+    }
+
+}
