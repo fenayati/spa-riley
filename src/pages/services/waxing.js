@@ -10,7 +10,7 @@ import Window from '../../components/layout/window'
 import VerticalCenterFlex from '../../components/layout/vertical-center-flex'
 
 // CSS
-import '../../styles/pages/waxing.css'
+import '../../styles/pages/services/waxing.css'
 
 const Waxing = ( {data} ) => {
 
