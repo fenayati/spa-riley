@@ -9,16 +9,25 @@ import { Columns, Column, Container } from "../../components/layout/bulma"
 import VerticalCenterFlex from "../../components/layout/vertical-center-flex"
 import Window from '../../components/layout/window'
 
+// CSS
+import '../../styles/pages/services/add-ons.css'
+
 const AddOns = ({data}) => (
 
   <Layout>
     <SEO title="Products" />
 
-    <Window>
+    <Window classes={["window-add-ons"]}>
 
-      <VerticalCenterFlex>
+      <VerticalCenterFlex classes={["vertical-center-add-ons"]}>
   
-        <Container classes={["site-font"]}>
+        <Container 
+          classes={["site-font"]}
+          styles={{
+            paddingTop: "25px", 
+            paddingBottom: "25px",
+          }}
+        >
     
           <Columns>
     
