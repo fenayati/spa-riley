@@ -1,0 +1,11 @@
+@media only screen and (max-height: 800px) {
+
+    .window-contact {
+        height: auto
+    }
+
+    .vertical-center-contact {
+        display: initial;
+    }
+
+}
