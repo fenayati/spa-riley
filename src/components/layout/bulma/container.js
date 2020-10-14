@@ -1,9 +1,15 @@
 import React from 'react'
 
-const Container = ( {children, styles} ) => {
+// UTILS
+import { classNameString } from '../../../utils'
+
+const Container = ( {children, styles, classes} ) => {
+
+    let className = classNameString("container", classes)
+
     return (
         <div 
-            className="container"
+            className={className}
             style={styles}
         >
             {children}
