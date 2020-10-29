@@ -11,31 +11,24 @@ const Facials = ( {data} ) => {
   const facialServices = [
 
     {
-      image: data.customFacial.childImageSharp.fluid, 
-      title: "Acne Facial", 
-      subtitle: "75 min, $125", 
-      description: "Includes steaming, deep cleanse, extractions, detoxifying mask, LED blue light for killing bacteria and stopping the growth of new bacteria, ending with a soothing toner, recovery oil and SPF."
-    },
-
-    {
-      image: data.facialDude.childImageSharp.fluid, 
-      title: "Signature Facial", 
+      image: data.acne.childImageSharp.fluid, 
+      title: "Signature", 
       subtitle: "60 min, $100", 
       description: "Steam, cleanse, custom mask, extractions if needed, gua sha, ultrasonic skin scrubber, hand and arm massage, eye cream, serum/moisturizer, SPF."
     },
 
     {
       image: data.customFacial.childImageSharp.fluid, 
-      title: "Hyperpigmentation Facial", 
+      title: "Hyperpigmentation", 
       subtitle: "60 min, $125", 
       description: "A facial targeted towards battling sun damage and discoloration, using a peel to lightly resurface the skin and prompt new cell turnover, vitamin C mask, vitamin C serum, hyaluronic acid moisturizer to fight dry skin and balance out the peel, ending with an SPF."
     },
 
     {
-      image: data.customFacial.childImageSharp.fluid, 
-      title: "Hydrafacial", 
-      subtitle: "60 min, $150", 
-      description: "Deep cleanse, extract and hydrate with pressurized water that is best for more sensitive skin types. This facial will help skin texture, reduce discoloration, dehydration, pore size and leave skin with a radiant glow for up to a week with no down time."
+      image: data.facialDude.childImageSharp.fluid, 
+      title: "Acne", 
+      subtitle: "75 min, $125", 
+      description: "Includes steaming, deep cleanse, extractions, detoxifying mask, LED blue light for killing bacteria and stopping the growth of new bacteria, ending with a soothing toner, recovery oil and SPF."
     },
 
     {
@@ -46,8 +39,15 @@ const Facials = ( {data} ) => {
     },
 
     {
+      image: data.hydrafacial.childImageSharp.fluid, 
+      title: "Hydrafacial", 
+      subtitle: "60 min, $150", 
+      description: "Deep cleanse, extract and hydrate with pressurized water that is best for more sensitive skin types. This facial will help skin texture, reduce discoloration, dehydration, pore size and leave skin with a radiant glow for up to a week with no down time."
+    },
+
+    {
       image: data.antiAgingFacial.childImageSharp.fluid, 
-      title: "Relaxing Facial", 
+      title: "Relaxing", 
       subtitle: "90 min, $125", 
       description: "Perfect for unwinding, using hot stones in combination with jade rollers to leave the skin feeling refreshed and awake. Includes a longer, hand, and arm massage with the option of a scalp massage. Soothing mask is used and followed up with toner, moisturizer and SPF."
     },
@@ -127,7 +127,21 @@ export const query = graphql`
         }
       }
     }
-    facialDude: file(relativePath: {eq: "facials/facial-dude.jpg"}) {
+    facialDude: file(relativePath: {eq: "facials/facial_dude_2.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    acne: file(relativePath: {eq: "facials/acne.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    hydrafacial: file(relativePath: {eq: "facials/hydrafacial_3.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
