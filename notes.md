@@ -129,7 +129,7 @@ body.brown {
 # 10. Google Map
 
 1. Create new project in Google Cloud console: `spa-riley`
-2. API Key: `AIzaSyBUN8_cF0KajMniudJc_TF0sPfSN2lG71w`
+2. API Key:
     - Store in `.env.development` and `.env.production` to make secure.
     - Call with `process.env.VARIABLE_NAME`
 3. Like EmbedSocial widget, can use the React Effect Hook to insert the Google Maps code onto the page.
