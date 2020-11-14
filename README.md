@@ -1,6 +1,6 @@
 # Spa Riley
 
-Check out the live site: [www.spariley.com](www.spariley.com)
+Check out the live site: [www.spariley.com](https://www.spariley.com)
 
 An image-heavy website for the business Spa Riley.
 
