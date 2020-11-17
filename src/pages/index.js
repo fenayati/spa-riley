@@ -11,6 +11,7 @@ import Window from '../components/layout/window'
 
 // STYLES
 import '../styles/pages/index.css'
+import VerticalCenterFlex from "../components/layout/vertical-center-flex"
 
 const IndexPage = ( {data} ) => (
   <Layout>
@@ -19,7 +20,7 @@ const IndexPage = ( {data} ) => (
 
     <div 
       style={{
-        marginTop: "30px",
+        // marginTop: "30px",
         height: "100px",
         backgroundColor: "#2f3E46",
         textTransform: "uppercase",
@@ -30,44 +31,58 @@ const IndexPage = ( {data} ) => (
         width: "100vw"
       }}
     >
-      15% Off Your First Service for All New Clients
+      <VerticalCenterFlex>
+        15% Off Your First Service for All New Clients
+      </VerticalCenterFlex>
+
     </div>
 
-    <Window classes={["window-index"]}>
-
-      <VerticalCenter classes={["vertical-center-index"]}>
-        <Container>
-
-          <Columns>
-
-            <Column
-              styles={{
-                backgroundColor: "#2f3e46", 
-                padding: 0
-              }}
-            >
-              <h1 
-                style={{
-                  fontSize: "72px", 
-                  color: "white",
-                  marginLeft: "20px"
+    <div 
+      style={{
+        margin: `0px auto`,
+        maxWidth: 960,
+        paddingLeft: `1.0875rem`,
+        paddingRight: `1.0875rem`
+      }}
+    >
+      <Window classes={["window-index"]}>
+  
+        <VerticalCenter classes={["vertical-center-index"]}>
+          <Container>
+  
+            <Columns>
+  
+              <Column
+                styles={{
+                  backgroundColor: "#2f3e46", 
+                  padding: 0,
                 }}
               >
-                Spa Riley: Putting Self Love First
-              </h1>
-            </Column>
-            
-            <Column styles={{padding: 0}}>
-              <Img 
-                fluid={data.stones.childImageSharp.fluid} 
-                style={{border: "10px solid #2f3E46"}}
-              />
-            </Column>
-            
-          </Columns>
-        </Container>
-      </VerticalCenter>
-    </Window>
+                <VerticalCenterFlex>
+                  <h1 
+                    style={{
+                      fontSize: "72px", 
+                      color: "white",
+                      marginLeft: "40px"
+                    }}
+                  >
+                    Spa Riley: Putting Self Love First
+                  </h1>
+                </VerticalCenterFlex>
+              </Column>
+              
+              <Column styles={{padding: 0}}>
+                <Img 
+                  fluid={data.stones.childImageSharp.fluid} 
+                  style={{border: "10px solid #2f3E46"}}
+                />
+              </Column>
+              
+            </Columns>
+          </Container>
+        </VerticalCenter>
+      </Window>
+    </div>
 
   </Layout>
 )
