@@ -20,8 +20,8 @@ const Contact = () => {
 
     // the location of Uluru
     var coordinates = {
-      lat: 41.4299,
-      lng: -81.3911
+      lat: 41.419795,
+      lng: -81.339451
     }
 
     // the map, centered at uluru
@@ -309,7 +309,8 @@ const Contact = () => {
                 >
       
                   <h1>Book Now</h1>
-                  <p style={{margin: 0}}>Chagrin Falls, Ohio 44022</p>
+                  <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
+                  <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
                   <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
                   <p style={{margin: 0}}>(440) 667-9617</p>
       
