@@ -17,26 +17,50 @@ const IndexPage = ( {data} ) => (
 
     <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
+    <div 
+      style={{
+        marginTop: "30px",
+        height: "100px",
+        backgroundColor: "#2f3E46",
+        textTransform: "uppercase",
+        textAlign: "center",
+        color: "white",
+        fontSize: "2em",
+        padding: 0,
+        width: "100vw"
+      }}
+    >
+      15% Off Your First Service for All New Clients
+    </div>
+
     <Window classes={["window-index"]}>
+
       <VerticalCenter classes={["vertical-center-index"]}>
         <Container>
+
           <Columns>
 
-            <Column>
+            <Column
+              styles={{
+                backgroundColor: "#2f3e46", 
+                padding: 0
+              }}
+            >
               <h1 
                 style={{
                   fontSize: "72px", 
-                  color: "white"
+                  color: "white",
+                  marginLeft: "20px"
                 }}
               >
                 Spa Riley: Putting Self Love First
               </h1>
             </Column>
             
-            <Column>
+            <Column styles={{padding: 0}}>
               <Img 
                 fluid={data.stones.childImageSharp.fluid} 
-                style={{border: "10px solid white"}}
+                style={{border: "10px solid #2f3E46"}}
               />
             </Column>
             
