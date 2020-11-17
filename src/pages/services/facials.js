@@ -67,7 +67,7 @@ const Facials = ( {data} ) => {
     },
 
     {
-      image: data.antiAgingFacial.childImageSharp.fluid, 
+      image: data.maskne.childImageSharp.fluid, 
       title: "Maskne", 
       subtitle: "75 min, $125", 
       description: "Our world has changed and it has caused an impact on the health of our skin. Wearing a face mask leads to more breakouts for people, dryer skin, rashes and in general more congestion. This facial focuses on decongesting the area of the face that is covered by masks by doing a double cleanse, extractions, clay mask and blue light for killing bacteria to help reduce the negative effects of wearing a face mask."
@@ -163,6 +163,13 @@ export const query = graphql`
       }
     }
     hydrafacial: file(relativePath: {eq: "facials/hydrafacial_3.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    maskne: file(relativePath: {eq: "facials/maskne.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
