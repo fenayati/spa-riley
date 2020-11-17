@@ -31,9 +31,9 @@ const Layout = ({ children, maxWidth }) => {
     }
   `)
 
-  if (maxWidth === undefined){
-    maxWidth = 960
-  }
+  // if (maxWidth === undefined){
+  //   maxWidth = 960
+  // }
 
   const faSize = "2x"
 
@@ -45,8 +45,10 @@ const Layout = ({ children, maxWidth }) => {
         style={{
           margin: `0px auto`,
           // maxWidth: 960,
-          maxWidth: maxWidth,
-          padding: `110px 1.0875rem 75px`,
+          // maxWidth: maxWidth,
+          paddingTop: `110px`,
+          // paddingRight: `1.0875rem`,
+          paddingBottom: `75px`
 
           // height: "calc(100vh - ( 75px + 110px ))",
           // position: "relative",

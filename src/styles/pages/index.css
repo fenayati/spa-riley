@@ -2,6 +2,10 @@ h1 {
     text-transform: uppercase ;
 }
 
+.window-index {
+  height: calc(100vh - ( 75px + 110px + 100px ) ) ;
+}
+
 @media only screen and (max-height: 653.09px) {
 
     .window-index {
