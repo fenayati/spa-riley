@@ -12,41 +12,10 @@ import VerticalCenterFlex from '../../components/layout/vertical-center-flex'
 // CSS
 import '../../styles/pages/services/waxing.css'
 
+// DATA
+import waxingServices from '../../utils/data/waxing.json'
+
 const Waxing = ( {data} ) => {
-
-  const waxingServices = [
-
-    {
-      service: "Half Leg/Full Leg",
-      price: "$30-$50"
-    },
-
-    {
-      service: "Bikini",
-      price: "$40"
-    },
-
-    {
-      service: "Stomach or Chest",
-      price: "$25"
-    },
-
-    {
-      service: "Underarms",
-      price: "$25"
-    },
-
-    {
-      service: "Brows",
-      price: "$15"
-    },
-
-    {
-      service: "Massage & Bodywork",
-      price: "60 min, $100"
-    },
-
-  ]
 
   return (
 
@@ -110,7 +79,7 @@ const Waxing = ( {data} ) => {
       
             </Columns>
           </Container>
-          
+
         </VerticalCenterFlex>
       </Window>
 
