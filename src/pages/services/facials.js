@@ -38,13 +38,6 @@ const Facials = ( {data} ) => {
       description: "Microdermabrasion and Dermaplaning to get rid of dead skin cell build up and leave skin feeling smooth and youthful. Toning, cleansing, serum, moisturizer, SPF."
     },
 
-    // {
-    //   image: data.hydrafacial.childImageSharp.fluid, 
-    //   title: "Hydrafacial", 
-    //   subtitle: "60 min, $150", 
-    //   description: "Deep cleanse, extract and hydrate with pressurized water that is best for more sensitive skin types. This facial will help skin texture, reduce discoloration, dehydration, pore size and leave skin with a radiant glow for up to a week with no down time."
-    // },
-
     {
       image: data.hydrafacial.childImageSharp.fluid, 
       title: "Contouring", 
@@ -72,13 +65,6 @@ const Facials = ( {data} ) => {
       subtitle: "75 min, $125", 
       description: "Our world has changed and it has caused an impact on the health of our skin. Wearing a face mask leads to more breakouts for people, dryer skin, rashes and in general more congestion. This facial focuses on decongesting the area of the face that is covered by masks by doing a double cleanse, extractions, clay mask and blue light for killing bacteria to help reduce the negative effects of wearing a face mask."
     },
-
-    // {
-    //   image: data.massageBodywork.childImageSharp.fluid, 
-    //   title: "Massage & Bodywork", 
-    //   subtitle: "60 min, $100", 
-    //   description: ""
-    // },
 
   ]
 
