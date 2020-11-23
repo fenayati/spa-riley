@@ -58,7 +58,7 @@ const AddOns = ({data}) => (
               >
       
                 <h1>Additional Services</h1>
-                <h4>Can be added to a custom facial or purchased as a stand alone service.</h4>
+                <h4 style={{textTransform: "uppercase"}}>Can be added to a custom facial or purchased as a stand alone service.</h4>
                 <p>Microdermabrasion - 30 minutes - $45</p>
                 <p>Chemical Peel (glycolic, lactic, salicyclic, or an AHA/BHA combination) - 15-45 minutes - $40</p>
                 <p>Microcurrent - 20 minutes - $45</p>
