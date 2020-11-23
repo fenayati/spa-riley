@@ -722,9 +722,14 @@ pre tt:after {
   position: relative
 }
 
-@media only screen and (max-height: 653.09px) {
+/* @media only screen and (max-height: 653.09px) {
   main {
     padding-top: 1rem ;
     padding-bottom: 1rem
   }
+} */
+
+.super-container {
+  margin-left: 1rem ;
+  margin-right: 1rem
 }
