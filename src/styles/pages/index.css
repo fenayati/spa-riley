@@ -3,14 +3,38 @@ h1 {
 }
 
 .window-index {
-  height: calc(100vh - ( 75px + 110px + 100px ) ) ;
+
+  /* 100 viewport height - ( footer height + header height + banner line height + banner padding )*/
+  height: calc(100vh - ( 75px + 110px + 3em + 40px ) ) ;
 }
 
-@media only screen and (max-height: 653.09px) {
+.sale-banner {
+  background-color: #2f3E46 ;
+  text-transform: uppercase ;
+  text-align: center ;
+  color: white ;
+  font-size: 2em ;
+  padding: 0 ;
+  width: 100vw
+}
+
+.spa-riley {
+  font-size: 72px;
+  color: white;
+  margin: 40px;
+}
+
+@media only screen and (max-height: 850px), (max-width: 776px) {
 
     .window-index {
-      height: auto
+      height: auto ;
+      margin-top: 2rem ;
+      margin-bottom: 2rem
     }
+
+    /* .sale-banner {
+      margin-bottom: 30px;
+    } */
 
     .vertical-center-index {
       position: relative;
@@ -18,4 +42,38 @@ h1 {
       transform: none ;
     }
     
+}
+
+@media only screen and (max-width: 910px) {
+
+  .sale-banner {
+    font-size: 1.75em
+  }
+  
+  .spa-riley {
+    font-size: 56px
+  }
+
+}
+
+@media only screen and (max-width: 414px) {
+  .sale-banner {
+    font-size: 1.5em
+  }
+
+  .spa-riley {
+    font-size: 40px
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .sale-banner {
+    font-size: 1em
+  }
+
+  .spa-riley {
+    font-size: 32px
+  }
+
 }
