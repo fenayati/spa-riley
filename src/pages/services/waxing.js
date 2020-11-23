@@ -110,6 +110,7 @@ const Waxing = ( {data} ) => {
       
             </Columns>
           </Container>
+          
         </VerticalCenterFlex>
       </Window>
 
