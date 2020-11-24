@@ -88,9 +88,9 @@ const Facials = ( {data} ) => {
       <SEO title="Facials" />
 
       <div className="super-container">
-        {/* 08.29.20: ADD BULMA COLUMNS  */}
+
         <div 
-          className="container site-font"
+          className="container"
           style={{
             paddingTop: "1rem",
             paddingBottom: "1rem"
