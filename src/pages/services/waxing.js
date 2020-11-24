@@ -33,24 +33,12 @@ const Waxing = ( {data} ) => {
               paddingBottom: "25px",
             }}
           >
-            <Columns classes={["site-font"]} >
+            <Columns>
       
-              <Column 
-                classes={["has-text-centered", "has-text-white"]}
-                styles={{
-                  backgroundColor: "#2f3e46", 
-                  padding: 0
-                }}
-              >
+              <Column classes={["has-text-centered", "has-text-white", "bg-color-0", "pad-0"]}>
       
                 <div style={{padding: "2em"}}>
-                  <h2 
-                    className="has-text-centered" 
-                    style={{
-                      textTransform: "uppercase", 
-                      color: "white"
-                    }}
-                  >
+                  <h2 className="has-text-centered has-text-white upper">
                     Waxing
                   </h2>
                   <div>
@@ -67,12 +55,12 @@ const Waxing = ( {data} ) => {
       
               </Column>
       
-              <Column styles={{padding: 0}}>
+              <Column classes={["pad-0"]}>
                 <Img 
-                  fluid={data.waxingLegs.childImageSharp.fluid} 
+                  fluid={data.waxingLegs.childImageSharp.fluid}
+                  className="border-10px-color-0"
                   style={{
                     height: "100%",
-                    border: "10px solid #2f3e46"
                   }}
                 />
               </Column>

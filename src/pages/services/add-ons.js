@@ -23,7 +23,6 @@ const AddOns = ({data}) => (
         <VerticalCenterFlex classes={["vertical-center-add-ons"]}>
     
           <Container 
-            classes={["site-font"]}
             styles={{
               paddingTop: "25px", 
               paddingBottom: "25px",
@@ -33,17 +32,17 @@ const AddOns = ({data}) => (
             <Columns>
       
               <Column 
+                classes={["pad-0"]}
                 styles = {{
-                  padding: 0, 
                   height: 300, 
                   width: "100%"
                 }}
               >
                 <Img 
                   fluid={data.addOns.childImageSharp.fluid} 
+                  className="border-10px-color-0"
                   style={{
-                    height: "100%",
-                    border: "10px solid #2f3e46"
+                    height: "100%"
                   }} 
                 />
               </Column>
@@ -52,13 +51,10 @@ const AddOns = ({data}) => (
       
             <Columns classes={["has-text-white"]}>
       
-              <Column
-                classes={["has-text-centered", "add-ons"]}
-                styles={{color: "white", backgroundColor: "#2f3e46"}}
-              >
+              <Column classes={["has-text-centered", "add-ons", "bg-color-0", "has-text-white"]}>
       
                 <h1>Additional Services</h1>
-                <h4 style={{textTransform: "uppercase"}}>Can be added to a custom facial or purchased as a stand alone service.</h4>
+                <h4 className="upper">Can be added to a custom facial or purchased as a stand alone service.</h4>
                 <p>Microdermabrasion - 30 minutes - $45</p>
                 <p>Chemical Peel (glycolic, lactic, salicyclic, or an AHA/BHA combination) - 15-45 minutes - $40</p>
                 <p>Microcurrent - 20 minutes - $45</p>

@@ -5,7 +5,7 @@ const FacialCard = ( {image, title, subtitle, description, columnSize} ) => {
 
     return(
         <div className={`column${columnSize ? " " + columnSize : ""}`}>
-            <div className="card" style={{height: "100%", backgroundColor: "#2F3E46"}}>
+            <div className="card bg-color-0" style={{height: "100%"}}>
                 <div className="card-image">
                     <figure className="image">
                     <Img fluid={image} style={{width: "100%", height: 0, paddingTop: "75%"}} />
@@ -13,22 +13,13 @@ const FacialCard = ( {image, title, subtitle, description, columnSize} ) => {
                 </div>
                 <div className="card-content">
                     <div 
-                        className="content" 
-                        style={{color: "white"}}
+                        className="content has-text-white"
                     >
-                        <h2 
-                            className="has-text-centered" 
-                            style={{
-                                textTransform: "uppercase", 
-                                color: "white"
-                            }}>
+                        <h2 className="has-text-centered has-text-white upper">
                                 {title}
                             </h2>
                         <h3 
-                            className="has-text-centered" 
-                            style={{
-                                color: "white"
-                            }}
+                            className="has-text-centered has-text-white"
                         >
                             {subtitle}
                         </h3>

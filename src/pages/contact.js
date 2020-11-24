@@ -294,10 +294,9 @@ const Contact = () => {
           >
       
               <Columns 
-                classes={["has-text-white"]}
+                classes={["has-text-white", "bg-color-0"]}
                 styles={{
-                  minHeight: 200,
-                  backgroundColor: "#2f3e46"
+                  minHeight: 200
                 }}
               >
       

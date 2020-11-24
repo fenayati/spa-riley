@@ -30,17 +30,13 @@ const About = ({data}) => (
     
           <Columns>
       
-            <Column
-              styles={{
-                padding: 0
-              }}
-            >
+            <Column classes={["pad-0"]}>
       
               <Img 
-                fluid={data.portrait.childImageSharp.fluid} 
+                fluid={data.portrait.childImageSharp.fluid}
+                class="border-10px-color-0"
                 style={{
                   height: "100%",
-                  border: "10px solid #2f3e46"
                 }} 
               />
               
@@ -49,12 +45,10 @@ const About = ({data}) => (
             <Column
               classes={[
                 "has-text-centered", 
-                "has-text-white"
+                "has-text-white",
+                "bg-color-0",
+                "pad-0"
               ]}
-              styles={{
-                backgroundColor: "#2f3e46", 
-                padding: 0
-              }}
             >
       
               <div style={{padding: "2em"}}>
