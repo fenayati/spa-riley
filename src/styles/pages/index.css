@@ -5,11 +5,10 @@ h1 {
 .window-index {
 
   /* 100 viewport height - ( footer height + header height + banner line height + banner padding )*/
-  height: calc(100vh - ( 75px + 110px + 3em + 40px ) ) ;
+  height: calc(100vh - 75px - 110px - 3em - 40px ) ;
 }
 
 .sale-banner {
-  background-color: #2f3E46 ;
   text-transform: uppercase ;
   text-align: center ;
   color: white ;
