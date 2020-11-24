@@ -1,8 +1,12 @@
 @charset "utf-8";
-// @import "../node_modules/bulma/bulma.sass";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap&family=Cabin&display=swap") ;
+
 $peach: #f9c4ac;
 $navbar-item-hover-background-color: $peach ;
 $navbar-item-hover-color: hsl(0, 0%, 21%) ;
-// $navbar-item-color: hsl(0, 0%, 96%) ;
 $navbar-item-color: $peach ;
+
+$family-sans-serif: 'Playfair Display', serif ;
+$family-primary: $family-sans-serif ;
+
 @import "~bulma/bulma.sass"
