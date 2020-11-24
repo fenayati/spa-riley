@@ -19,12 +19,15 @@ const IndexPage = ( {data} ) => (
     <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
     <div 
-      className="sale-banner"
+      className="sale-banner bg-color-0"
     >
       <VerticalCenterFlex>
-        <div style={{padding: "20px"}}>
-          15% Off Your First Service for All New Clients
-        </div>
+        
+        <Container>
+          <div style={{padding: "20px"}}>
+            15% Off Your First Service for All New Clients
+          </div>
+        </Container>
         
       </VerticalCenterFlex>
 
@@ -45,12 +48,7 @@ const IndexPage = ( {data} ) => (
   
             <Columns>
   
-              <Column
-                styles={{
-                  backgroundColor: "#2f3e46", 
-                  padding: 0,
-                }}
-              >
+              <Column classes={["bg-color-0", "pad-0"]}>
                 <VerticalCenterFlex>
                   <h1 className='spa-riley'>
                     Spa Riley: Putting Self Love First
@@ -58,10 +56,10 @@ const IndexPage = ( {data} ) => (
                 </VerticalCenterFlex>
               </Column>
               
-              <Column styles={{padding: 0}}>
+              <Column classes={["pad-0"]}>
                 <Img 
                   fluid={data.stones.childImageSharp.fluid} 
-                  style={{border: "10px solid #2f3E46"}}
+                  className="border-10px-color-0"
                 />
               </Column>
               
