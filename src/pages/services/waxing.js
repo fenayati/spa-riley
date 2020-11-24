@@ -55,10 +55,9 @@ const Waxing = ( {data} ) => {
       
               </Column>
       
-              <Column classes={["pad-0"]}>
+              <Column classes={["pad-0", "border-10px-color-0"]}>
                 <Img 
                   fluid={data.waxingLegs.childImageSharp.fluid}
-                  className="border-10px-color-0"
                   style={{
                     height: "100%",
                   }}

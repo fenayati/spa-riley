@@ -32,7 +32,7 @@ const AddOns = ({data}) => (
             <Columns>
       
               <Column 
-                classes={["pad-0"]}
+                classes={["pad-0", "border-10px-color-0"]}
                 styles = {{
                   height: 300, 
                   width: "100%"
@@ -40,7 +40,6 @@ const AddOns = ({data}) => (
               >
                 <Img 
                   fluid={data.addOns.childImageSharp.fluid} 
-                  className="border-10px-color-0"
                   style={{
                     height: "100%"
                   }} 

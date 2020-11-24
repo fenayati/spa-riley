@@ -30,11 +30,10 @@ const About = ({data}) => (
     
           <Columns>
       
-            <Column classes={["pad-0"]}>
-      
+            <Column classes={["pad-0", "border-10px-color-0"]}>
+    
               <Img 
                 fluid={data.portrait.childImageSharp.fluid}
-                class="border-10px-color-0"
                 style={{
                   height: "100%",
                 }} 

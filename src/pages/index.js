@@ -56,10 +56,9 @@ const IndexPage = ( {data} ) => (
                 </VerticalCenterFlex>
               </Column>
               
-              <Column classes={["pad-0"]}>
+              <Column classes={["pad-0", "border-10px-color-0"]}>
                 <Img 
                   fluid={data.stones.childImageSharp.fluid} 
-                  className="border-10px-color-0"
                 />
               </Column>
               
