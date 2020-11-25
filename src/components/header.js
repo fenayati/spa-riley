@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 // import Navbar from "../components/nav/bulma/navbar"
-import Navbar from "../components/nav/custom/navbar"
+import Navbar from "../components/nav/navbar"
 
 const Header = ({ siteTitle }) => (
   <header>
