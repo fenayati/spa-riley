@@ -5,6 +5,7 @@ import React from "react"
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 import FacialRow from '../../components/facials/facial_row'
+import { Container } from 'react-bootstrap'
 
 const Facials = ( {data} ) => {
 
@@ -90,18 +91,19 @@ const Facials = ( {data} ) => {
       <div className="super-container">
 
         <div 
-          className="container"
           style={{
             paddingTop: "1rem",
             paddingBottom: "1rem"
           }}
         >
   
-          {        
-            productRows.map( (row, i) =>
-              <FacialRow key={i} products={row}/>
-            )
-          }
+          <Container>
+            {        
+              productRows.map( (row, i) =>
+                <FacialRow key={i} products={row}/>
+              )
+            }
+          </Container>
   
         </div>
       </div>

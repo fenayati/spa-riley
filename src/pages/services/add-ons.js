@@ -5,9 +5,10 @@ import { graphql } from 'gatsby'
 // COMPONENTS
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
-import { Columns, Column, Container } from "../../components/layout/bulma"
+import { Columns, Column } from "../../components/layout/bulma"
 import VerticalCenterFlex from "../../components/layout/vertical-center-flex"
 import Window from '../../components/layout/window'
+import { Container } from 'react-bootstrap'
 
 // CSS
 import '../../styles/pages/services/add-ons.css'
@@ -15,19 +16,17 @@ import '../../styles/pages/services/add-ons.css'
 const AddOns = ({data}) => (
 
   <Layout>
+    
     <SEO title="Products" />
 
-    <div className="super-container">
-      <Window classes={["window-add-ons"]}>
-  
-        <VerticalCenterFlex classes={["vertical-center-add-ons"]}>
     
-          <Container 
-            styles={{
-              paddingTop: "25px", 
-              paddingBottom: "25px",
-            }}
-          >
+    <Window classes={["window-add-ons"]}>
+
+      <VerticalCenterFlex classes={["vertical-center-add-ons"]}>
+  
+        <div className="super-container">
+
+          <Container>
       
             <Columns>
       
@@ -65,11 +64,13 @@ const AddOns = ({data}) => (
             </Columns>
       
           </Container>
-          
-        </VerticalCenterFlex>
-  
-      </Window>
-    </div>
+        
+        </div>
+        
+      </VerticalCenterFlex>
+
+    </Window>
+    
     
   </Layout>
 )

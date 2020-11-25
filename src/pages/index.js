@@ -5,9 +5,10 @@ import Img from 'gatsby-image'
 // COMPONENTS
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import { Column, Columns, Container } from "../components/layout/bulma"
+import { Column, Columns } from "../components/layout/bulma"
 import VerticalCenter from '../components/layout/vertical-center'
 import Window from '../components/layout/window'
+import { Container } from 'react-bootstrap'
 
 // STYLES
 import '../styles/pages/index.css'
