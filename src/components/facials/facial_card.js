@@ -1,10 +1,12 @@
 import React from "react"
 import Img from 'gatsby-image'
+import { Col } from 'react-bootstrap'
 
 const FacialCard = ( {image, title, subtitle, description, columnSize} ) => {
 
     return(
-        <div className={`column${columnSize ? " " + columnSize : ""}`}>
+
+        <Col>
             <div className="card bg-color-0" style={{height: "100%"}}>
                 <div className="card-image">
                     <figure className="image">
@@ -29,7 +31,8 @@ const FacialCard = ( {image, title, subtitle, description, columnSize} ) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Col>
+
     )
 
 }

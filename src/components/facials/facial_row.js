@@ -1,5 +1,6 @@
 import React from 'react'
 import FacialCard from './facial_card'
+import { Row } from 'react-bootstrap'
 
 const FacialRow = ({products}) => {
 
@@ -8,9 +9,8 @@ const FacialRow = ({products}) => {
     const columnSize = 12 % numServices === 0 ? "is-" + 12/numServices : ""
 
     return (
-        <div className="columns">
+        <Row>
 
-            {/* 08.30.20: MAP THE FACIALS BULMA CARD COMPONENT */}
             {
                 products.map( (service, i) => 
                     <FacialCard 
@@ -24,7 +24,7 @@ const FacialRow = ({products}) => {
                 )
             }
 
-        </div>
+        </Row>
     )
 }
 

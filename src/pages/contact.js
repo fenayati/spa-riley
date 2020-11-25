@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 // COMPONENTS
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import { Columns, Column } from '../components/layout/bulma'
 import VerticalCenterFlex from "../components/layout/vertical-center-flex"
 import Window from "../components/layout/window"
 import { Container } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 // CSS
 import '../styles/pages/contact.css'
@@ -290,52 +290,45 @@ const Contact = () => {
           <div className="super-container">
             <Container>
         
-                <Columns 
-                  classes={["has-text-white", "bg-color-0"]}
-                  styles={{
-                    minHeight: 200
-                  }}
-                >
+                <Row>
         
-                  {/* CONTACT INFO */}
-                  <Column
-                    styles={{
-                      margin: "1em"
-                    }}
-                  >
+                  <div className="has-text-white bg-color-0" style={{ minHeight: 200 }}>
+
+                    {/* CONTACT INFO */}
+                    <Col>
+          
+                      <div style={{ margin: "1em" }}>
+                        <h1>Book Now</h1>
+                        <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
+                        <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
+                        <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
+                        <p style={{margin: 0}}>(440) 667-9617</p>
+                      </div>
+          
+                    </Col>
+          
+                    {/* HOURS */}
+                    <Col>
+          
+                      <div style={{ margin: "1em" }}>
+                        <h1>Hours</h1>
+                        <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
+                        <p style={{margin: 0}}>Sat: 10am - 5pm</p>
+                        <p style={{margin: 0}}>Sun: 10am - 5pm</p>
+                      </div>
+          
+                    </Col>
+
+                  </div>
         
-                    <h1>Book Now</h1>
-                    <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
-                    <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
-                    <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
-                    <p style={{margin: 0}}>(440) 667-9617</p>
+                </Row>
         
-                  </Column>
-        
-                  {/* HOURS */}
-                  <Column
-                    styles={{
-                      margin: "1em"
-                    }}
-                  >
-        
-                    <h1>Hours</h1>
-                    <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
-                    <p style={{margin: 0}}>Sat: 10am - 5pm</p>
-                    <p style={{margin: 0}}>Sun: 10am - 5pm</p>
-        
-                  </Column>
-        
-                </Columns>
-        
-                {/* <div className="columns" style={{marginBottom: "1em"}}> */}
-                <Columns>
+                <Row>
         
                   {/* 09.01.20: MAP DIV */}
                   <div id="map" style={{height: 400, width: "100%"}}></div>
         
-                {/* </div> */}
-                </Columns>
+                </Row>
         
             </Container>
           </div>

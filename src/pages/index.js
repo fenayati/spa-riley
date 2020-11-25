@@ -5,10 +5,9 @@ import Img from 'gatsby-image'
 // COMPONENTS
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import { Column, Columns } from "../components/layout/bulma"
 import VerticalCenter from '../components/layout/vertical-center'
 import Window from '../components/layout/window'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // STYLES
 import '../styles/pages/index.css'
@@ -47,23 +46,33 @@ const IndexPage = ( {data} ) => (
         <VerticalCenter classes={["vertical-center-index"]}>
           <Container>
   
-            <Columns>
+            <Row>
   
-              <Column classes={["bg-color-0", "pad-0"]}>
-                <VerticalCenterFlex>
-                  <h1 className='spa-riley'>
-                    Spa Riley: Putting Self Love First
-                  </h1>
-                </VerticalCenterFlex>
-              </Column>
+              <Col>
+
+                <div className="bg-color-0 pad-0">
+
+                  <VerticalCenterFlex>
+
+                    <h1 className='spa-riley'>
+                      Spa Riley: Putting Self Love First
+                    </h1>
+
+                  </VerticalCenterFlex>
+
+                </div>
+
+              </Col>
               
-              <Column classes={["pad-0", "border-10px-color-0"]}>
-                <Img 
-                  fluid={data.stones.childImageSharp.fluid} 
-                />
-              </Column>
+              <Col>
+
+                <div className="pad-0 border-10px-color-0">
+                  <Img fluid={data.stones.childImageSharp.fluid} /> 
+                </div>
+                
+              </Col>
               
-            </Columns>
+            </Row>
           </Container>
         </VerticalCenter>
       </Window>

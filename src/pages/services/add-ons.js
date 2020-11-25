@@ -5,10 +5,9 @@ import { graphql } from 'gatsby'
 // COMPONENTS
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
-import { Columns, Column } from "../../components/layout/bulma"
 import VerticalCenterFlex from "../../components/layout/vertical-center-flex"
 import Window from '../../components/layout/window'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // CSS
 import '../../styles/pages/services/add-ons.css'
@@ -28,40 +27,54 @@ const AddOns = ({data}) => (
 
           <Container>
       
-            <Columns>
+            <Row>
       
-              <Column 
-                classes={["pad-0", "border-10px-color-0"]}
-                styles = {{
-                  height: 300, 
-                  width: "100%"
-                }}
-              >
-                <Img 
-                  fluid={data.addOns.childImageSharp.fluid} 
-                  style={{
-                    height: "100%"
-                  }} 
-                />
-              </Column>
+              <Col>
+
+                <div 
+                  className="pad-0 border-10px-color-0"
+                  style = {{
+                    height: 300, 
+                    width: "100%"
+                  }}
+                >
+
+                  <Img 
+                    fluid={data.addOns.childImageSharp.fluid} 
+                    style={{
+                      height: "100%"
+                    }} 
+                  />
+
+                </div>
+                 
+              </Col>
       
-            </Columns>
+            </Row>
       
-            <Columns classes={["has-text-white"]}>
+            <Row>
       
-              <Column classes={["has-text-centered", "add-ons", "bg-color-0", "has-text-white"]}>
+              <div className="has-text-white">
+
+                <Col>
+        
+                  <div className="has-text-centered add-ons bg-color-0 has-text-white">
+
+                    <h1>Additional Services</h1>
+                    <h4 className="upper">Can be added to a custom facial or purchased as a stand alone service.</h4>
+                    <p>Microdermabrasion - 30 minutes - $45</p>
+                    <p>Chemical Peel (glycolic, lactic, salicyclic, or an AHA/BHA combination) - 15-45 minutes - $40</p>
+                    <p>Microcurrent - 20 minutes - $45</p>
+                    <p>LED - 20 minutes - $30</p>
+                    <p>Dermaplaning - 30 minutes - $30</p>
+                    
+                  </div>
+                  
+                </Col>
+
+              </div>
       
-                <h1>Additional Services</h1>
-                <h4 className="upper">Can be added to a custom facial or purchased as a stand alone service.</h4>
-                <p>Microdermabrasion - 30 minutes - $45</p>
-                <p>Chemical Peel (glycolic, lactic, salicyclic, or an AHA/BHA combination) - 15-45 minutes - $40</p>
-                <p>Microcurrent - 20 minutes - $45</p>
-                <p>LED - 20 minutes - $30</p>
-                <p>Dermaplaning - 30 minutes - $30</p>
-                
-              </Column>
-      
-            </Columns>
+            </Row>
       
           </Container>
         
