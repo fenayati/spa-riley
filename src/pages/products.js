@@ -6,11 +6,11 @@ const Products = () => {
 
   return (    
     <Layout>
+      
       <SEO title="Products" />
 
       <h1 className="has-text-white">Product page</h1>
-      <div className="container">
-      </div>
+
     </Layout>
   )
 }
