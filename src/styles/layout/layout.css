@@ -1,6 +1,6 @@
 html {
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100% 
 }
 
 body {
@@ -654,6 +654,9 @@ pre tt:after {
 
 .vertical-center-flex {
   height: 100% ;
+  /* max-width: 100% ; */
+  /* width: 100% ; */
+  /* display: -ms-flexbox ; */
   display: flex ;
   align-items: center ;
   /* justify-content: center ; */
@@ -673,6 +676,8 @@ pre tt:after {
 } */
 
 .super-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-left: 1rem ;
   margin-right: 1rem
 }
