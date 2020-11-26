@@ -10,7 +10,7 @@ const FacialRow = ({products}) => {
 
     return (
 
-        <Row style={{paddingTop: "15px", paddingBottom: "15px"}}>
+        <Row>
 
             {
                 products.map( (service, i) => 
