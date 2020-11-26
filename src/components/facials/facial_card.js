@@ -7,10 +7,17 @@ const FacialCard = ( {image, title, subtitle, description, columnSize} ) => {
     return(
 
         <Col>
-            <Card className="bg-color-0" style={{height: "100%", border: 0, borderRadius: 0}}>
+            <Card className="bg-color-0 h-100 border-0" style={{borderRadius: 0}}>
 
                 {/* height 0 + paddingTop 75% is for the 4:3 aspect ratio */}
-                <Img fluid={image} style={{width: "100%", height: 0, paddingTop: "75%"}} />
+                <Img 
+                    className="w-100"
+                    fluid={image} 
+                    style={{
+                        height: 0, 
+                        paddingTop: "75%"
+                    }} 
+                />
 
                 <Card.Body>
                 
