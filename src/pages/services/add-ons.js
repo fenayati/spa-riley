@@ -32,7 +32,7 @@ const AddOns = ({data}) => (
               <Col>
 
                 <div 
-                  className="pad-0 border-10px-color-0"
+                  className="p-0 border-10px-color-0"
                   style = {{
                     height: 300, 
                     width: "100%"
@@ -54,14 +54,14 @@ const AddOns = ({data}) => (
       
             <Row>
       
-              <div className="has-text-white">
+              <div className="text-white">
 
                 <Col>
         
-                  <div className="has-text-centered add-ons bg-color-0 has-text-white">
+                  <div className="text-center add-ons bg-color-0 text-white">
 
                     <h1>Additional Services</h1>
-                    <h4 className="upper">Can be added to a custom facial or purchased as a stand alone service.</h4>
+                    <h4 className="text-uppercase">Can be added to a custom facial or purchased as a stand alone service.</h4>
                     <p>Microdermabrasion - 30 minutes - $45</p>
                     <p>Chemical Peel (glycolic, lactic, salicyclic, or an AHA/BHA combination) - 15-45 minutes - $40</p>
                     <p>Microcurrent - 20 minutes - $45</p>

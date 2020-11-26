@@ -30,7 +30,7 @@ const About = ({data}) => (
         
               
               <Col>
-                <div className="pad-0 border-10px-color-0">
+                <div className="p-0 border-10px-color-0">
                   <Img 
                     fluid={data.portrait.childImageSharp.fluid}
                     style={{
@@ -43,7 +43,7 @@ const About = ({data}) => (
         
               <Col>
         
-                <div className="has-text-centered has-text-white bg-color-0 pad-0">
+                <div className="text-center text-white bg-color-0 p-0">
 
                   <div style={{padding: "2em"}}>
 

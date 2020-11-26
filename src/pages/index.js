@@ -50,7 +50,7 @@ const IndexPage = ( {data} ) => (
   
               <Col>
 
-                <div className="bg-color-0 pad-0">
+                <div className="bg-color-0 p-0">
 
                   <VerticalCenterFlex>
 
@@ -66,7 +66,7 @@ const IndexPage = ( {data} ) => (
               
               <Col>
 
-                <div className="pad-0 border-10px-color-0">
+                <div className="p-0 border-10px-color-0">
                   <Img fluid={data.stones.childImageSharp.fluid} /> 
                 </div>
                 
