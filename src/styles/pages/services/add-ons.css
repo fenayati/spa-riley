@@ -1,4 +1,4 @@
-@media only screen and (max-height: 925px) {
+@media only screen and (max-height: 925px), (max-width: 470px) {
 
     .window-add-ons {
         height: auto

@@ -25,7 +25,7 @@ const AddOns = ({data}) => (
 
         <VerticalCenterFlex>
   
-          <Container>
+          <Container style={{paddingTop: "15px", paddingBottom: "15px"}}>
       
             <Row>
       
@@ -55,7 +55,7 @@ const AddOns = ({data}) => (
 
                 <Col>
         
-                  <div className="text-center add-ons bg-color-0 text-white py-1">
+                  <div className="text-center add-ons bg-color-0 text-white py-1 px-5">
 
                     <h1>Additional Services</h1>
                     <h4 className="text-uppercase">Can be added to a custom facial or purchased as a stand alone service.</h4>
