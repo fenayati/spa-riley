@@ -62,10 +62,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 mark {
   background-color: #ff0;
   color: #000;
@@ -258,6 +254,8 @@ h1 {
   /* 08.28.20 - ADJUST TO MATCH WIX SETTINGS */
   /* line-height: 1.1; */
   line-height: 1.25em;
+
+  font-size: 2em;
 
 }
 h2 {
@@ -646,12 +644,6 @@ pre tt:after {
   color: #2f3E46 ;
 }
 
-.vertical-center {
-  position: absolute ;
-  top: 50% ; 
-  transform: translateY(-50%);
-}
-
 .vertical-center-flex {
   height: 100% ;
   display: flex ;
@@ -662,13 +654,6 @@ pre tt:after {
   height: calc(100vh - ( 75px + 110px )) ;
   position: relative
 }
-
-/* @media only screen and (max-height: 653.09px) {
-  main {
-    padding-top: 1rem ;
-    padding-bottom: 1rem
-  }
-} */
 
 .super-container {
   padding-top: 25px;
