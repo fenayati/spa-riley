@@ -91,10 +91,10 @@ const Facials = ( {data} ) => {
       <div className="super-container">
 
         <div 
-          style={{
-            paddingTop: "1rem",
-            paddingBottom: "1rem"
-          }}
+          // style={{
+          //   paddingTop: "1rem",
+          //   paddingBottom: "1rem"
+          // }}
         >
   
           <Container>
@@ -119,49 +119,49 @@ export const query = graphql`
   query {
     customFacial: file(relativePath: {eq: "facials/smiling-lady.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 800, maxHeight: 600, cropFocus: CENTER, fit: COVER) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     dualExfoliation: file(relativePath: {eq: "facials/facial_2/facial_2_square.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 800, maxHeight: 600, cropFocus: CENTER, fit: COVER) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     antiAgingFacial: file(relativePath: {eq: "facials/facial_3/facial_3_square.jpeg"}) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 800, maxHeight: 600, cropFocus: CENTER, fit: COVER) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     facialDude: file(relativePath: {eq: "facials/facial_dude_2.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 800, maxHeight: 600, cropFocus: CENTER, fit: COVER) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     acne: file(relativePath: {eq: "facials/acne.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 800, maxHeight: 600, cropFocus: CENTER, fit: COVER) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     hydrafacial: file(relativePath: {eq: "facials/hydrafacial_3.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 800, maxHeight: 600, cropFocus: CENTER, fit: COVER) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     maskne: file(relativePath: {eq: "facials/maskne.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 800, maxHeight: 600, cropFocus: CENTER, fit: COVER) {
           ...GatsbyImageSharpFluid
         }
       }
