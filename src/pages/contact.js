@@ -285,19 +285,18 @@ const Contact = () => {
 
       <Window classes={["window-contact"]}>
 
-        <VerticalCenterFlex classes={["vertical-center-contact"]}>
+        <div className="super-container">
 
-          <div className="super-container">
-            <Container>
-        
-                <Row>
-        
-                  <div className="text-white bg-color-0" style={{ minHeight: 200 }}>
+          <VerticalCenterFlex>
+
+            <Container className="p-0 text-white bg-color-0">
+                
+                  <Row className="mx-0">
 
                     {/* CONTACT INFO */}
                     <Col>
           
-                      <div style={{ margin: "1em" }}>
+                      <div className="m-5">
                         <h1>Book Now</h1>
                         <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
                         <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
@@ -310,7 +309,7 @@ const Contact = () => {
                     {/* HOURS */}
                     <Col>
           
-                      <div style={{ margin: "1em" }}>
+                      <div className="m-5">
                         <h1>Hours</h1>
                         <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
                         <p style={{margin: 0}}>Sat: 10am - 5pm</p>
@@ -318,22 +317,21 @@ const Contact = () => {
                       </div>
           
                     </Col>
-
-                  </div>
         
-                </Row>
+                  </Row>
         
-                <Row>
-        
-                  {/* 09.01.20: MAP DIV */}
-                  <div id="map" style={{height: 400, width: "100%"}}></div>
-        
-                </Row>
-        
+                  <Row className="mx-0">
+          
+                    {/* 09.01.20: MAP DIV */}
+                    <div id="map" style={{height: 400, width: "100%"}}></div>
+          
+                  </Row>
+                          
             </Container>
-          </div>
 
-        </VerticalCenterFlex>
+          </VerticalCenterFlex>
+
+        </div>
 
       </Window>
 

@@ -20,28 +20,27 @@ const About = ({data}) => (
 
     <Window classes={["window-about"]}>
 
-      <VerticalCenterFlex classes={["vertical-center-about"]}>
-  
-        <div className="super-container"
-        >
+      <div className="super-container">
+
+        <VerticalCenterFlex>
+
           <Container>
       
             <Row>
-        
               
-              <Col>
-                <div className="p-0 border-10px-color-0">
+              <Col className="p-0">
+
+                <div className="p-0 border-10px-color-0 h-100">
                   <Img 
+                    className="h-100"
                     fluid={data.portrait.childImageSharp.fluid}
-                    style={{
-                      height: "100%",
-                    }} 
                   />
                 </div>
+
               </Col>
               
         
-              <Col>
+              <Col className="p-0">
         
                 <div className="text-center text-white bg-color-0 p-0">
 
@@ -66,9 +65,10 @@ const About = ({data}) => (
             </Row>
             
           </Container>
-        </div>
         
-      </VerticalCenterFlex>
+        </VerticalCenterFlex>
+
+      </div>
 
     </Window>
   

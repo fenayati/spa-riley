@@ -90,12 +90,7 @@ const Facials = ( {data} ) => {
 
       <div className="super-container">
 
-        <div 
-          // style={{
-          //   paddingTop: "1rem",
-          //   paddingBottom: "1rem"
-          // }}
-        >
+        <div>
   
           <Container>
             {        
@@ -106,6 +101,7 @@ const Facials = ( {data} ) => {
           </Container>
   
         </div>
+        
       </div>
 
     </Layout>

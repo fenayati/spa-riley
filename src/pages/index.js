@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 // COMPONENTS
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import VerticalCenter from '../components/layout/vertical-center'
 import Window from '../components/layout/window'
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -43,14 +42,15 @@ const IndexPage = ( {data} ) => (
     >
       <Window classes={["window-index"]}>
   
-        <VerticalCenter classes={["vertical-center-index"]}>
+        <VerticalCenterFlex>
+
           <Container>
   
             <Row>
   
-              <Col>
+              <Col className="p-0">
 
-                <div className="bg-color-0 p-0">
+                <div className="bg-color-0 p-0 h-100">
 
                   <VerticalCenterFlex>
 
@@ -64,17 +64,22 @@ const IndexPage = ( {data} ) => (
 
               </Col>
               
-              <Col>
+              <Col className="p-0">
 
-                <div className="p-0 border-10px-color-0">
-                  <Img fluid={data.stones.childImageSharp.fluid} /> 
+                <div className="p-0 border-10px-color-0 h-100">
+                  <Img
+                    className="h-100" 
+                    fluid={data.stones.childImageSharp.fluid} /> 
                 </div>
                 
               </Col>
               
             </Row>
+
           </Container>
-        </VerticalCenter>
+
+        </VerticalCenterFlex>
+
       </Window>
     </div>
 

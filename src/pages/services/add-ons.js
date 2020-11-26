@@ -21,10 +21,10 @@ const AddOns = ({data}) => (
     
     <Window classes={["window-add-ons"]}>
 
-      <VerticalCenterFlex classes={["vertical-center-add-ons"]}>
-  
-        <div className="super-container">
+      <div className="super-container">
 
+        <VerticalCenterFlex>
+  
           <Container>
       
             <Row>
@@ -32,18 +32,15 @@ const AddOns = ({data}) => (
               <Col>
 
                 <div 
-                  className="p-0 border-10px-color-0"
+                  className="p-0 border-10px-color-0 w-100"
                   style = {{
-                    height: 300, 
-                    width: "100%"
+                    height: 300
                   }}
                 >
 
                   <Img 
-                    fluid={data.addOns.childImageSharp.fluid} 
-                    style={{
-                      height: "100%"
-                    }} 
+                    className="h-100"
+                    fluid={data.addOns.childImageSharp.fluid}
                   />
 
                 </div>
@@ -54,11 +51,11 @@ const AddOns = ({data}) => (
       
             <Row>
       
-              <div className="text-white">
+              <div className="text-white w-100">
 
                 <Col>
         
-                  <div className="text-center add-ons bg-color-0 text-white">
+                  <div className="text-center add-ons bg-color-0 text-white py-1">
 
                     <h1>Additional Services</h1>
                     <h4 className="text-uppercase">Can be added to a custom facial or purchased as a stand alone service.</h4>
@@ -78,12 +75,11 @@ const AddOns = ({data}) => (
       
           </Container>
         
-        </div>
-        
-      </VerticalCenterFlex>
+        </VerticalCenterFlex>
+
+      </div>
 
     </Window>
-    
     
   </Layout>
 )

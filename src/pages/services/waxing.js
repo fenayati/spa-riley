@@ -27,7 +27,7 @@ const Waxing = ( {data} ) => {
 
         <div className="super-container">
         
-          <VerticalCenterFlex classes={["vertical-center-waxing"]}>
+          <VerticalCenterFlex>
 
               <Container>
                 <Row>
@@ -56,16 +56,11 @@ const Waxing = ( {data} ) => {
           
                   <Col className="p-0">
 
-                    <div 
-                      className="p-0 border-10px-color-0" 
-                      style={{height: "100%"}}
-                    >
+                    <div className="p-0 border-10px-color-0 h-100">
 
-                      <Img 
+                      <Img
+                        className="h-100"
                         fluid={data.waxingLegs.childImageSharp.fluid}
-                        style={{
-                          height: "100%",
-                        }}
                       />
 
                     </div>
