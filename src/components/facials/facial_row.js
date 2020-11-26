@@ -9,7 +9,8 @@ const FacialRow = ({products}) => {
     const columnSize = 12 % numServices === 0 ? "is-" + 12/numServices : ""
 
     return (
-        <Row>
+
+        <Row style={{paddingTop: "15px", paddingBottom: "15px"}}>
 
             {
                 products.map( (service, i) => 
@@ -25,6 +26,7 @@ const FacialRow = ({products}) => {
             }
 
         </Row>
+
     )
 }
 
