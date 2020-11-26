@@ -285,7 +285,7 @@ const Contact = () => {
 
       <Window classes={["window-contact"]}>
 
-        <div className="super-container">
+        {/* <div className="super-container"> */}
 
           <VerticalCenterFlex>
 
@@ -331,7 +331,7 @@ const Contact = () => {
 
           </VerticalCenterFlex>
 
-        </div>
+        {/* </div> */}
 
       </Window>
 

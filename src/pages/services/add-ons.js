@@ -21,7 +21,7 @@ const AddOns = ({data}) => (
     
     <Window classes={["window-add-ons"]}>
 
-      <div className="super-container">
+      {/* <div className="super-container"> */}
 
         <VerticalCenterFlex>
   
@@ -77,7 +77,7 @@ const AddOns = ({data}) => (
         
         </VerticalCenterFlex>
 
-      </div>
+      {/* </div> */}
 
     </Window>
     
