@@ -69,7 +69,11 @@ const IndexPage = ( {data} ) => (
                 <div className="p-0 border-10px-color-0 h-100">
                   <Img
                     className="h-100" 
-                    fluid={data.stones.childImageSharp.fluid} /> 
+                    fluid={data.stones.childImageSharp.fluid} 
+                    style={{
+                      minWidth: "170px"
+                    }}
+                  /> 
                 </div>
                 
               </Col>
