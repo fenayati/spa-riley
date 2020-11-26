@@ -3,7 +3,7 @@
     margin-right: 20px
 }
 
-@media only screen and (max-height: 850px), (max-width: 776px) {
+@media only screen and (max-height: 925px), (max-width: 776px) {
 
     .window-waxing {
         height: auto
