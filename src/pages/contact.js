@@ -292,7 +292,7 @@ const Contact = () => {
         
                 <Row>
         
-                  <div className="has-text-white bg-color-0" style={{ minHeight: 200 }}>
+                  <div className="text-white bg-color-0" style={{ minHeight: 200 }}>
 
                     {/* CONTACT INFO */}
                     <Col>
@@ -301,7 +301,7 @@ const Contact = () => {
                         <h1>Book Now</h1>
                         <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
                         <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
-                        <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
+                        <p style={{margin: 0}}><Link className="text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
                         <p style={{margin: 0}}>(440) 667-9617</p>
                       </div>
           
