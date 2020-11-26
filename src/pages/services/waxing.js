@@ -24,55 +24,61 @@ const Waxing = ( {data} ) => {
       <SEO title="Waxing" />
 
       <Window classes={["window-waxing"]}>
-        
-        <VerticalCenterFlex classes={["vertical-center-waxing"]}>
 
-          <div className="super-container">
-            <Container>
-              <Row>
+        <div className="super-container">
         
-                <Col>
-        
-                  <div className="has-text-centered has-text-white bg-color-0 pad-0">
-                    <div style={{padding: "2em"}}>
-                      <h2 className="has-text-centered has-text-white upper">
-                        Waxing
-                      </h2>
-                      <div>
-                        {
-                          waxingServices.map(service => 
-                            <WaxingService 
-                              service={service.service} 
-                              price={service.price} 
-                            />
-                          )
-                        }
+          <VerticalCenterFlex classes={["vertical-center-waxing"]}>
+
+              <Container>
+                <Row>
+          
+                  <Col className="p-0">
+          
+                    <div className="text-center text-white bg-color-0 p-0">
+                      <div style={{padding: "2em"}}>
+                        <h2 className="text-center text-white text-uppercase">
+                          Waxing
+                        </h2>
+                        <div>
+                          {
+                            waxingServices.map(service => 
+                              <WaxingService 
+                                service={service.service} 
+                                price={service.price} 
+                              />
+                            )
+                          }
+                        </div>
                       </div>
                     </div>
-                  </div>
-        
-                </Col>
-        
-                <Col>
+          
+                  </Col>
+          
+                  <Col className="p-0">
 
-                  <div className="pad-0 border-10px-color-0">
+                    <div 
+                      className="p-0 border-10px-color-0" 
+                      style={{height: "100%"}}
+                    >
 
-                    <Img 
-                      fluid={data.waxingLegs.childImageSharp.fluid}
-                      style={{
-                        height: "100%",
-                      }}
-                    />
+                      <Img 
+                        fluid={data.waxingLegs.childImageSharp.fluid}
+                        style={{
+                          height: "100%",
+                        }}
+                      />
 
-                  </div>
-                  
-                </Col>
-        
-              </Row>
-            </Container>
-          </div>
+                    </div>
+                    
+                  </Col>
+          
+                </Row>
+              </Container>
 
-        </VerticalCenterFlex>
+          </VerticalCenterFlex>
+
+        </div>
+
       </Window>
 
     </Layout>
