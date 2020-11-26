@@ -28,7 +28,7 @@ const About = ({data}) => (
       
             <Row>
               
-              <Col sm={6} className="p-0">
+              <Col md={6} className="p-0">
 
                 <div className="p-0 border-10px-color-0 h-100">
                   <Img 
@@ -40,7 +40,7 @@ const About = ({data}) => (
               </Col>
               
         
-              <Col sm={6} className="p-0">
+              <Col md={6} className="p-0">
         
                 <div className="text-center text-white bg-color-0 p-0">
 
