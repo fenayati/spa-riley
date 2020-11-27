@@ -283,7 +283,7 @@ const Contact = () => {
 
       <SEO title="Contact" />
 
-      <Window classes={["window-contact"]}>
+      <Window className="window-contact">
 
         <div className="super-container">
 

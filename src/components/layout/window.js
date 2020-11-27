@@ -3,9 +3,9 @@ import React from 'react'
 // UTILS
 import { classNameString } from '../../utils'
 
-const Window = ( {children, classes} ) => {
+const Window = ( {children, className} ) => {
 
-    let className = classNameString("window", classes)
+    className = classNameString("window", className)
 
     return (
         <div className={className}>

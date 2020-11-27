@@ -18,7 +18,7 @@ const AddOns = ({data}) => (
     <SEO title="Products" />
 
     
-    <Window classes={["window-add-ons"]}>
+    <Window className="window-add-ons">
 
         <VerticalCenterFlex>
   

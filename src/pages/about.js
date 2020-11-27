@@ -17,7 +17,7 @@ const About = ({data}) => (
 
     <SEO title="About Me" />
 
-    <Window classes={["window-about"]}>
+    <Window className="window-about">
 
       <div className="super-container">
 

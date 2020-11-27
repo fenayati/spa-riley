@@ -1,11 +1,7 @@
-export const classNameString = (def, classes) => {
+export const classNameString = (def, className) => {
 
-    let className = [def]
-    
-    if ( classes !== undefined ) {
-        className.push(...classes)
-    }
+    className = `${def}${className ? ' ' + className : ''}`
 
-    return className.join(" ")
+    return className
 
 }

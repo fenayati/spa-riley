@@ -40,7 +40,7 @@ const IndexPage = ( {data} ) => (
         paddingRight: `1.0875rem`
       }}
     >
-      <Window classes={["window-index"]}>
+      <Window className="window-index">
   
         <VerticalCenterFlex>
 

@@ -22,7 +22,7 @@ const Waxing = ( {data} ) => {
 
       <SEO title="Waxing" />
 
-      <Window classes={["window-waxing"]}>
+      <Window className="window-waxing">
 
         <div className="super-container">
         
