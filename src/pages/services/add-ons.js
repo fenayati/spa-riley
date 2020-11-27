@@ -21,8 +21,6 @@ const AddOns = ({data}) => (
     
     <Window classes={["window-add-ons"]}>
 
-      {/* <div className="super-container"> */}
-
         <VerticalCenterFlex>
   
           <Container style={{paddingTop: "15px", paddingBottom: "15px"}}>
@@ -76,8 +74,6 @@ const AddOns = ({data}) => (
           </Container>
         
         </VerticalCenterFlex>
-
-      {/* </div> */}
 
     </Window>
     

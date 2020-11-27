@@ -20,7 +20,7 @@ const About = ({data}) => (
 
     <Window classes={["window-about"]}>
 
-      {/* <div className="super-container"> */}
+      <div className="super-container">
 
         <VerticalCenterFlex>
 
@@ -68,7 +68,7 @@ const About = ({data}) => (
         
         </VerticalCenterFlex>
 
-      {/* </div> */}
+      </div>
 
     </Window>
   
