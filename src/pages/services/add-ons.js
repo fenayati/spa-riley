@@ -3,7 +3,6 @@ import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 
 // COMPONENTS
-import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 import VerticalCenterFlex from "../../components/layout/vertical-center-flex"
 import Window from '../../components/layout/window'
@@ -14,7 +13,7 @@ import '../../styles/pages/services/add-ons.css'
 
 const AddOns = ({data}) => (
 
-  <Layout>
+  <>
     
     <SEO title="Products" />
 
@@ -77,7 +76,7 @@ const AddOns = ({data}) => (
 
     </Window>
     
-  </Layout>
+  </>
 )
 
 export default AddOns

@@ -2,7 +2,6 @@ import React from "react"
 import Img from 'gatsby-image'
 
 // COMPONENTS
-import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 import WaxingService from '../../components/waxing_service'
 import Window from '../../components/layout/window'
@@ -19,7 +18,7 @@ const Waxing = ( {data} ) => {
 
   return (
 
-    <Layout>
+    <>
 
       <SEO title="Waxing" />
 
@@ -80,7 +79,7 @@ const Waxing = ( {data} ) => {
 
       </Window>
 
-    </Layout>
+    </>
 
   )
 

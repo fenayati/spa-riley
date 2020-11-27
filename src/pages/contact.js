@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { Link } from 'gatsby' 
 
 // COMPONENTS
-import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import VerticalCenterFlex from "../components/layout/vertical-center-flex"
 import Window from "../components/layout/window"
@@ -280,7 +279,8 @@ const Contact = () => {
   
   return (
 
-    <Layout>
+    <>
+
       <SEO title="Contact" />
 
       <Window classes={["window-contact"]}>
@@ -335,7 +335,7 @@ const Contact = () => {
 
       </Window>
 
-    </Layout>
+    </>
 
   )
 

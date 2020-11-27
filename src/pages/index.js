@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 // COMPONENTS
-import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Window from '../components/layout/window'
 import { Container, Row, Col } from 'react-bootstrap'
@@ -13,7 +12,8 @@ import '../styles/pages/index.css'
 import VerticalCenterFlex from "../components/layout/vertical-center-flex"
 
 const IndexPage = ( {data} ) => (
-  <Layout>
+
+  <>
 
     <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
@@ -86,7 +86,8 @@ const IndexPage = ( {data} ) => (
       </Window>
     </div>
 
-  </Layout>
+  </>
+
 )
 
 export default IndexPage

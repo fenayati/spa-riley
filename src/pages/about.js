@@ -2,7 +2,6 @@ import React from "react"
 import Img from 'gatsby-image'
 
 // COMPONENTS
-import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import VerticalCenterFlex from '../components/layout/vertical-center-flex'
 import Window from '../components/layout/window'
@@ -14,7 +13,7 @@ import '../styles/pages/about.css'
 
 const About = ({data}) => (
 
-  <Layout maxWidth={1200}>
+  <>
 
     <SEO title="About Me" />
 
@@ -72,7 +71,7 @@ const About = ({data}) => (
 
     </Window>
   
-  </Layout>
+  </>
 
 )
 

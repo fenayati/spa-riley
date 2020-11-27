@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react"
 
 // COMPONENTS
-import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 import FacialRow from '../../components/facials/facial_row'
 import { Container } from 'react-bootstrap'
@@ -116,19 +115,19 @@ const Facials = ( {data} ) => {
 )
 
   return (  
-    <Layout maxWidth="90%">
+    <>
       
       <SEO title="Facials" />
   
-        <Container className="my-2">
-          {        
-            productRows.map( (row, i) =>
-              <FacialRow key={i} products={row}/>
-            )
-          }
-        </Container>
+      <Container className="my-2">
+        {        
+          productRows.map( (row, i) =>
+            <FacialRow key={i} products={row}/>
+          )
+        }
+      </Container>
         
-    </Layout>
+    </>
   )
 }
 
