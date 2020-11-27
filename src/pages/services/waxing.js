@@ -5,9 +5,9 @@ import Img from 'gatsby-image'
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 import WaxingService from '../../components/waxing_service'
-import { Columns, Column, Container } from "../../components/layout/bulma"
 import Window from '../../components/layout/window'
 import VerticalCenterFlex from '../../components/layout/vertical-center-flex'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // CSS
 import '../../styles/pages/services/waxing.css'
@@ -24,63 +24,56 @@ const Waxing = ( {data} ) => {
       <SEO title="Waxing" />
 
       <Window classes={["window-waxing"]}>
+
+        {/* <div className="super-container"> */}
         
-        <VerticalCenterFlex classes={["vertical-center-waxing"]}>
+          <VerticalCenterFlex>
 
-          <Container 
-            styles={{
-              paddingTop: "25px", 
-              paddingBottom: "25px",
-            }}
-          >
-            <Columns classes={["site-font"]} >
-      
-              <Column 
-                classes={["has-text-centered", "has-text-white"]}
-                styles={{
-                  backgroundColor: "#2f3e46", 
-                  padding: 0
-                }}
-              >
-      
-                <div style={{padding: "2em"}}>
-                  <h2 
-                    className="has-text-centered" 
-                    style={{
-                      textTransform: "uppercase", 
-                      color: "white"
-                    }}
-                  >
-                    Waxing
-                  </h2>
-                  <div>
-                    {
-                      waxingServices.map(service => 
-                        <WaxingService 
-                          service={service.service} 
-                          price={service.price} 
-                        />
-                      )
-                    }
-                  </div>
-                </div>
-      
-              </Column>
-      
-              <Column styles={{padding: 0}}>
-                <Img 
-                  fluid={data.waxingLegs.childImageSharp.fluid} 
-                  style={{
-                    height: "100%",
-                    border: "10px solid #2f3e46"
-                  }}
-                />
-              </Column>
-      
-            </Columns>
-          </Container>
+              <Container>
+                <Row>
+          
+                  <Col sm={6} className="p-0">
+          
+                    <div className="text-center text-white bg-color-0 p-0">
+                      <div style={{padding: "2em"}}>
+                        <h2 className="text-center text-white text-uppercase">
+                          Waxing
+                        </h2>
+                        <div>
+                          {
+                            waxingServices.map(service => 
+                              <WaxingService 
+                                service={service.service} 
+                                price={service.price} 
+                              />
+                            )
+                          }
+                        </div>
+                      </div>
+                    </div>
+          
+                  </Col>
+          
+                  <Col sm={6} className="p-0">
 
-        </VerticalCenterFlex>
+                    <div className="p-0 border-10px-color-0 h-100">
+
+                      <Img
+                        className="h-100"
+                        fluid={data.waxingLegs.childImageSharp.fluid}
+                      />
+
+                    </div>
+                    
+                  </Col>
+          
+                </Row>
+              </Container>
+
+          </VerticalCenterFlex>
+
+        {/* </div> */}
+
       </Window>
 
     </Layout>

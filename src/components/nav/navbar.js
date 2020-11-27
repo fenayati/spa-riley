@@ -79,28 +79,6 @@ const Navbar = () => {
             </span>
 
             <div className="inner_main_menu" style={{margin: "0 auto", width: "90%"}}>
-                {/* 09.06.20 - CONVERT NAVLIST TO A COMPONENT SO CAN BE USED IN THE SIDE NAV */}
-                {/* <ul 
-                    style={{
-                        margin: 0, 
-                        padding: 0, 
-                        listStyle: "none", 
-                        textAlign: "right", 
-                        paddingTop: 31
-                    }}
-                >
-                    <li>
-                        <Link>Services</Link>
-                        <ul>
-                            <NavSegment path="/services/facials" label="Facials" />
-                            <NavSegment path="/services/waxing" label="Waxing" />
-                            <NavSegment path="/services/add-ons" label="Add-Ons" />
-                        </ul>
-                    </li>
-                    <NavSegment path="/products" label="Products"/>
-                    <NavSegment path="/about" label="About Me"/>
-                    <NavSegment path="/contact" label="Contact"/>
-                </ul> */}
                 <NavList />
             </div>
 
@@ -116,15 +94,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-// export const query = graphql`
-//   query {
-//     logo: file(relativePath: {eq: "logo_transparent.png"}) {
-//       childImageSharp {
-//         fluid(maxWidth: 2000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `

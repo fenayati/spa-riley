@@ -5,9 +5,9 @@ import { graphql } from 'gatsby'
 // COMPONENTS
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
-import { Columns, Column, Container } from "../../components/layout/bulma"
 import VerticalCenterFlex from "../../components/layout/vertical-center-flex"
 import Window from '../../components/layout/window'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // CSS
 import '../../styles/pages/services/add-ons.css'
@@ -15,66 +15,71 @@ import '../../styles/pages/services/add-ons.css'
 const AddOns = ({data}) => (
 
   <Layout>
+    
     <SEO title="Products" />
 
-    <div className="super-container">
-      <Window classes={["window-add-ons"]}>
-  
-        <VerticalCenterFlex classes={["vertical-center-add-ons"]}>
     
-          <Container 
-            classes={["site-font"]}
-            styles={{
-              paddingTop: "25px", 
-              paddingBottom: "25px",
-            }}
-          >
+    <Window classes={["window-add-ons"]}>
+
+      {/* <div className="super-container"> */}
+
+        <VerticalCenterFlex>
+  
+          <Container style={{paddingTop: "15px", paddingBottom: "15px"}}>
       
-            <Columns>
+            <Row>
       
-              <Column 
-                styles = {{
-                  padding: 0, 
-                  height: 300, 
-                  width: "100%"
-                }}
-              >
-                <Img 
-                  fluid={data.addOns.childImageSharp.fluid} 
-                  style={{
-                    height: "100%",
-                    border: "10px solid #2f3e46"
-                  }} 
-                />
-              </Column>
+              <Col>
+
+                <div 
+                  className="p-0 border-10px-color-0 w-100"
+                  style = {{
+                    height: 300
+                  }}
+                >
+
+                  <Img 
+                    className="h-100"
+                    fluid={data.addOns.childImageSharp.fluid}
+                  />
+
+                </div>
+                 
+              </Col>
       
-            </Columns>
+            </Row>
       
-            <Columns classes={["has-text-white"]}>
+            <Row>
       
-              <Column
-                classes={["has-text-centered", "add-ons"]}
-                styles={{color: "white", backgroundColor: "#2f3e46"}}
-              >
+              <div className="text-white w-100">
+
+                <Col>
+        
+                  <div className="text-center add-ons bg-color-0 text-white py-1 px-5">
+
+                    <h1>Additional Services</h1>
+                    <h4 className="text-uppercase">Can be added to a custom facial or purchased as a stand alone service.</h4>
+                    <p>Microdermabrasion - 30 minutes - $45</p>
+                    <p>Chemical Peel (glycolic, lactic, salicyclic, or an AHA/BHA combination) - 15-45 minutes - $40</p>
+                    <p>Microcurrent - 20 minutes - $45</p>
+                    <p>LED - 20 minutes - $30</p>
+                    <p>Dermaplaning - 30 minutes - $30</p>
+                    
+                  </div>
+                  
+                </Col>
+
+              </div>
       
-                <h1>Additional Services</h1>
-                <h4 style={{textTransform: "uppercase"}}>Can be added to a custom facial or purchased as a stand alone service.</h4>
-                <p>Microdermabrasion - 30 minutes - $45</p>
-                <p>Chemical Peel (glycolic, lactic, salicyclic, or an AHA/BHA combination) - 15-45 minutes - $40</p>
-                <p>Microcurrent - 20 minutes - $45</p>
-                <p>LED - 20 minutes - $30</p>
-                <p>Dermaplaning - 30 minutes - $30</p>
-                
-              </Column>
-      
-            </Columns>
+            </Row>
       
           </Container>
-          
+        
         </VerticalCenterFlex>
-  
-      </Window>
-    </div>
+
+      {/* </div> */}
+
+    </Window>
     
   </Layout>
 )

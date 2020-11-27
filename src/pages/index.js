@@ -5,9 +5,8 @@ import Img from 'gatsby-image'
 // COMPONENTS
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import { Column, Columns, Container } from "../components/layout/bulma"
-import VerticalCenter from '../components/layout/vertical-center'
 import Window from '../components/layout/window'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // STYLES
 import '../styles/pages/index.css'
@@ -19,12 +18,15 @@ const IndexPage = ( {data} ) => (
     <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
 
     <div 
-      className="sale-banner"
+      className="sale-banner bg-color-0"
     >
       <VerticalCenterFlex>
-        <div style={{padding: "20px"}}>
-          15% Off Your First Service for All New Clients
-        </div>
+        
+        <Container>
+          <div style={{padding: "20px"}}>
+            15% Off Your First Service for All New Clients
+          </div>
+        </Container>
         
       </VerticalCenterFlex>
 
@@ -40,34 +42,47 @@ const IndexPage = ( {data} ) => (
     >
       <Window classes={["window-index"]}>
   
-        <VerticalCenter classes={["vertical-center-index"]}>
+        <VerticalCenterFlex>
+
           <Container>
   
-            <Columns>
+            <Row>
   
-              <Column
-                styles={{
-                  backgroundColor: "#2f3e46", 
-                  padding: 0,
-                }}
-              >
-                <VerticalCenterFlex>
-                  <h1 className='spa-riley'>
-                    Spa Riley: Putting Self Love First
-                  </h1>
-                </VerticalCenterFlex>
-              </Column>
+              <Col sm={6} className="p-0">
+
+                <div className="bg-color-0 p-0 h-100">
+
+                  <VerticalCenterFlex>
+
+                    <h1 className='spa-riley'>
+                      Spa Riley: Putting Self Love First
+                    </h1>
+
+                  </VerticalCenterFlex>
+
+                </div>
+
+              </Col>
               
-              <Column styles={{padding: 0}}>
-                <Img 
-                  fluid={data.stones.childImageSharp.fluid} 
-                  style={{border: "10px solid #2f3E46"}}
-                />
-              </Column>
+              <Col sm={6} className="p-0">
+
+                <div className="p-0 border-10px-color-0 h-100">
+
+                  <Img
+                    className="h-100" 
+                    fluid={data.stones.childImageSharp.fluid} 
+                  /> 
+                  
+                </div>
+                
+              </Col>
               
-            </Columns>
+            </Row>
+
           </Container>
-        </VerticalCenter>
+
+        </VerticalCenterFlex>
+
       </Window>
     </div>
 

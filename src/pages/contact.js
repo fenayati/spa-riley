@@ -4,9 +4,10 @@ import { Link } from 'gatsby'
 // COMPONENTS
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import { Container, Columns, Column } from '../components/layout/bulma'
 import VerticalCenterFlex from "../components/layout/vertical-center-flex"
 import Window from "../components/layout/window"
+import { Container } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 // CSS
 import '../styles/pages/contact.css'
@@ -284,66 +285,53 @@ const Contact = () => {
 
       <Window classes={["window-contact"]}>
 
-        <VerticalCenterFlex classes={["vertical-center-contact"]}>
+        {/* <div className="super-container"> */}
 
-          <Container
-            styles={{
-              paddingTop: "25px", 
-              paddingBottom: "25px",
-            }}
-          >
-      
-              <Columns 
-                classes={["has-text-white"]}
-                styles={{
-                  minHeight: 200,
-                  backgroundColor: "#2f3e46"
-                }}
-              >
-      
-                {/* CONTACT INFO */}
-                <Column
-                  styles={{
-                    margin: "1em"
-                  }}
-                >
-      
-                  <h1>Book Now</h1>
-                  <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
-                  <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
-                  <p style={{margin: 0}}><Link className="has-text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
-                  <p style={{margin: 0}}>(440) 667-9617</p>
-      
-                </Column>
-      
-                {/* HOURS */}
-                <Column
-                  styles={{
-                    margin: "1em"
-                  }}
-                >
-      
-                  <h1>Hours</h1>
-                  <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
-                  <p style={{margin: 0}}>Sat: 10am - 5pm</p>
-                  <p style={{margin: 0}}>Sun: 10am - 5pm</p>
-      
-                </Column>
-      
-              </Columns>
-      
-              {/* <div className="columns" style={{marginBottom: "1em"}}> */}
-              <Columns>
-      
-                {/* 09.01.20: MAP DIV */}
-                <div id="map" style={{height: 400, width: "100%"}}></div>
-      
-              {/* </div> */}
-              </Columns>
-      
-          </Container>
+          <VerticalCenterFlex>
 
-        </VerticalCenterFlex>
+            <Container className="p-0 text-white bg-color-0">
+                
+                  <Row className="mx-0">
+
+                    {/* CONTACT INFO */}
+                    <Col>
+          
+                      <div className="m-5">
+                        <h1>Book Now</h1>
+                        <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
+                        <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
+                        <p style={{margin: 0}}><Link className="text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
+                        <p style={{margin: 0}}>(440) 667-9617</p>
+                      </div>
+          
+                    </Col>
+          
+                    {/* HOURS */}
+                    <Col>
+          
+                      <div className="m-5">
+                        <h1>Hours</h1>
+                        <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
+                        <p style={{margin: 0}}>Sat: 10am - 5pm</p>
+                        <p style={{margin: 0}}>Sun: 10am - 5pm</p>
+                      </div>
+          
+                    </Col>
+        
+                  </Row>
+        
+                  <Row className="mx-0">
+          
+                    {/* 09.01.20: MAP DIV */}
+                    <div id="map" style={{height: 400, width: "100%"}}></div>
+          
+                  </Row>
+                          
+            </Container>
+
+          </VerticalCenterFlex>
+
+        {/* </div> */}
 
       </Window>
 

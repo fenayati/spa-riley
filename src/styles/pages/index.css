@@ -5,11 +5,10 @@ h1 {
 .window-index {
 
   /* 100 viewport height - ( footer height + header height + banner line height + banner padding )*/
-  height: calc(100vh - ( 75px + 110px + 3em + 40px ) ) ;
+  height: calc(100vh - 75px - 110px - 3em - 40px ) ;
 }
 
 .sale-banner {
-  background-color: #2f3E46 ;
   text-transform: uppercase ;
   text-align: center ;
   color: white ;
@@ -31,16 +30,6 @@ h1 {
       margin-top: 2rem ;
       margin-bottom: 2rem
     }
-
-    /* .sale-banner {
-      margin-bottom: 30px;
-    } */
-
-    .vertical-center-index {
-      position: relative;
-      top: auto ;
-      transform: none ;
-    }
     
 }
 
@@ -51,7 +40,7 @@ h1 {
   }
   
   .spa-riley {
-    font-size: 56px
+    font-size: 1.75em
   }
 
 }
@@ -62,7 +51,7 @@ h1 {
   }
 
   .spa-riley {
-    font-size: 40px
+    font-size: 1.5em
   }
 }
 
@@ -73,7 +62,7 @@ h1 {
   }
 
   .spa-riley {
-    font-size: 32px
+    font-size: 1em
   }
 
 }
