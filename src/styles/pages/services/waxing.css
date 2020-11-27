@@ -1,8 +1,3 @@
-/* .window-waxing {
-    margin-left: 20px ;
-    margin-right: 20px
-} */
-
 @media only screen and (max-height: 850px) {
     .window-waxing {
         height: auto

@@ -23,7 +23,7 @@ const FacialCard = ( {image, title, subtitle, description, columnSize} ) => {
                 
                     <div className="text-white text-center">
 
-                        <h2 className="text-uppercase">
+                        <h2 className="text-uppercase facial-card">
                             {title}
                         </h2>
                         <h3>{subtitle}</h3>
