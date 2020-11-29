@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 // import defaultMetaImage from '../../static/favicon_multi.png'
-const defaultMetaImage = "/static/favicon_multi.png"
+const defaultMetaImage = "/favicon_multi.png"
 
 function SEO({ description, lang, meta, title, image, path }) {
   const { site } = useStaticQuery(
