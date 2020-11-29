@@ -20,7 +20,10 @@ const Waxing = ( {data} ) => {
 
     <>
 
-      <SEO title="Waxing" />
+      <SEO 
+        title="Waxing" 
+        path="/waxing"
+      />
 
       <Window className="window-waxing">
 

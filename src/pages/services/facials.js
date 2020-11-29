@@ -117,7 +117,10 @@ const Facials = ( {data} ) => {
   return (  
     <>
       
-      <SEO title="Facials" />
+      <SEO 
+        title="Facials" 
+        path="/facials"
+      />
   
       <Container className="my-2">
         {        

@@ -15,7 +15,10 @@ const AddOns = ({data}) => (
 
   <>
     
-    <SEO title="Products" />
+    <SEO 
+      title="Additional Services" 
+      path="/add-ons"
+    />
 
     
     <Window className="window-add-ons">

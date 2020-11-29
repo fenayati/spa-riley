@@ -15,7 +15,10 @@ const About = ({data}) => (
 
   <>
 
-    <SEO title="About Me" />
+    <SEO 
+      title="About Me" 
+      path="/about"
+    />
 
     <Window className="window-about">
 

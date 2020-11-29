@@ -289,7 +289,10 @@ const Contact = () => {
 
     <>
 
-      <SEO title="Contact" />
+      <SEO 
+        title="Contact"
+        path="/contact" 
+      />
 
       <Window className="window-contact">
 

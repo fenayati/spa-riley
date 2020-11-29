@@ -6,7 +6,10 @@ const Products = () => {
   return (    
     <>
       
-      <SEO title="Products" />
+      <SEO 
+        title="Products" 
+        path="/products"
+      />
 
       <h1 className="text-white">Product page</h1>
 
