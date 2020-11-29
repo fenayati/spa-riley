@@ -1,16 +1,12 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, image}) {
+// import defaultMetaImage from '../../static/favicon_multi.png'
+const defaultMetaImage = "/static/favicon_multi.png"
+
+function SEO({ description, lang, meta, title, image, path }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,13 +15,19 @@ function SEO({ description, lang, meta, title, image}) {
             title
             description
             author
+            siteURL
           }
         }
       }
     `
   )
 
+  console.log({defaultMetaImage})
+
   const metaDescription = description || site.siteMetadata.description
+  const siteURL = site.siteMetadata.siteURL
+  const imageURL = siteURL + ( image || defaultMetaImage ) 
+  const titleSiteConcat = `${title !== undefined ? title + ' | ' : '' }${site.siteMetadata.title}`
 
   return (
     <Helmet
@@ -41,11 +43,7 @@ function SEO({ description, lang, meta, title, image}) {
         },
         {
           property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:image`,
-          content: image,
+          content: titleSiteConcat,
         },
         {
           property: `og:description`,
@@ -54,6 +52,10 @@ function SEO({ description, lang, meta, title, image}) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: 'og:image',
+          content: imageURL
         },
         {
           name: `twitter:card`,
@@ -65,14 +67,39 @@ function SEO({ description, lang, meta, title, image}) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: titleSiteConcat,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: 'twitter:site',
+          content: '@nsmedira'
+        },
+        {
+          name: 'viweport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          charset: 'utf-8'
+        },
+        {
+          name: 'theme-color',
+          content: '#2d728f' 
+        },
+        {
+          name: 'google',
+          content: 'nositelinksearchbox'
+        },
+        {
+          name: 'twitter:image',
+          content: imageURL
+        }
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={siteURL + path} />
+    </Helmet>
   )
 }
 
