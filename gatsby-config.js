@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `SpaRiley.com`,
-    description: ``,
+    description: `Welcome to Spa Riley, the Chagrin Valley's premier spa experience.`,
     author: `@nsmedira`,
+    siteURL: 'https://spariley.com'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
