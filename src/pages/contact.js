@@ -18,10 +18,13 @@ const Contact = () => {
 
     console.log('initMap() has been called')
 
-    // the location of Uluru
+    const lat = 41.419795
+    const lng = -81.339451
+
+    // the location of Spa Riley
     var coordinates = {
-      lat: 41.419795,
-      lng: -81.339451
+      lat,
+      lng
     }
 
     // the map, centered at uluru
@@ -35,6 +38,7 @@ const Contact = () => {
         mapTypeControl: false,
         fullscreenControl: false,
         streetViewControl: false,
+        draggableCursor: 'pointer',
         styles: [
           {
             "elementType": "geometry",
@@ -216,6 +220,10 @@ const Contact = () => {
       }
     )
 
+    map.addListener("click", () => {
+      window.open(\`https://www.google.com/maps/dir/?api=1&destination=\${lat}%2C\${lng}\`)
+    })
+
     // the marker, positioned at uluru
     var marker = new google.maps.Marker({
       position: coordinates,
@@ -293,29 +301,41 @@ const Contact = () => {
                 
                   <Row className="mx-0">
 
-                    {/* CONTACT INFO */}
                     <Col>
-          
-                      <div className="m-5">
-                        <h1>Book Now</h1>
-                        <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
-                        <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
-                        <p style={{margin: 0}}><Link className="text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
-                        <p style={{margin: 0}}>(440) 667-9617</p>
-                      </div>
-          
-                    </Col>
-          
-                    {/* HOURS */}
-                    <Col>
-          
-                      <div className="m-5">
-                        <h1>Hours</h1>
-                        <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
-                        <p style={{margin: 0}}>Sat: 10am - 5pm</p>
-                        <p style={{margin: 0}}>Sun: 10am - 5pm</p>
-                      </div>
-          
+
+                      <Row>
+                        {/* CONTACT INFO */}
+                        <Col>
+              
+                          <div className="m-5">
+                            <h1>Book Now</h1>
+                            <p style={{margin: 0}}>16490 Chillicothe Rd.</p>
+                            <p style={{margin: 0}}>Chagrin Falls, OH, 44023</p>
+                            <p style={{margin: 0}}><Link className="text-white" to="mailto:rdw7795@gmail.com">rdw7795@gmail.com</Link></p>
+                            <p style={{margin: 0}}>(440) 667-9617</p>
+                          </div>
+              
+                        </Col>
+              
+                        {/* HOURS */}
+                        <Col>
+              
+                          <div className="m-5">
+                            <h1>Hours</h1>
+                            <p style={{margin: 0}}>Tues-Thurs: 11am - 4pm</p>
+                            <p style={{margin: 0}}>Sat: 10am - 5pm</p>
+                            <p style={{margin: 0}}>Sun: 10am - 5pm</p>
+                          </div>
+              
+                        </Col>
+                      </Row>
+
+                      <Row>
+                        <Col className="mx-5">
+                          <p>Click anywhere on the map for driving directions.</p>
+                        </Col>
+                      </Row>
+
                     </Col>
         
                   </Row>
