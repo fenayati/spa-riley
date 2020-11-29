@@ -15,7 +15,10 @@ const IndexPage = ( {data} ) => (
 
   <>
 
-    <SEO title="Home" image={data.ogImagePath.childImageSharp.fixed.src} />
+    <SEO 
+      title="Home" 
+      path="/"
+    />
 
     <div 
       className="sale-banner bg-color-0"
@@ -99,13 +102,6 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    ogImagePath: file(relativePath: {eq: "logo_transparent_multi_v3.png"}) {
-      childImageSharp {
-        fixed {
-          src
         }
       }
     }
