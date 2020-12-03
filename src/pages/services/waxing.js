@@ -40,7 +40,7 @@ const Waxing = ( {data} ) => {
                     className="p-0"
                   >
           
-                    <div className="text-center text-white bg-color-0">
+                    <div className="text-center text-white bg-color-0 h-100">
                       <div style={{padding: "2em"}}>
                         <h2 className="text-center text-white text-uppercase">
                           Waxing
