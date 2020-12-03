@@ -21,13 +21,19 @@ const IndexPage = ( {data} ) => (
     />
 
     <div 
-      className="sale-banner bg-color-0"
+      className="sale-banner"
+      style={{
+        margin: `0px auto`,
+        maxWidth: 960,
+        paddingLeft: `1.0875rem`,
+        paddingRight: `1.0875rem`
+      }}
     >
       <VerticalCenterFlex>
         
-        <Container>
+        <Container className="bg-color-0">
           <div style={{padding: "20px"}}>
-            15% Off Your First Service for All New Clients
+            15% Off Your First Service
           </div>
         </Container>
         
