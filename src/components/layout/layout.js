@@ -22,19 +22,12 @@ const Layout = ( { children } ) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        className="main-div"
-        style={{
-          margin: `0px auto`,
-          paddingTop: `110px`,
-          paddingBottom: `75px`
-        }}
-      >
+      <div id="main-div">
         <main>
           {children}
         </main>
       </div>
-      <footer className="fixed-footer nav-text">
+      <footer id="footer" className="nav-text">
         <p style={{position: "absolute", top: "27px", marginBottom: 0, marginLeft: "15px"}}>© {new Date().getFullYear()}, Spa Riley, LLC</p>
         
         <ul className="social-icons">
