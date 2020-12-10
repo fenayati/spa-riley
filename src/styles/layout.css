@@ -1,0 +1,66 @@
+#footer {
+  position: fixed ;
+  bottom: 0 ;
+  height: 75px ;
+  width: 100% ;
+  background-color: white ;
+}
+
+#main-div {
+  margin: 0px auto ;
+  padding-top: 110px ;
+  padding-bottom: 75px
+}
+
+#navbar {
+  top: 0 ;
+  width: 100% ; 
+  position: fixed ; 
+  background-color: white ; 
+  height: 110px ;
+  z-index: 1
+}
+
+#sale-banner {
+  text-transform: uppercase ;
+  text-align: center ;
+  color: white ;
+  font-size: 2em ;
+  width: 100vw
+}
+
+.l-index {
+  margin: 0px auto ;
+  max-width: 960px ;
+  padding-left: 1.0875rem ;
+  padding-right: 1.0875rem
+}
+
+.l-vertical-center-flex {
+  height: 100% ;
+  display: flex ;
+  align-items: center ;
+}
+
+.nav-text {
+  color: #2f3E46 ;
+}
+
+.window {
+  height: calc(100vh - ( 75px + 110px )) ;
+  position: relative
+}
+
+.super-container {
+  padding: 15px ;
+  height: 100% ;
+}
+
+.bg-color-0 {
+  /* dark green color */
+  background-color: #2F3E46
+}
+
+.border-10px-color-0 {
+  border: 10px solid #2F3E46 ;
+}
