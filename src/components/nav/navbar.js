@@ -33,18 +33,7 @@ const Navbar = () => {
     }
 
     return(
-        <div 
-            id="navbar" 
-            style={{
-                top: 0, 
-                width: "100%", 
-                // position: "relative",
-                position: "fixed", 
-                backgroundColor: "white", 
-                height: 110,
-                zIndex: 1
-            }}
-        >
+        <div id="navbar">
             <div 
                 className="logo_area" 
                 style={{
@@ -83,7 +72,7 @@ const Navbar = () => {
             </div>
 
             {/* 09.06.20 - SIDENAV DIV */}
-            <div id="side-nav" className="side-nav">
+            <div id="side-nav">
                 <button className="closebtn" style={{cursor: "pointer"}} onClick={closeNav}>&times;</button>
                 <NavList />
             </div>
