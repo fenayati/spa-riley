@@ -4,7 +4,7 @@ const VerticalCenterFlex = ( { children } ) => {
 
     return (
 
-        <div className="vertical-center-flex">
+        <div className="l-vertical-center-flex">
             {children}
         </div>
         
