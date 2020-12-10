@@ -4,16 +4,7 @@
   height: calc(100vh - 75px - 110px - 3em - 40px ) ;
 }
 
-.sale-banner {
-  text-transform: uppercase ;
-  text-align: center ;
-  color: white ;
-  font-size: 2em ;
-  padding: 0 ;
-  width: 100vw
-}
-
-.spa-riley {
+#spa-riley {
   font-size: 72px;
   color: white;
   margin: 40px;
@@ -31,33 +22,33 @@
 
 @media only screen and (max-width: 910px) {
 
-  .sale-banner {
+  #sale-banner {
     font-size: 1.75em
   }
   
-  .spa-riley {
+  #spa-riley {
     font-size: 1.75em
   }
 
 }
 
 @media only screen and (max-width: 414px) {
-  .sale-banner {
+  #sale-banner {
     font-size: 1.5em
   }
 
-  .spa-riley {
+  #spa-riley {
     font-size: 1.5em
   }
 }
 
 @media only screen and (max-width: 320px) {
 
-  .sale-banner {
+  #sale-banner {
     font-size: 1em
   }
 
-  .spa-riley {
+  #spa-riley {
     font-size: 1em
   }
 
