@@ -20,15 +20,8 @@ const IndexPage = ( {data} ) => (
       path="/"
     />
 
-    <div 
-      className="sale-banner"
-      style={{
-        margin: `0px auto`,
-        maxWidth: 960,
-        paddingLeft: `1.0875rem`,
-        paddingRight: `1.0875rem`
-      }}
-    >
+    <div id="sale-banner" className="l-index">
+
       <VerticalCenterFlex>
         
         <Container className="bg-color-0">
@@ -41,14 +34,8 @@ const IndexPage = ( {data} ) => (
 
     </div>
 
-    <div 
-      style={{
-        margin: `0px auto`,
-        maxWidth: 960,
-        paddingLeft: `1.0875rem`,
-        paddingRight: `1.0875rem`
-      }}
-    >
+    <div className="l-index">
+
       <Window className="window-index">
   
         <VerticalCenterFlex>
@@ -63,7 +50,7 @@ const IndexPage = ( {data} ) => (
 
                   <VerticalCenterFlex>
 
-                    <h1 className='spa-riley'>
+                    <h1 id='spa-riley'>
                       Spa Riley: Putting Self Love First
                     </h1>
 
