@@ -32,7 +32,7 @@ const AddOns = ({data}) => (
               <Col>
 
                 <div 
-                  className="p-0 border-10px-color-0 w-100"
+                  className="p-0 primary-border w-100"
                   style = {{
                     height: 300
                   }}

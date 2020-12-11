@@ -32,7 +32,7 @@ const About = ({data}) => (
               
               <Col md={6} className="p-0">
 
-                <div className="p-0 border-10px-color-0 h-100">
+                <div className="p-0 primary-border h-100">
                   <Img 
                     className="h-100"
                     fluid={data.portrait.childImageSharp.fluid}

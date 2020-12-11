@@ -62,7 +62,7 @@ const Waxing = ( {data} ) => {
           
                   <Col sm={6} className="p-0">
 
-                    <div className="border-10px-color-0 h-100">
+                    <div className="primary-border h-100">
 
                       <Img
                         className="h-100"

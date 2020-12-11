@@ -62,7 +62,7 @@ const IndexPage = ( {data} ) => (
               
               <Col sm={6} className="p-0">
 
-                <div className="p-0 border-10px-color-0 h-100">
+                <div className="p-0 primary-border h-100">
 
                   <Img
                     className="h-100" 
