@@ -1,9 +1,11 @@
+@import './variables.scss' ;
+
 #footer {
   position: fixed ;
   bottom: 0 ;
   height: 75px ;
   width: 100% ;
-  background-color: white ;
+  background-color: $color-5 ;
 }
 
 #main-div {
@@ -16,7 +18,7 @@
   top: 0 ;
   width: 100% ; 
   position: fixed ; 
-  background-color: white ; 
+  background-color: $color-5 ; 
   height: 110px ;
   z-index: 1
 }
@@ -24,7 +26,7 @@
 #sale-banner {
   text-transform: uppercase ;
   text-align: center ;
-  color: white ;
+  color: $color-5 ;
   font-size: 2em ;
   width: 100vw
 }
@@ -42,10 +44,6 @@
   align-items: center ;
 }
 
-.nav-text {
-  color: #2f3E46 ;
-}
-
 .window {
   height: calc(100vh - ( 75px + 110px )) ;
   position: relative
@@ -54,13 +52,4 @@
 .super-container {
   padding: 15px ;
   height: 100% ;
-}
-
-.bg-color-0 {
-  /* dark green color */
-  background-color: #2F3E46
-}
-
-.border-10px-color-0 {
-  border: 10px solid #2F3E46 ;
 }
