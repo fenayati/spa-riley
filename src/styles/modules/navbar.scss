@@ -1,3 +1,5 @@
+@import '../variables.scss' ;
+
 #main-menu {
     margin: 0 ;
     padding: 0 ;
@@ -17,7 +19,6 @@
 }
 
 .inner_main_menu ul li a {
-    color: #2f3E46 ;
     font-size: 20px ; 
     text-transform: uppercase ;
     text-decoration: none ; 
@@ -25,15 +26,11 @@
     padding: 10px 20px
 }
 
-.inner_main_menu ul li a:hover {
-    color: #52796f ;
-}
-
 .inner_main_menu ul li ul {
     position: absolute ;
     top: 27px;
     left: -12px ; 
-    background-color: #2f3e46 ;
+    background-color: $color-0 ;
     z-index: 1 ;
     display: none ;
 }
@@ -50,14 +47,14 @@
 }
 
 .inner_main_menu ul li ul li a {
-    color: white ; 
+    color: $color-5 ; 
     font-size: 15px ;
     text-transform: capitalize;
 }
 
 .inner_main_menu ul li ul li a:hover {
-    background: #CAD2C5 ; 
-    color: #2F3E46
+    background: $color-4 ; 
+    color: $color-0
 }
 
 #side-nav{
@@ -67,7 +64,7 @@
     z-index: 1 ;
     top: 0 ;
     left: 0 ; 
-    background-color: #255957 ;
+    background-color: $color-1 ;
     overflow-x: hidden ;
     padding-top: 60px ;
     transition: .5s
@@ -86,13 +83,13 @@
     padding: 8px 8px 8px 32px ;
     text-decoration: none ;
     font-size: 25px;
-    color: #cad2c5 ;
+    color: $color-4 ;
     display: block ;
     transition: 0.3s ;
 }
 
 #side-nav a:hover {
-    color: #f1f1f1 ;
+    color: $color-5 ;
 }
 
 #side-nav .closebtn {
@@ -104,17 +101,21 @@
     background-color: transparent ;
     border: none ;
     outline: none ;
-    color: #cad2c5 ;
+    color: $color-4 ;
 }
 
 #side-nav .closebtn:hover {
-    color: #f1f1f1 ;
+    color: $color-5 ;
 }
 
 #hamburger {
     display: none ;
     padding-top: 32.5px ;
     padding-left: 30px ;
+}
+
+.nav-text {
+    color: $color-0 ;
 }
 
 @media screen and (max-width: 812px) {
