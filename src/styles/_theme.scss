@@ -8,10 +8,29 @@
     border-color: variables.$color-0 ;
 }
 
-.inner_main_menu ul li a {
+.m-nav-link {
+
     color: variables.$color-0 ;
+
+    &:hover {
+        color: variables.$color-2 ;
+    }
+
 }
 
-.inner_main_menu ul li a:hover {
-    color: variables.$color-2 ;
+.m-dropdown {
+
+    background-color: variables.$color-0 ;
+
+    &-link {
+
+        color: variables.$color-5 ; 
+
+        &:hover {
+            background: variables.$color-4 ; 
+            color: variables.$color-0 ;
+        }
+
+    }
+
 }
