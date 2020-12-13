@@ -7,18 +7,18 @@ import NavSegment from './nav_segment'
 const NavList = () => {
     return (
         <ul className="main-menu">
-            <li className="nav-segment">
-                <a className="nav-link" name="services">Services</a>
-                <ul className="dropdown">
-                    <NavSegment className="dropdown-segment" path="/services/facials" label="Facials" />
-                    <NavSegment className="dropdown-segment" path="/services/waxing" label="Waxing" />
-                    <NavSegment className="dropdown-segment" path="/services/add-ons" label="Add-Ons" />
+            <li className="m-nav-segment">
+                <a className="m-nav-link nav-link" name="services">Services</a>
+                <ul className="m-dropdown">
+                    <NavSegment namespace="m-dropdown" path="/services/facials" label="Facials" />
+                    <NavSegment namespace="m-dropdown" path="/services/waxing" label="Waxing" />
+                    <NavSegment namespace="m-dropdown" path="/services/add-ons" label="Add-Ons" />
                 </ul>
             </li>
 
-            <NavSegment className="nav-segment" path="/products" label="Products"/>
-            <NavSegment className="nav-segment" path="/about" label="About Me"/>
-            <NavSegment className="nav-segment" path="/contact" label="Contact"/>
+            <NavSegment namespace="m-nav" path="/products" label="Products"/>
+            <NavSegment namespace="m-nav" path="/about" label="About Me"/>
+            <NavSegment namespace="m-nav" path="/contact" label="Contact"/>
         </ul>
     )
 }
