@@ -1,13 +1,29 @@
-.nav-segment {
-    float: none ;
-    display: inline-block ;
-    position: relative ;
+@use 'link' ;
+@use '../../variables' ;
 
-    &:nth-child(-n+2) {
-        float: left 
-    } ;
+.m-nav {
+    
+    &-segment {
 
-    &:hover > .dropdown {
-        display: block;
+        float: none ;
+        display: inline-block ;
+        position: relative ;
+
+        &:nth-child(-n+2) {
+            float: left 
+        } ;
+
+        &:hover > .m-dropdown {
+            display: block;
+        }
+    }  
+    
+    &-link {
+
+        @extend %link ;
+        font-size: 20px ; 
+        text-transform: uppercase ;
+
     }
+
 }
