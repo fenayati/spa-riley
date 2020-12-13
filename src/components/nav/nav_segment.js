@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const NavSegment = ( { path, label } ) => {
+const NavSegment = ( { path, label, className } ) => {
 
 	return (
 
-		<li>
-            <Link to={path}>{label}</Link>
+		<li className={className}>
+            <Link className="nav-link" to={path}>{label}</Link>
         </li>
 
 	)
