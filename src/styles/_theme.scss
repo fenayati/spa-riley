@@ -1,0 +1,17 @@
+@use 'variables' ;
+
+.bg-color-0 {
+    background-color: variables.$color-0
+}
+
+.primary-border {
+    border-color: variables.$color-0 ;
+}
+
+.inner_main_menu ul li a {
+    color: variables.$color-0 ;
+}
+
+.inner_main_menu ul li a:hover {
+    color: variables.$color-2 ;
+}
