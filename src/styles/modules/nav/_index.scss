@@ -1,6 +1,5 @@
 @use '../../variables' ;
 @use 'nav-segment' ;
-@use 'nav-link' ;
 @use 'dropdown' ;
 
 .main-menu {
@@ -9,17 +8,6 @@
     list-style: none ; 
     text-align: right ; 
     padding-top: 31px
-}
-
-.inner_main_menu ul li ul li a {
-    color: variables.$color-5 ; 
-    font-size: 15px ;
-    text-transform: capitalize;
-}
-
-.inner_main_menu ul li ul li a:hover {
-    background: variables.$color-4 ; 
-    color: variables.$color-0
 }
 
 #side-nav{
