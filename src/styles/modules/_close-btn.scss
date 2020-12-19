@@ -1,0 +1,19 @@
+@use '../variables' ;
+
+.closebtn {
+
+    position: absolute ;
+    top: 0;
+    right: 15px ;
+    font-size: 36px;
+    margin-left: 50px ;
+    background-color: transparent ;
+    border: none ;
+    outline: none ;
+    color: variables.$color-4 ;
+
+    &:hover {
+        color: variables.$color-5 ;
+    }
+
+}
