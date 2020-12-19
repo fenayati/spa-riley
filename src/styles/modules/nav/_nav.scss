@@ -1,7 +1,13 @@
 @use 'link' ;
+@use 'nav-list' ;
 @use '../../variables' ;
 
 .m-nav {
+
+    @extend %nav-list ;
+
+    text-align: right ; 
+    padding-top: 31px ;
     
     &-segment {
 
@@ -26,4 +32,10 @@
 
     }
 
+}
+
+@media screen and (max-width: 812px) {
+    .inner_main_menu {
+        display: none
+    }
 }
