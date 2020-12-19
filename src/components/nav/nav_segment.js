@@ -7,7 +7,7 @@ const NavSegment = ( { path, label, namespace } ) => {
 	return (
 
 		<li className={namespace + '-segment'}>
-            <Link className={`${namespace + '-link'} nav-link`} to={path}>{label}</Link>
+            <Link className={namespace + '-link'} to={path}>{label}</Link>
         </li>
 
 	)
