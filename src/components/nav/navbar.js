@@ -25,11 +25,11 @@ const Navbar = () => {
     )    
 
     function openNav() {
-        document.getElementById('side-nav').style.width = "200px"
+        document.getElementsByClassName('m-side-nav')[0].style.width = "200px"
     }
 
     function closeNav() {
-        document.getElementById('side-nav').style.width = "0"
+        document.getElementsByClassName('m-side-nav')[0].style.width = "0"
     }
 
     return(
@@ -52,9 +52,8 @@ const Navbar = () => {
                 </Link>
             </div>
 
-            {/* 09.06.20 - HAMBURGER ICON */}
             <span 
-                id="hamburger" 
+                className="hamburger" 
                 style={{
                     fontSize: 30, 
                     cursor: "pointer"
@@ -71,10 +70,9 @@ const Navbar = () => {
                 <NavList />
             </div>
 
-            {/* 09.06.20 - SIDENAV DIV */}
-            <div id="side-nav">
+            <div className="m-side-nav">
                 <button className="closebtn" style={{cursor: "pointer"}} onClick={closeNav}>&times;</button>
-                <NavList />
+                <NavList sidenav />
             </div>
 
         </div>
