@@ -4,23 +4,32 @@ import React from 'react'
 // COMPONENTS
 import NavSegment from './nav_segment'
 
-const NavList = () => {
+const NavList = ( { sidenav } ) => {
+
     return (
-        <ul className="main-menu">
-            <li className="m-nav-segment">
-                <a className="m-nav-link nav-link" name="services">Services</a>
-                <ul className="m-dropdown">
-                    <NavSegment namespace="m-dropdown" path="/services/facials" label="Facials" />
-                    <NavSegment namespace="m-dropdown" path="/services/waxing" label="Waxing" />
-                    <NavSegment namespace="m-dropdown" path="/services/add-ons" label="Add-Ons" />
+
+        <ul className={`m-nav${sidenav ? " m-side-nav-list" : ""}`}>
+
+            <li className={ sidenav ? "m-side-nav-segment" : "m-nav-segment" }>
+                <a className={sidenav ? " m-side-nav-link" : " m-nav-link"} name="services">Services</a>
+
+                <ul className={sidenav ? "m-side-nav-list" : "m-dropdown"} >
+
+                    <NavSegment namespace={sidenav ? "m-side-nav" : "m-dropdown"} path="/services/facials" label="Facials" />
+                    <NavSegment namespace={sidenav ? "m-side-nav" : "m-dropdown"} path="/services/waxing" label="Waxing" />
+                    <NavSegment namespace={sidenav ? "m-side-nav" : "m-dropdown"} path="/services/add-ons" label="Add-Ons" />
+
                 </ul>
+
             </li>
 
-            <NavSegment namespace="m-nav" path="/products" label="Products"/>
-            <NavSegment namespace="m-nav" path="/about" label="About Me"/>
-            <NavSegment namespace="m-nav" path="/contact" label="Contact"/>
+            <NavSegment namespace={sidenav ? "m-side-nav" : "m-nav"} path="/products" label="Products"/>
+            <NavSegment namespace={sidenav ? "m-side-nav" : "m-nav"} path="/about" label="About Me"/>
+            <NavSegment namespace={sidenav ? "m-side-nav" : "m-nav"} path="/contact" label="Contact"/>
+
         </ul>
     )
+
 }
 
 export default NavList
