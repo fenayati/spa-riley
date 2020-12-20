@@ -20,7 +20,7 @@ const IndexPage = ( {data} ) => (
       path="/"
     />
 
-    <div id="sale-banner" className="l-index">
+    <div id="sale-banner" className="l-index fs-1">
 
       <VerticalCenterFlex>
         
