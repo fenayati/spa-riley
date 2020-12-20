@@ -53,11 +53,7 @@ const Navbar = () => {
             </div>
 
             <span 
-                className="hamburger" 
-                style={{
-                    fontSize: 30, 
-                    cursor: "pointer"
-                }} 
+                className="hamburger fs-2" 
                 onClick={openNav}
                 onKeyDown={openNav}
                 role="button"
@@ -71,7 +67,7 @@ const Navbar = () => {
             </div>
 
             <div className="m-side-nav">
-                <button className="closebtn" style={{cursor: "pointer"}} onClick={closeNav}>&times;</button>
+                <button className="closebtn fs-1" style={{cursor: "pointer"}} onClick={closeNav}>&times;</button>
                 <NavList sidenav />
             </div>
 
