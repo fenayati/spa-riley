@@ -5,7 +5,7 @@
 }
 
 .primary-border {
-    border-color: variables.$color-0 ;
+    border-color: variables.$color-0 !important;
 }
 
 .m-nav-link {
@@ -40,25 +40,25 @@
 } ;
 
 .fs-1 {
-    font-size: 2em;
+    font-size: variables.$fs-1;
 }
 
 .fs-2 {
-    font-size: 1.5rem;
+    font-size: variables.$fs-2;
 }
 
 .fs-3 {
-    font-size: 20px;
+    font-size: variables.$fs-3;
 }
 
 .fs-4 {
-    font-size: 1rem;
+    font-size: variables.$fs-4;
 }
 
 .fs-5 {
-    font-size: 0.85028rem;
+    font-size: variables.$fs-5;
 }
 
 .fs-6 {
-    font-size: 0.78405rem;
+    font-size: variables.$fs-6;
 }
