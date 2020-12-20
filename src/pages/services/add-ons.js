@@ -8,9 +8,6 @@ import VerticalCenterFlex from "../../components/layout/vertical-center-flex"
 import Window from '../../components/layout/window'
 import { Container, Row, Col } from 'react-bootstrap'
 
-// CSS
-import '../../styles/pages/services/add-ons.css'
-
 const AddOns = ({data}) => (
 
   <>

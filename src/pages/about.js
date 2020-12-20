@@ -8,9 +8,6 @@ import Window from '../components/layout/window'
 import { Container } from 'react-bootstrap'
 import { Row, Col } from 'react-bootstrap'
 
-// CSS
-import '../styles/pages/about.css'
-
 const About = ({data}) => (
 
   <>

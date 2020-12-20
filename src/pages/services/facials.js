@@ -6,9 +6,6 @@ import SEO from "../../components/seo"
 import FacialRow from '../../components/facials/facial_row'
 import { Container } from 'react-bootstrap'
 
-// STYLES
-import '../../styles/pages/services/facials.css'
-
 const Facials = ( {data} ) => {
 
   const [ windowWidth, setWindowWidth ] = useState('')

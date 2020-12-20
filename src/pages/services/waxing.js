@@ -8,9 +8,6 @@ import Window from '../../components/layout/window'
 import VerticalCenterFlex from '../../components/layout/vertical-center-flex'
 import { Container, Row, Col } from 'react-bootstrap'
 
-// CSS
-import '../../styles/pages/services/waxing.css'
-
 // DATA
 import waxingServices from '../../utils/data/waxing.json'
 
