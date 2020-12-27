@@ -11,7 +11,7 @@ const NavList = ( { sidenav } ) => {
         <ul className={`m-nav${sidenav ? " m-side-nav-list" : ""}`}>
 
             <li className={ sidenav ? "m-side-nav-segment" : "m-nav-segment" }>
-                <a className={`fs-3${sidenav ? " m-side-nav-link" : " m-nav-link"}`} name="services">Services</a>
+                <a className={`fs-3 m-link${sidenav ? " m-side-nav-link" : " m-nav-link"}`} name="services">Services</a>
 
                 <ul className={sidenav ? "m-side-nav-list" : "m-dropdown"} >
 
