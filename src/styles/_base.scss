@@ -1,5 +1,5 @@
 @use 'variables' ;
-@use 'theme' ;
+@use 'typography' ;
 
 html {
     -ms-text-size-adjust: 100%;
@@ -13,12 +13,14 @@ html {
 }
 
 body {
+
+    @extend .fs-normal, .fw-normal ;
+
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: hsla(0, 0%, 0%, 0.8);
     background-color: variables.$color-4;
-    font-style: normal; 
     font-weight: normal;
     font-variant-ligatures: normal;
     font-variant-caps: normal;
@@ -84,7 +86,7 @@ strong {
     font-weight: bolder;
 }
 dfn {
-    font-style: italic;
+    @extend .fs-italic ;
 }
 mark {
     background-color: #ff0;
@@ -265,7 +267,7 @@ h1 {
 
 h2 {
 
-    @extend .fs-2 ;
+    @extend .fs-2, .fw-bold ;
 
     margin-left: 0;
     margin-right: 0;
@@ -276,7 +278,6 @@ h2 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-weight: bold;
     text-rendering: optimizeLegibility;
     line-height: 1.1;
 
@@ -320,7 +321,7 @@ h4 {
 
 h5 {
 
-    @extend .fs-5 ;
+    @extend .fs-5, .fw-bold ;
 
     margin-left: 0;
     margin-right: 0;
@@ -331,7 +332,6 @@ h5 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-weight: bold;
     text-rendering: optimizeLegibility;
     line-height: 1.1;
 
@@ -339,7 +339,7 @@ h5 {
 
 h6 {
 
-    @extend .fs-6 ;
+    @extend .fs-6, .fw-bold ;
 
     margin-left: 0;
     margin-right: 0;
@@ -350,7 +350,6 @@ h6 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-weight: bold;
     text-rendering: optimizeLegibility;
     line-height: 1.1;
 
@@ -542,16 +541,16 @@ address {
     margin-bottom: 1.45rem;
 }
 b {
-    font-weight: bold;
+    @extend .fw-bold ;
 }
 strong {
-    font-weight: bold;
+    @extend .fw-bold ;
 }
 dt {
-    font-weight: bold;
+    @extend .fw-bold ;
 }
 th {
-    font-weight: bold;
+    @extend .fw-bold ;
 }
 li {
     margin-bottom: calc(1.45rem / 2);
