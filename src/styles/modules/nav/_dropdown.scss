@@ -1,5 +1,4 @@
 @use '../../variables' ;
-@use 'link' ;
 
 .m-dropdown {
 
@@ -16,7 +15,6 @@
     }
 
     &-link {
-        @extend %link ;
         text-transform: capitalize;
     }
 

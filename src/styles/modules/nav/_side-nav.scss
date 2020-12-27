@@ -1,6 +1,5 @@
 @use '../../variables';
 @use 'close-btn' ;
-@use 'link' ;
 
 .m-side-nav {
 
@@ -29,9 +28,6 @@
     }
 
     &-link {
-
-        @extend %link ;
-
         padding: 8px 8px 8px 32px ;
         color: variables.$color-4 ;
         transition: 0.3s ;

@@ -1,11 +1,12 @@
-@use 'link' ;
-@use 'nav-list' ;
+// @use 'nav-list' ;
 @use '../../variables' ;
 
 .m-nav {
 
-    @extend %nav-list ;
-
+    // @extend %nav-list ;
+    margin: 0 ;
+    padding: 0 ;
+    list-style: none ; 
     text-align: right ; 
     padding-top: 31px ;
     
@@ -25,10 +26,7 @@
     }  
     
     &-link {
-
-        @extend %link ;
         text-transform: uppercase ;
-
     }
 
 }
