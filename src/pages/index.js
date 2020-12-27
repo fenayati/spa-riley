@@ -8,7 +8,6 @@ import Window from '../components/layout/window'
 import { Container, Row, Col } from 'react-bootstrap'
 
 // STYLES
-import '../styles/pages/index.css'
 import VerticalCenterFlex from "../components/layout/vertical-center-flex"
 
 const IndexPage = ( {data} ) => (
